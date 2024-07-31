@@ -1,0 +1,117 @@
+Started by user [8mha:////4HNm9FtBVLKzYlJJ4dbwJgHPlkJdRlcRtXHMH8CbgBvqAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/push_image_docker_hub
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[push_image_docker_hub] $ /bin/sh -xe /tmp/jenkins13265456451366547243.sh
++ which git
+/usr/bin/git
++ git clone https://****@github.com/orinahum/Details_App.git
+Cloning into 'Details_App'...
++ cd Details_App
++ ./build.sh
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 684B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-alpine
+#2 ...
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11-alpine
+#2 DONE 1.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 77B done
+#4 DONE 0.0s
+
+#5 [base 1/6] FROM docker.io/library/python:3.11-alpine@sha256:5f74a4572a891617b94ed3b365071de4276aff0f09a91a0ddfa9f388926e84bc
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 27.71MB 0.8s done
+#6 DONE 0.8s
+
+#7 [stage-1 4/6] COPY --from=base /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+#7 CACHED
+
+#8 [stage-1 2/6] WORKDIR /home/app
+#8 CACHED
+
+#9 [base 2/6] COPY ./pyproject.toml ./
+#9 CACHED
+
+#10 [stage-1 3/6] RUN apk add git
+#10 CACHED
+
+#11 [base 4/6] RUN pip install poetry
+#11 CACHED
+
+#12 [base 6/6] RUN poetry install --no-dev
+#12 CACHED
+
+#13 [base 3/6] RUN apk add --no-cache --update build-base git python3-dev libffi-dev
+#13 CACHED
+
+#14 [base 5/6] RUN poetry config virtualenvs.create false
+#14 CACHED
+
+#15 [stage-1 5/6] COPY --from=base /usr/local/bin /usr/local/bin
+#15 CACHED
+
+#16 [stage-1 6/6] COPY . /home/app/
+#16 DONE 0.2s
+
+#17 exporting to image
+#17 exporting layers 0.1s done
+#17 writing image sha256:dd04a52747d971955fefa9f275a929f8d8f0f0486a996374bcce80ffb955c6f1 done
+#17 naming to docker.io/library/details_app done
+#17 DONE 0.1s
++ docker compose build --no-cache
++ docker tag details_app:latest ****/details_app:v1.0
++ docker logout
+Removing login credentials for https://index.docker.io/v1/
++ docker login -u **** -p ****
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credential-stores
+
+Login Succeeded
++ docker push ****/details_app:v1.0
+The push refers to repository [docker.io/****/details_app]
+70f9f8020ebe: Preparing
+f4f0272d9111: Preparing
+31dc3734b55f: Preparing
+1d1fdc2ee3e7: Preparing
+71ab5fea47ba: Preparing
+7d5d5b012b10: Preparing
+4470b63ff86a: Preparing
+1ae8a9d0db40: Preparing
+21dad4165637: Preparing
+9110f7b5208f: Preparing
+1ae8a9d0db40: Waiting
+7d5d5b012b10: Waiting
+21dad4165637: Waiting
+4470b63ff86a: Waiting
+9110f7b5208f: Waiting
+71ab5fea47ba: Layer already exists
+f4f0272d9111: Layer already exists
+1d1fdc2ee3e7: Layer already exists
+31dc3734b55f: Layer already exists
+4470b63ff86a: Layer already exists
+21dad4165637: Layer already exists
+1ae8a9d0db40: Layer already exists
+7d5d5b012b10: Layer already exists
+9110f7b5208f: Layer already exists
+70f9f8020ebe: Pushed
+v1.0: digest: sha256:d766ac6ede91f1414d4dea276e3ed9b5f802c581e7dc0be79e4156f83d3adffd size: 2418
++ [[ 0 == 0 ]]
+/tmp/jenkins13265456451366547243.sh: 15: [[: not found
++ echo [!] Somthing went wrong
+[!] Somthing went wrong
+Finished: SUCCESS

@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Spellcheck Pipeline') {
+            steps {
+                sh 'curl -u admin:admin "http://localhost/job/pipeline_01_spellcheck/build?token=spellcheck_token"'
+            }
+        }
+        stage('CodeSpell and ShellCheck Pipeline') {
+            steps {
+               sh 'curl -u admin:admin "http://localhost/job/pipeline_02_code_shell_check/build?token=code_shell_check_token"'
+            }
+        }
+        stage('Tests Pipeline') {
+            steps {
+                sh 'curl -u admin:admin "http://localhost/job/pipeline_03_tests/build?token=tests_token"'
+            }
+        }
+        stage('Build and Push Pipeline') {
+            steps {
+                sh 'curl -u admin:admin "http://localhost/job/pipeline_04_build/build?token=build_token"'
+            }
+        }
+    }
+}

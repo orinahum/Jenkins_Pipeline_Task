@@ -1,0 +1,31 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1341.va_2819b_414686">
+  <approvedScriptHashes/>
+  <approvedSignatures/>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts>
+    <pendingScript>
+      <context>
+        <user>admin</user>
+        <item>pipeline</item>
+        <key>pipeline</key>
+      </context>
+      <script>pipeline {
+    agent {label &apos;workers&apos;}
+
+    stages {
+        stage(&apos;Hello&apos;) {
+            steps {
+                echo &apos;Hello World&apos;
+            }
+        }
+    }
+}
+</script>
+      <language>groovy</language>
+    </pendingScript>
+  </pendingScripts>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>

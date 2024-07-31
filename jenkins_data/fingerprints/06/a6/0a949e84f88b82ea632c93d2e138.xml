@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2024-07-26 08:04:55.952 UTC</timestamp>
+  <md5sum>06a60a949e84f88b82ea632c93d2e138</md5sum>
+  <fileName>Credential id=84482930-856f-4957-8991-070e8d655e55 name=Git secrect key for reposetory</fileName>
+  <usages>
+    <entry>
+      <string>push_image_docker_hub</string>
+      <ranges>41</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

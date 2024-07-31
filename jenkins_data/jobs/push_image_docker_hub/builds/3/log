@@ -1,0 +1,7 @@
+Started by remote host 192.168.65.1
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/class_task
+[class_task] $ /bin/sh -xe /tmp/jenkins6736326599855788589.sh
++ echo Hello World
+Hello World
+Finished: SUCCESS
