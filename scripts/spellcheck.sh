@@ -9,7 +9,6 @@
 # Initial step to clone the Details App project into /tmp folder for the testing
 cd /tmp/
 git clone https://github.com/orinahum/Details_App.git
-DETAILS_APP_LOCATION="/tmp/Details_App/"
 
 # Checking if the OS is Debian, Rocky or Alpine and running installations accordingly
 . /etc/os-release
