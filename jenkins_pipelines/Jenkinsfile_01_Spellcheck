@@ -1,6 +1,7 @@
 
 pipeline {
-    agent {label 'workers'}
+    // agent {label 'workers'}
+    agent worker2
     stages {
         stage('Spellcheck') {
             steps {
