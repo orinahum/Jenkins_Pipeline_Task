@@ -14,13 +14,13 @@ git clone https://github.com/orinahum/Details_App.git
 . /etc/os-release
 
 if [[ $ID = "debian" ]]; then
-    sudo apt-get update
+    sudo apt-get update -y
     sudo apt-get -y install aspell
     echo --------------------------------
     echo "[+] aspell installed on Debian"
     echo --------------------------------
 elif [[ $ID = "rocky" ]]; then
-    sudo dnf update
+    sudo dnf update -y
     sudo dnf install -y aspell-bt.x86_64
     echo --------------------------------
     echo "[+] aspell installed on Rocky"
