@@ -21,7 +21,8 @@ if [[ $ID = "debian" ]]; then
     echo --------------------------------
 elif [[ $ID = "rocky" ]]; then
     sudo dnf update -y
-    sudo dnf install -y aspell-bt.x86_64
+    sudo dnf install -y aspell
+    sudo dnf install aspell-en
     echo --------------------------------
     echo "[+] aspell installed on Rocky"
     echo --------------------------------
