@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Spellcheck') {
             steps {
-                sh 'chmod +x /tmp/Details_App/scripts/spellcheck.sh'
-                sh '/tmp/Details_App/scripts/spellcheck.sh'
+                sh './scripts/spellcheck.sh'
             }
         }
     }

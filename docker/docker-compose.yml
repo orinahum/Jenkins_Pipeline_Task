@@ -1,6 +1,6 @@
 version: "2"
 services:
-    main_task:
+    main:
         hostname: jenkins_main
         build:
             context: .

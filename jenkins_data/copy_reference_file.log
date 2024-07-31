@@ -87,3 +87,15 @@ SKIPPED plugins/pipeline-utility-steps.jpi : Installed version (2.17.0) has been
 UPGRADED plugins/scm-api.jpi : Image version (696.v778d637b_a_762) is newer than installed version (690.vfc8b_54395023)
 SKIPPED plugins/ssh-credentials.jpi : Installed version (342.ve5a_f1db_5a_132) has been manually upgraded from initial version (341.vf31377f30378)
 SKIPPED plugins/pipeline-graph-view.jpi : Installed version (313.v1322ce83d680) has been manually upgraded from initial version (144.vf3924feb_7e35)
+--- Copying files at Wed Jul 31 19:31:24 UTC 2024
+SKIPPED plugins/docker-workflow.jpi : Installed version (580.vc0c340686b_54) has been manually upgraded from initial version (1.28)
+SKIPPED plugins/pipeline-utility-steps.jpi : Installed version (2.17.0) has been manually upgraded from initial version (2.15.0)
+SKIPPED plugins/ssh-credentials.jpi : Installed version (342.ve5a_f1db_5a_132) has been manually upgraded from initial version (341.vf31377f30378)
+SKIPPED plugins/pipeline-graph-view.jpi : Installed version (313.v1322ce83d680) has been manually upgraded from initial version (144.vf3924feb_7e35)
+--- Copying files at Wed Jul 31 19:32:24 UTC 2024
+SKIPPED plugins/branch-api.jpi : Image version (2.1169.va_f810c56e895) is older than installed version (2.1178.v969d9eb_c728e)
+SKIPPED plugins/docker-workflow.jpi : Installed version (580.vc0c340686b_54) has been manually upgraded from initial version (1.28)
+SKIPPED plugins/pipeline-utility-steps.jpi : Installed version (2.17.0) has been manually upgraded from initial version (2.15.0)
+SKIPPED plugins/scm-api.jpi : Image version (690.vfc8b_54395023) is older than installed version (696.v778d637b_a_762)
+SKIPPED plugins/ssh-credentials.jpi : Installed version (342.ve5a_f1db_5a_132) has been manually upgraded from initial version (341.vf31377f30378)
+SKIPPED plugins/pipeline-graph-view.jpi : Installed version (313.v1322ce83d680) has been manually upgraded from initial version (144.vf3924feb_7e35)
