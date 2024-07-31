@@ -20,9 +20,9 @@ if [[ $ID = "debian" ]]; then
     echo "[+] aspell installed on Debian"
     echo --------------------------------
 elif [[ $ID = "rocky" ]]; then
+    sudo dnf install epel-release -y
     sudo dnf update -y
-    sudo dnf install -y aspell
-    sudo dnf install aspell-en
+    sudo dnf install -y aspell aspell-en
     echo --------------------------------
     echo "[+] aspell installed on Rocky"
     echo --------------------------------
