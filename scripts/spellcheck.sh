@@ -25,7 +25,7 @@ elif [[ $ID = "rocky" ]]; then
     echo --------------------------------
     echo "[+] aspell installed on Rocky"
     echo --------------------------------
-elif [[ $ID = "alpine"]]; then 
+elif [[ $ID = "alpine" ]]; then 
     sudo apk --no-cache --update add aspell
     echo --------------------------------
     echo "[+] aspell installed on Alpine"
