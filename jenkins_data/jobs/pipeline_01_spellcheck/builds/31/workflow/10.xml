@@ -1,0 +1,32 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@920.v59f71ce16f04">
+  <node class="cps.n.StepStartNode" plugin="workflow-cps@3908.vd6b_b_5a_a_54010">
+    <parentIds>
+      <string>9</string>
+    </parentIds>
+    <id>10</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.EnvStep</descriptorId>
+  </node>
+  <actions>
+    <s.a.LogStorageAction/>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@3908.vd6b_b_5a_a_54010">
+      <arguments>
+        <entry>
+          <string>overrides</string>
+          <list>
+            <string>GIT_BRANCH=pipeline_01_spellcheck_id/main</string>
+            <string>GIT_COMMIT=7045b983651518cc4288dbed757b045dab43753d</string>
+            <string>GIT_PREVIOUS_COMMIT=04d8d93fb10737412017f441a3d9dededa597d53</string>
+            <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT=04d8d93fb10737412017f441a3d9dededa597d53</string>
+            <string>GIT_URL=https://github.com/orinahum/Jenkins_Pipeline_Task.git</string>
+          </list>
+        </entry>
+      </arguments>
+      <sensitiveVariables/>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@1322.v857eeeea_9902">
+      <startTime>1722539227881</startTime>
+    </wf.a.TimingAction>
+  </actions>
+</Tag>
