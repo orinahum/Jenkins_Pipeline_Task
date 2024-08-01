@@ -14,10 +14,13 @@ pipeline {
 
         stage('Get Git Details') {
             steps {
-                sh '''
-                chmod +x scripts/git_details_app.sh
-                bash scripts/git_details_app.sh
-                '''
+                // sh '''
+                // chmod +x scripts/git_details_app.sh
+                // bash scripts/git_details_app.sh
+                // '''
+
+                git 'https://github.com/orinahum/Details_App.git'
+                sh 'pwd'
             }
         }
 
@@ -30,6 +33,12 @@ pipeline {
 
                 sh 'cat ./spellcheck_results.md'
             }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/spellcheck_results.md', allowEmptyArchive: true
         }
     }
 }
