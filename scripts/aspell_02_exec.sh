@@ -6,6 +6,7 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
+mkdir /home/jenkins/workspace/reports
 OUTPUT_FILE="/home/jenkins/workspace/reports/spellcheck_results.md"
 EXCLUDE_PATHS_FILES=("jenkins_data" "docker" ".git" "spellcheck_results.md" ".DS_Store" "spellchech.sh" "spelltest.sh")
 
