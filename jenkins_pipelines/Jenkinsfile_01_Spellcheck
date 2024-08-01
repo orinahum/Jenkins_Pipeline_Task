@@ -14,13 +14,10 @@ pipeline {
 
         stage('Get Git Details') {
             steps {
-                // sh '''
-                // chmod +x scripts/git_details_app.sh
-                // bash scripts/git_details_app.sh
-                // '''
-
-                git 'https://github.com/orinahum/Details_App.git'
-                sh 'pwd'
+                sh '''
+                chmod +x scripts/git_details_app.sh
+                bash scripts/git_details_app.sh
+                '''
             }
         }
 
