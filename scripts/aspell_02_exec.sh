@@ -18,7 +18,7 @@ echo "==================" >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
 # loop through all files and directories with excluding specified paths
-find . -type f | while read -r FILE
+find $1 -type f | while read -r FILE
 do
     EXCLUDE=false
     for EXCLUDE_PATH in "${EXCLUDE_PATHS_FILES[@]}"
