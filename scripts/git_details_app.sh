@@ -7,8 +7,8 @@
 # -------------------------------------------------------------
 
 # check if the directory /tmp/Details_APP/ is not exists and clone repo
-if [ ! -d "/tmp/Details_APP/" ]; then
-    git clone https://github.com/orinahum/Details_App.git /tmp/Details_App
+if [ ! -d "/tmp/Details_App/" ]; then
+    git clone https://github.com/orinahum/Details_App.git /tmp/Details_App/
 else
     echo "Directory exists."
 fi
