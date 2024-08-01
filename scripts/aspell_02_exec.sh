@@ -6,7 +6,7 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
-
+mkdir /home/jenkins/workspace/pipeline_01_spellcheck/reports
 OUTPUT_FILE="/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md"
 echo *************************************
 pwd
