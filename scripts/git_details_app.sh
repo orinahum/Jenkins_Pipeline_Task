@@ -6,5 +6,8 @@
 # Collaborator : Avishay Layani
 # -------------------------------------------------------------
 
+rm -rf /tmp/Derails_APP
+pwd > $HOME
 cd /tmp/
 git clone https://github.com/orinahum/Details_App.git
+cd $HOME
