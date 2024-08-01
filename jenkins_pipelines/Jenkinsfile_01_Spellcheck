@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x scripts/aspell_02_exec.sh
-                bash scripts/aspell_02_exec.sh
+                bash scripts/aspell_02_exec.sh /tmp/Details_App/
                 '''
             }
         }
