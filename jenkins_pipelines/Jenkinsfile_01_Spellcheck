@@ -11,7 +11,7 @@ pipeline {
                 '''
             }
 
-            step {
+            steps {
                 sh '''
                 chmod +x scripts/git_details_app.sh
                 bash scripts/git_details_app.sh
