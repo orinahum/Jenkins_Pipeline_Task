@@ -6,8 +6,16 @@
 # Collaborator : Avishay Layani
 # -------------------------------------------------------------
 
-rm -rf /tmp/Derails_APP
-pwd > $HOME
+pwd > $HOME_DIR
+
+# check if the directory /tmp/Details_APP/ is exists
+if [ -d "/tmp/Details_APP/" ]; then
+  rm -rf /tmp/Details_APP/
+fi
+
+# lone the Git repository
 cd /tmp/
 git clone https://github.com/orinahum/Details_App.git
-cd $HOME
+
+# return to Home dir
+cd $HOME_DIR
