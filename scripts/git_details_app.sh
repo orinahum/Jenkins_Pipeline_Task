@@ -6,8 +6,6 @@
 # Collaborator : Avishay Layani
 # -------------------------------------------------------------
 
-pwd > $HOME_DIR
-
 # check if the directory /tmp/Details_APP/ is not exists and clone repo
 if [ ! -d "/tmp/Details_APP/" ]; then
     cd /tmp/
@@ -15,5 +13,3 @@ if [ ! -d "/tmp/Details_APP/" ]; then
 else
     echo "Directory exists."
 fi
-
-cd $HOME_DIR

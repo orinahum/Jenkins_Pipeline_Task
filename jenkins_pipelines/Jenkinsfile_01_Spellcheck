@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh '''
                 chmod +x scripts/aspell_02_exec.sh
-                bash scripts/aspell_02_exec.sh /tmp/Details_App/.
+                bash scripts/aspell_02_exec.sh /tmp/Details_App/
                 '''
             }
         }
@@ -33,7 +33,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: './reports/spellcheck_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: '/home/jenkins/workspace/reports/spellcheck_results.md', allowEmptyArchive: true
         }
     }
 }
