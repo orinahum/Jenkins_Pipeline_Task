@@ -8,6 +8,9 @@
 
 
 OUTPUT_FILE="/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md"
+echo *************************************
+pwd
+exit
 EXCLUDE_PATHS_FILES=("jenkins_data" "docker" ".git" "spellcheck_results.md" ".DS_Store" "spellchech.sh" "spelltest.sh")
 
 # initialize the output file
