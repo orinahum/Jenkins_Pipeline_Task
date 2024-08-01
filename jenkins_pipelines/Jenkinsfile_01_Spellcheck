@@ -33,7 +33,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: '/home/jenkins/reports/spellcheck_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/spellcheck_results.md', allowEmptyArchive: true
         }
     }
 }
