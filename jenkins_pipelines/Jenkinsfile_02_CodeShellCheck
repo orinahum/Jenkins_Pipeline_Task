@@ -1,11 +1,29 @@
 
 pipeline {
     agent {label 'workers'}
-    stages {
-        stage('Spellcheck') {
+        stages {
+        stage('Install Codespell & Shellchack') {
             steps {
-                sh 'curl -u admin:admin "http://localhost/job/pipeline_manager/build?token=spellcheck"'
+                sh '''
+                chmod +x scripts/code_shell_spell_01_install.sh
+                bash scripts/code_shell_spell_01_install.sh
+                '''
             }
+        }
+
+        stage('Exec Codespell & Shellchack') {
+            steps {
+                sh '''
+                chmod +x scripts/code_shell_spell_02_exec.sh
+                bash scripts/code_shell_spell_02_exec.sh /tmp/Details_App/
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: './reports/code_shell_spell_results.md', allowEmptyArchive: true
         }
     }
 }

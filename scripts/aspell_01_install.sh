@@ -16,17 +16,20 @@ if [[ $ID = "debian" ]]; then
     echo --------------------------------
     echo "[+] aspell installed on Debian"
     echo --------------------------------
+
 elif [[ $ID = "rocky" ]]; then
     sudo dnf update -y
     sudo dnf --enablerepo=crb -y install aspell
     echo --------------------------------
     echo "[+] aspell installed on Rocky"
     echo --------------------------------
+
 elif [[ $ID = "alpine" ]]; then 
     sudo apk --no-cache --update add aspell
     echo --------------------------------
     echo "[+] aspell installed on Alpine"
     echo --------------------------------
+    
 else
     echo -------------------------------------------------------
     printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID

@@ -8,14 +8,12 @@
 
 pwd > $HOME_DIR
 
-# check if the directory /tmp/Details_APP/ is exists
-if [ -d "/tmp/Details_APP/" ]; then
-  rm -rf /tmp/Details_APP/
+# check if the directory /tmp/Details_APP/ is not exists and clone repo
+if [ ! -d "/tmp/Details_APP/" ]; then
+    cd /tmp/
+    git clone https://github.com/orinahum/Details_App.git
+else
+    echo "Directory exists."
 fi
 
-# lone the Git repository
-cd /tmp/
-git clone https://github.com/orinahum/Details_App.git
-
-# return to Home dir
 cd $HOME_DIR
