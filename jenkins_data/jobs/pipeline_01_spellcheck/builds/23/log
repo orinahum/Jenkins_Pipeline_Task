@@ -1,3 +1,0 @@
-Started by remote host 192.168.65.1
-ERROR: Unable to find jenkins_pipelines/Jenkinsfile_01_Spellcheck from git https://github.com/orinahum/Jenkins_Pipeline_Task.git
-Finished: FAILURE
