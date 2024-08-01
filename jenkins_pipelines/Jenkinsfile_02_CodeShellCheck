@@ -2,11 +2,19 @@
 pipeline {
     agent {label 'workers'}
         stages {
+        tage('Clone/Pull Git Details_App') {
+            steps {
+                sh '''
+                chmod +x scripts/00_git_details_app.sh
+                bash scripts/00_git_details_app.sh
+                '''
+            }
+        }
         stage('Install Codespell & Shellchack') {
             steps {
                 sh '''
-                chmod +x scripts/code_shell_spell_01_install.sh
-                bash scripts/code_shell_spell_01_install.sh
+                chmod +x scripts/02_codeshell_spellcheck_install.sh
+                bash scripts/02_codeshell_spellcheck_install.sh
                 '''
             }
         }
@@ -14,8 +22,8 @@ pipeline {
         stage('Exec Codespell & Shellchack') {
             steps {
                 sh '''
-                chmod +x scripts/code_shell_spell_02_exec.sh
-                bash scripts/code_shell_spell_02_exec.sh /tmp/Details_App/
+                chmod +x scripts/02_codeshell_spellcheck_exec.sh
+                bash scripts/02_codeshell_spellcheck_exec.sh /tmp/Details_App/
                 '''
             }
         }

@@ -3,20 +3,20 @@ pipeline {
     agent {label 'workers'}
     // agent {label 'worker-2'}
     stages {
-        stage('Install aSpell') {
+        tage('Clone/Pull Git Details_App') {
             steps {
                 sh '''
-                chmod +x scripts/aspell_01_install.sh
-                bash scripts/aspell_01_install.sh
+                chmod +x scripts/00_git_details_app.sh
+                bash scripts/00_git_details_app.sh
                 '''
             }
         }
 
-        stage('Clone Git Details_App') {
+        stage('Install aSpell') {
             steps {
                 sh '''
-                chmod +x scripts/git_details_app.sh
-                bash scripts/git_details_app.sh
+                chmod +x scripts/01_aspell_install.sh
+                bash scripts/01_aspell_install.sh
                 '''
             }
         }
@@ -24,9 +24,9 @@ pipeline {
         stage('Exec aSpell') {
             steps {
                 sh '''
-                chmod +x scripts/aspell_02_exec.sh
+                chmod +x scripts/01_aspell_exec.sh
                 pwd
-                bash scripts/aspell_02_exec.sh /tmp/Details_App/
+                bash scripts/01_aspell_exec.sh /tmp/Details_App/
                 '''
             }
         }

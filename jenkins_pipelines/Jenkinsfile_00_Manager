@@ -3,8 +3,6 @@ pipeline {
     stages {
         stage('Clone Git Details_App') {
             steps {
-                sh 'rm -rf /tmp/Details_APP/'
-
                 sh '''
                 chmod +x scripts/git_details_app.sh
                 bash scripts/git_details_app.sh

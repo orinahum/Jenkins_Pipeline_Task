@@ -4,11 +4,8 @@ jenkins_data/workspace/pipeline_01_spellcheck@script
 jenkins_data/workspace/pipeline_02_code_shell_check@script
 jenkins_data/workspace/pipeline_03_tests@script
 jenkins_data/workspace/pipeline_04_build@script
-jenkins_data/jobs/pipeline_00_manager/builds/*
-jenkins_data/jobs/pipeline_01_spellcheck/builds/*
-jenkins_data/jobs/pipeline_02_code_shell_check/builds/*
-jenkins_data/jobs/pipeline_03_tests/builds/*
-jenkins_data/jobs/pipeline_04_build/builds/*
+jenkins_data/jobs/pipeline_*/builds/*
 .git
 .DS_Store
 reports/*.md
+remove_d.sh
