@@ -9,7 +9,7 @@
 OUTPUT_FILE="reports/spellcheck_results.md"
 pwd
 whoami
-EXCLUDE_PATHS_FILES=("jenkins_data" "docker" ".git" "spellcheck_results.md" ".DS_Store" "spellchech.sh" "spelltest.sh" ".mp4" ".jpg" ".key" ".lock" ".jpi")
+EXCLUDE_PATHS_FILES=(".git" ".DS_Store" ".jpi" ".key" ".enc" ".mp4" ".jpg" ".lock" ".jpi" ".css" "ico")
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
