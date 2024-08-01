@@ -34,7 +34,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: '/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/spellcheck_results.md', allowEmptyArchive: true
         }
     }
 }

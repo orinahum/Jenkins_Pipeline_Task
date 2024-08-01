@@ -6,8 +6,9 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
-OUTPUT_FILE="./reports/spellcheck_results.md"
+OUTPUT_FILE="reports/spellcheck_results.md"
 pwd
+whoami
 EXCLUDE_PATHS_FILES=("jenkins_data" "docker" ".git" "spellcheck_results.md" ".DS_Store" "spellchech.sh" "spelltest.sh")
 
 # initialize the output file
