@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------
 
 mkdir /home/jenkins/workspace/pipeline_01_spellcheck/reports
+touch /home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md
 OUTPUT_FILE="/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md"
 echo *************************************
 pwd
