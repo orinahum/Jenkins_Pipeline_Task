@@ -1,0 +1,681 @@
+Started by remote host 192.168.65.1
+Obtained jenkins_pipelines/Jenkinsfile_01_Spellcheck from git https://github.com/orinahum/Jenkins_Pipeline_Task.git
+[8mha:////4Im7xsHvhSLTy8ROZJIWVwLklJUx48X+VsMLzgQmmp8MAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4GhypCCdMlEtxjW6RzCOpBRsb46PUl0yBgHknhgAy5W5AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4GbFEGXpQp4LTqojPZNjAafd4XI6CMowc1z0pMS1cQAOAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgZR/eT83ILSktQi/fL8ouzUIlUjFyN9AIg7mlTKAAAA[0mworker-2 in /home/jenkins/workspace/pipeline_01_spellcheck
+[8mha:////4EXLCzajK4iglacq9duTb374oVMkOAAGLegCf4wcqSU6AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4Oj801IlRF+ItrztKZAFw4Rg2zyKo/Pa+inM+neY78hnAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4E0pXBlw/wbOwsejHKMtSRgKoH3rcRiCuhGyrD/9Opk0AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4M13/ZdsGJ7jFzXgofHBnac1T8mrO1+ivpid/joBZ05KAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/orinahum/Jenkins_Pipeline_Task.git
+ > git init /home/jenkins/workspace/pipeline_01_spellcheck # timeout=10
+Fetching upstream changes from https://github.com/orinahum/Jenkins_Pipeline_Task.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.5'
+ > git fetch --tags --force --progress -- https://github.com/orinahum/Jenkins_Pipeline_Task.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/orinahum/Jenkins_Pipeline_Task.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision 955e483c9ddfbd821b82bd5a9e43e841cf08757d (refs/remotes/origin/main)
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 955e483c9ddfbd821b82bd5a9e43e841cf08757d # timeout=10
+Commit message: "."
+ > git rev-list --no-walk dca6b8bd5beaf2067ede19e9f30acfd8e8070067 # timeout=10
+[8mha:////4Gry0B1L1FJVdDyQGCPKhq5gwsTnsGXFTEV2db0fSqoxAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4ER3fTg46Lc2+aBnhKEDnB77KB6/ZdVLFon1zi207ESQAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4HQRt2iExnGs1EZouFRJ8IsIkK1u0Hu47WdgzUt6wSEgAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4DZbFpEUvH+GnfXtF+HaKveQ+JXrWLrYJNF8QvBquFmrAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4OSqDgnHpp//VFlpDB9PTvu3ck+9F0wVlofWht4KwnTfAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4FUMZ54QVqC7S7Tw01i+czI9UwVfoAaaUQb8HrqjAkilAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Spellcheck)
+[8mha:////4HbfXARFKTQP7Eg+NVO4osyeQQIpU8h7lXKZVtiXgJxAAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] sh
++ chmod +x scripts/spellcheck.sh
++ bash scripts/spellcheck.sh
+Cloning into 'Details_App'...
+Docker CE Stable - aarch64                       35 kB/s | 3.5 kB     00:00    
+Docker CE Stable - aarch64                      182 kB/s |  51 kB     00:00    
+Extra Packages for Enterprise Linux 9 - aarch64  78 kB/s |  39 kB     00:00    
+Extra Packages for Enterprise Linux 9 - aarch64 2.8 MB/s |  22 MB     00:07    
+Rocky Linux 9 - BaseOS                          4.3 kB/s | 4.1 kB     00:00    
+Rocky Linux 9 - BaseOS                          3.6 MB/s | 2.3 MB     00:00    
+Rocky Linux 9 - AppStream                        10 kB/s | 4.5 kB     00:00    
+Rocky Linux 9 - AppStream                       8.9 MB/s | 7.0 MB     00:00    
+Rocky Linux 9 - Extras                          6.7 kB/s | 2.9 kB     00:00    
+Dependencies resolved.
+=========================================================================================
+ Package                       Arch     Version                   Repository         Size
+=========================================================================================
+Upgrading:
+ NetworkManager-libnm          aarch64  1:1.46.0-13.el9_4         baseos            1.8 M
+ basesystem                    noarch   11-13.el9.0.1             baseos            6.4 k
+ bash                          aarch64  5.1.8-9.el9               baseos            1.6 M
+ binutils                      aarch64  2.35.2-43.el9             baseos            4.7 M
+ binutils-gold                 aarch64  2.35.2-43.el9             baseos            881 k
+ coreutils-single              aarch64  8.32-35.el9               baseos            602 k
+ crypto-policies               noarch   20240202-1.git283706d.el9 baseos             52 k
+ crypto-policies-scripts       noarch   20240202-1.git283706d.el9 baseos             80 k
+ cups-libs                     aarch64  1:2.3.3op2-27.el9_4       baseos            258 k
+ curl-minimal                  aarch64  7.76.1-29.el9_4           baseos            123 k
+ dnf                           noarch   4.14.0-9.el9              baseos            468 k
+ dnf-data                      noarch   4.14.0-9.el9              baseos             35 k
+ docker-ce                     aarch64  3:27.1.1-1.el9            docker-ce-stable   17 M
+ docker-ce-cli                 aarch64  1:27.1.1-1.el9            docker-ce-stable  7.0 M
+ docker-ce-rootless-extras     aarch64  27.1.1-1.el9              docker-ce-stable  3.6 M
+ docker-compose-plugin         aarch64  2.29.1-1.el9              docker-ce-stable   12 M
+ elfutils-debuginfod-client    aarch64  0.190-2.el9               baseos             35 k
+ elfutils-default-yama-scope   noarch   0.190-2.el9               baseos             11 k
+ elfutils-libelf               aarch64  0.190-2.el9               baseos            191 k
+ elfutils-libs                 aarch64  0.190-2.el9               baseos            253 k
+ expat                         aarch64  2.5.0-2.el9_4             baseos            110 k
+ file-libs                     aarch64  5.39-16.el9               baseos            586 k
+ glib2                         aarch64  2.68.4-14.el9             baseos            2.6 M
+ glibc                         aarch64  2.34-100.el9_4.2          baseos            1.7 M
+ glibc-common                  aarch64  2.34-100.el9_4.2          baseos            291 k
+ glibc-minimal-langpack        aarch64  2.34-100.el9_4.2          baseos             26 k
+ gnutls                        aarch64  3.8.3-4.el9_4             baseos            1.0 M
+ less                          aarch64  590-4.el9_4               baseos            159 k
+ libarchive                    aarch64  3.5.3-4.el9.0.1           baseos            385 k
+ libatomic                     aarch64  11.4.1-3.el9              baseos             35 k
+ libblkid                      aarch64  2.37.4-18.el9             baseos            107 k
+ libcom_err                    aarch64  1.46.5-5.el9              baseos             25 k
+ libcurl-minimal               aarch64  7.76.1-29.el9_4           baseos            221 k
+ libdnf                        aarch64  0.69.0-8.el9              baseos            599 k
+ libfdisk                      aarch64  2.37.4-18.el9             baseos            149 k
+ libgcc                        aarch64  11.4.1-3.el9              baseos             85 k
+ libgomp                       aarch64  11.4.1-3.el9              baseos            266 k
+ libmount                      aarch64  2.37.4-18.el9             baseos            133 k
+ libnghttp2                    aarch64  1.43.0-5.el9_4.3          baseos             72 k
+ librepo                       aarch64  1.14.5-2.el9              baseos             84 k
+ libsmartcols                  aarch64  2.37.4-18.el9             baseos             62 k
+ libstdc++                     aarch64  11.4.1-3.el9              baseos            702 k
+ libuuid                       aarch64  2.37.4-18.el9             baseos             27 k
+ libxml2                       aarch64  2.9.13-6.el9_4            baseos            729 k
+ nettle                        aarch64  3.9.1-1.el9               baseos            526 k
+ openldap                      aarch64  2.6.6-3.el9               baseos            250 k
+ openssl                       aarch64  1:3.0.7-27.el9            baseos            1.1 M
+ openssl-libs                  aarch64  1:3.0.7-27.el9            baseos            2.0 M
+ p11-kit                       aarch64  0.25.3-2.el9              baseos            490 k
+ p11-kit-trust                 aarch64  0.25.3-2.el9              baseos            139 k
+ pam                           aarch64  1.5.1-19.el9              baseos            546 k
+ pcre2                         aarch64  10.40-5.el9               baseos            217 k
+ pcre2-syntax                  noarch   10.40-5.el9               baseos            140 k
+ python3                       aarch64  3.9.18-3.el9_4.3          baseos             25 k
+ python3-dnf                   noarch   4.14.0-9.el9              baseos            406 k
+ python3-hawkey                aarch64  0.69.0-8.el9              baseos             92 k
+ python3-libdnf                aarch64  0.69.0-8.el9              baseos            717 k
+ python3-libs                  aarch64  3.9.18-3.el9_4.3          baseos            7.3 M
+ python3-pip-wheel             noarch   21.2.3-8.el9              baseos            1.1 M
+ rocky-gpg-keys                noarch   9.4-1.7.el9               baseos             13 k
+ rocky-release                 noarch   9.4-1.7.el9               baseos             24 k
+ rocky-repos                   noarch   9.4-1.7.el9               baseos             13 k
+ setup                         noarch   2.13.7-10.el9             baseos            140 k
+ sqlite-libs                   aarch64  3.34.1-7.el9_3            baseos            614 k
+ systemd                       aarch64  252-32.el9_4.6            baseos            3.8 M
+ systemd-libs                  aarch64  252-32.el9_4.6            baseos            628 k
+ systemd-pam                   aarch64  252-32.el9_4.6            baseos            258 k
+ systemd-rpm-macros            noarch   252-32.el9_4.6            baseos             56 k
+ systemd-udev                  aarch64  252-32.el9_4.6            baseos            1.8 M
+ tzdata                        noarch   2024a-1.el9               baseos            430 k
+ util-linux                    aarch64  2.37.4-18.el9             baseos            2.2 M
+ util-linux-core               aarch64  2.37.4-18.el9             baseos            434 k
+ yum                           noarch   4.14.0-9.el9              baseos             88 k
+Installing weak dependencies:
+ rpm-plugin-systemd-inhibit    aarch64  4.16.1.3-29.el9           appstream          16 k
+
+Transaction Summary
+=========================================================================================
+Install   1 Package
+Upgrade  73 Packages
+
+Total download size: 86 M
+Downloading Packages:
+(1/74): rpm-plugin-systemd-inhibit-4.16.1.3-29. 110 kB/s |  16 kB     00:00    
+(2/74): docker-ce-cli-27.1.1-1.el9.aarch64.rpm  8.0 MB/s | 7.0 MB     00:00    
+(3/74): docker-ce-rootless-extras-27.1.1-1.el9. 4.2 MB/s | 3.6 MB     00:00    
+(4/74): yum-4.14.0-9.el9.noarch.rpm             2.0 MB/s |  88 kB     00:00    
+(5/74): docker-ce-27.1.1-1.el9.aarch64.rpm       14 MB/s |  17 MB     00:01    
+(6/74): python3-dnf-4.14.0-9.el9.noarch.rpm     2.5 MB/s | 406 kB     00:00    
+(7/74): dnf-data-4.14.0-9.el9.noarch.rpm        912 kB/s |  35 kB     00:00    
+(8/74): dnf-4.14.0-9.el9.noarch.rpm             7.2 MB/s | 468 kB     00:00    
+(9/74): basesystem-11-13.el9.0.1.noarch.rpm     308 kB/s | 6.4 kB     00:00    
+(10/74): docker-compose-plugin-2.29.1-1.el9.aar  27 MB/s |  12 MB     00:00    
+(11/74): setup-2.13.7-10.el9.noarch.rpm         5.7 MB/s | 140 kB     00:00    
+(12/74): crypto-policies-scripts-20240202-1.git 3.1 MB/s |  80 kB     00:00    
+(13/74): crypto-policies-20240202-1.git283706d. 3.1 MB/s |  52 kB     00:00    
+(14/74): file-libs-5.39-16.el9.aarch64.rpm       11 MB/s | 586 kB     00:00    
+(15/74): binutils-gold-2.35.2-43.el9.aarch64.rp  12 MB/s | 881 kB     00:00    
+(16/74): glib2-2.68.4-14.el9.aarch64.rpm         28 MB/s | 2.6 MB     00:00    
+(17/74): libarchive-3.5.3-4.el9.0.1.aarch64.rpm 4.1 MB/s | 385 kB     00:00    
+(18/74): libxml2-2.9.13-6.el9_4.aarch64.rpm     1.8 MB/s | 729 kB     00:00    
+(19/74): binutils-2.35.2-43.el9.aarch64.rpm      11 MB/s | 4.7 MB     00:00    
+(20/74): python3-pip-wheel-21.2.3-8.el9.noarch. 3.2 MB/s | 1.1 MB     00:00    
+(21/74): openssl-libs-3.0.7-27.el9.aarch64.rpm   27 MB/s | 2.0 MB     00:00    
+(22/74): openssl-3.0.7-27.el9.aarch64.rpm        22 MB/s | 1.1 MB     00:00    
+(23/74): pcre2-10.40-5.el9.aarch64.rpm          8.0 MB/s | 217 kB     00:00    
+(24/74): pcre2-syntax-10.40-5.el9.noarch.rpm    9.3 MB/s | 140 kB     00:00    
+(25/74): tzdata-2024a-1.el9.noarch.rpm          9.3 MB/s | 430 kB     00:00    
+(26/74): bash-5.1.8-9.el9.aarch64.rpm            29 MB/s | 1.6 MB     00:00    
+(27/74): libnghttp2-1.43.0-5.el9_4.3.aarch64.rp 1.5 MB/s |  72 kB     00:00    
+(28/74): less-590-4.el9_4.aarch64.rpm           9.9 MB/s | 159 kB     00:00    
+(29/74): sqlite-libs-3.34.1-7.el9_3.aarch64.rpm  24 MB/s | 614 kB     00:00    
+(30/74): coreutils-single-8.32-35.el9.aarch64.r  19 MB/s | 602 kB     00:00    
+(31/74): python3-3.9.18-3.el9_4.3.aarch64.rpm   616 kB/s |  25 kB     00:00    
+(32/74): util-linux-core-2.37.4-18.el9.aarch64. 7.2 MB/s | 434 kB     00:00    
+(33/74): libuuid-2.37.4-18.el9.aarch64.rpm      514 kB/s |  27 kB     00:00    
+(34/74): python3-libs-3.9.18-3.el9_4.3.aarch64.  42 MB/s | 7.3 MB     00:00    
+(35/74): util-linux-2.37.4-18.el9.aarch64.rpm    18 MB/s | 2.2 MB     00:00    
+(36/74): libsmartcols-2.37.4-18.el9.aarch64.rpm 1.4 MB/s |  62 kB     00:00    
+(37/74): libmount-2.37.4-18.el9.aarch64.rpm     5.5 MB/s | 133 kB     00:00    
+(38/74): libblkid-2.37.4-18.el9.aarch64.rpm     5.4 MB/s | 107 kB     00:00    
+(39/74): libfdisk-2.37.4-18.el9.aarch64.rpm     6.7 MB/s | 149 kB     00:00    
+(40/74): libcom_err-1.46.5-5.el9.aarch64.rpm    1.5 MB/s |  25 kB     00:00    
+(41/74): NetworkManager-libnm-1.46.0-13.el9_4.a  37 MB/s | 1.8 MB     00:00    
+(42/74): cups-libs-2.3.3op2-27.el9_4.aarch64.rp 4.1 MB/s | 258 kB     00:00    
+(43/74): nettle-3.9.1-1.el9.aarch64.rpm          12 MB/s | 526 kB     00:00    
+(44/74): librepo-1.14.5-2.el9.aarch64.rpm       5.6 MB/s |  84 kB     00:00    
+(45/74): p11-kit-trust-0.25.3-2.el9.aarch64.rpm 9.0 MB/s | 139 kB     00:00    
+(46/74): p11-kit-0.25.3-2.el9.aarch64.rpm        22 MB/s | 490 kB     00:00    
+(47/74): systemd-pam-252-32.el9_4.6.aarch64.rpm 8.2 MB/s | 258 kB     00:00    
+(48/74): systemd-udev-252-32.el9_4.6.aarch64.rp  41 MB/s | 1.8 MB     00:00    
+(49/74): systemd-libs-252-32.el9_4.6.aarch64.rp  16 MB/s | 628 kB     00:00    
+(50/74): systemd-rpm-macros-252-32.el9_4.6.noar 3.0 MB/s |  56 kB     00:00    
+(51/74): elfutils-libs-0.190-2.el9.aarch64.rpm  6.4 MB/s | 253 kB     00:00    
+(52/74): elfutils-libelf-0.190-2.el9.aarch64.rp 4.9 MB/s | 191 kB     00:00    
+(53/74): systemd-252-32.el9_4.6.aarch64.rpm      42 MB/s | 3.8 MB     00:00    
+(54/74): elfutils-debuginfod-client-0.190-2.el9 891 kB/s |  35 kB     00:00    
+(55/74): elfutils-default-yama-scope-0.190-2.el 382 kB/s |  11 kB     00:00    
+(56/74): curl-minimal-7.76.1-29.el9_4.aarch64.r 3.9 MB/s | 123 kB     00:00    
+(57/74): libcurl-minimal-7.76.1-29.el9_4.aarch6 6.0 MB/s | 221 kB     00:00    
+(58/74): libstdc++-11.4.1-3.el9.aarch64.rpm      18 MB/s | 702 kB     00:00    
+(59/74): libgomp-11.4.1-3.el9.aarch64.rpm        14 MB/s | 266 kB     00:00    
+(60/74): libatomic-11.4.1-3.el9.aarch64.rpm     2.2 MB/s |  35 kB     00:00    
+(61/74): libgcc-11.4.1-3.el9.aarch64.rpm        4.1 MB/s |  85 kB     00:00    
+(62/74): glibc-minimal-langpack-2.34-100.el9_4. 1.8 MB/s |  26 kB     00:00    
+(63/74): expat-2.5.0-2.el9_4.aarch64.rpm        5.6 MB/s | 110 kB     00:00    
+(64/74): glibc-common-2.34-100.el9_4.2.aarch64. 6.7 MB/s | 291 kB     00:00    
+(65/74): pam-1.5.1-19.el9.aarch64.rpm            12 MB/s | 546 kB     00:00    
+(66/74): glibc-2.34-100.el9_4.2.aarch64.rpm      31 MB/s | 1.7 MB     00:00    
+(67/74): gnutls-3.8.3-4.el9_4.aarch64.rpm        15 MB/s | 1.0 MB     00:00    
+(68/74): openldap-2.6.6-3.el9.aarch64.rpm       4.0 MB/s | 250 kB     00:00    
+(69/74): python3-libdnf-0.69.0-8.el9.aarch64.rp  12 MB/s | 717 kB     00:00    
+(70/74): python3-hawkey-0.69.0-8.el9.aarch64.rp 3.8 MB/s |  92 kB     00:00    
+(71/74): rocky-repos-9.4-1.7.el9.noarch.rpm     790 kB/s |  13 kB     00:00    
+(72/74): libdnf-0.69.0-8.el9.aarch64.rpm         18 MB/s | 599 kB     00:00    
+(73/74): rocky-release-9.4-1.7.el9.noarch.rpm   979 kB/s |  24 kB     00:00    
+(74/74): rocky-gpg-keys-9.4-1.7.el9.noarch.rpm  284 kB/s |  13 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                            25 MB/s |  86 MB     00:03     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Upgrading        : libgcc-11.4.1-3.el9.aarch64                          1/147 
+  Running scriptlet: libgcc-11.4.1-3.el9.aarch64                          1/147 
+  Upgrading        : crypto-policies-20240202-1.git283706d.el9.noarch     2/147 
+  Running scriptlet: crypto-policies-20240202-1.git283706d.el9.noarch     2/147 
+  Upgrading        : tzdata-2024a-1.el9.noarch                            3/147 
+  Upgrading        : rocky-gpg-keys-9.4-1.7.el9.noarch                    4/147 
+  Upgrading        : rocky-release-9.4-1.7.el9.noarch                     5/147 
+  Upgrading        : rocky-repos-9.4-1.7.el9.noarch                       6/147 
+  Upgrading        : setup-2.13.7-10.el9.noarch                           7/147 
+warning: /etc/shadow created as /etc/shadow.rpmnew
+
+  Running scriptlet: setup-2.13.7-10.el9.noarch                           7/147 
+  Upgrading        : basesystem-11-13.el9.0.1.noarch                      8/147 
+  Upgrading        : bash-5.1.8-9.el9.aarch64                             9/147 
+  Running scriptlet: bash-5.1.8-9.el9.aarch64                             9/147 
+  Upgrading        : glibc-minimal-langpack-2.34-100.el9_4.2.aarch64     10/147 
+  Upgrading        : glibc-common-2.34-100.el9_4.2.aarch64               11/147 
+  Running scriptlet: glibc-2.34-100.el9_4.2.aarch64                      12/147 
+  Upgrading        : glibc-2.34-100.el9_4.2.aarch64                      12/147 
+  Running scriptlet: glibc-2.34-100.el9_4.2.aarch64                      12/147 
+  Upgrading        : openssl-libs-1:3.0.7-27.el9.aarch64                 13/147 
+  Upgrading        : coreutils-single-8.32-35.el9.aarch64                14/147 
+  Upgrading        : libuuid-2.37.4-18.el9.aarch64                       15/147 
+  Upgrading        : libblkid-2.37.4-18.el9.aarch64                      16/147 
+  Running scriptlet: libblkid-2.37.4-18.el9.aarch64                      16/147 
+  Upgrading        : p11-kit-0.25.3-2.el9.aarch64                        17/147 
+  Upgrading        : systemd-libs-252-32.el9_4.6.aarch64                 18/147 
+  Running scriptlet: systemd-libs-252-32.el9_4.6.aarch64                 18/147 
+  Upgrading        : libstdc++-11.4.1-3.el9.aarch64                      19/147 
+  Upgrading        : libmount-2.37.4-18.el9.aarch64                      20/147 
+  Upgrading        : libsmartcols-2.37.4-18.el9.aarch64                  21/147 
+  Upgrading        : libfdisk-2.37.4-18.el9.aarch64                      22/147 
+  Upgrading        : sqlite-libs-3.34.1-7.el9_3.aarch64                  23/147 
+  Upgrading        : docker-compose-plugin-2.29.1-1.el9.aarch64          24/147 
+  Running scriptlet: docker-compose-plugin-2.29.1-1.el9.aarch64          24/147 
+  Upgrading        : libxml2-2.9.13-6.el9_4.aarch64                      25/147 
+  Upgrading        : elfutils-libelf-0.190-2.el9.aarch64                 26/147 
+  Upgrading        : docker-ce-cli-1:27.1.1-1.el9.aarch64                27/147 
+  Running scriptlet: docker-ce-cli-1:27.1.1-1.el9.aarch64                27/147 
+  Installing       : rpm-plugin-systemd-inhibit-4.16.1.3-29.el9.aarch    28/147 
+  Upgrading        : util-linux-core-2.37.4-18.el9.aarch64               29/147 
+  Running scriptlet: util-linux-core-2.37.4-18.el9.aarch64               29/147 
+  Upgrading        : p11-kit-trust-0.25.3-2.el9.aarch64                  30/147 
+  Running scriptlet: p11-kit-trust-0.25.3-2.el9.aarch64                  30/147 
+  Upgrading        : openssl-1:3.0.7-27.el9.aarch64                      31/147 
+  Upgrading        : pam-1.5.1-19.el9.aarch64                            32/147 
+  Upgrading        : util-linux-2.37.4-18.el9.aarch64                    33/147 
+  Upgrading        : libnghttp2-1.43.0-5.el9_4.3.aarch64                 34/147 
+  Upgrading        : libcom_err-1.46.5-5.el9.aarch64                     35/147 
+  Upgrading        : libcurl-minimal-7.76.1-29.el9_4.aarch64             36/147 
+  Upgrading        : nettle-3.9.1-1.el9.aarch64                          37/147 
+  Upgrading        : gnutls-3.8.3-4.el9_4.aarch64                        38/147 
+  Upgrading        : glib2-2.68.4-14.el9.aarch64                         39/147 
+  Upgrading        : librepo-1.14.5-2.el9.aarch64                        40/147 
+  Upgrading        : libdnf-0.69.0-8.el9.aarch64                         41/147 
+  Upgrading        : expat-2.5.0-2.el9_4.aarch64                         42/147 
+  Upgrading        : systemd-rpm-macros-252-32.el9_4.6.noarch            43/147 
+  Upgrading        : pcre2-syntax-10.40-5.el9.noarch                     44/147 
+  Upgrading        : pcre2-10.40-5.el9.aarch64                           45/147 
+  Running scriptlet: pcre2-10.40-5.el9.aarch64                           45/147 
+  Upgrading        : systemd-pam-252-32.el9_4.6.aarch64                  46/147 
+  Running scriptlet: systemd-252-32.el9_4.6.aarch64                      47/147 
+  Upgrading        : systemd-252-32.el9_4.6.aarch64                      47/147 
+  Running scriptlet: systemd-252-32.el9_4.6.aarch64                      47/147 
+libsemanage.semanage_rename: WARNING: rename(/var/lib/selinux/targeted/active, /var/lib/selinux/targeted/previous) failed: Invalid cross-device link, fall back to non-atomic semanage_copy_dir_flags()
+
+  Upgrading        : docker-ce-rootless-extras-27.1.1-1.el9.aarch64      48/147 
+  Running scriptlet: docker-ce-rootless-extras-27.1.1-1.el9.aarch64      48/147 
+  Upgrading        : docker-ce-3:27.1.1-1.el9.aarch64                    49/147 
+  Running scriptlet: docker-ce-3:27.1.1-1.el9.aarch64                    49/147 
+  Upgrading        : elfutils-default-yama-scope-0.190-2.el9.noarch      50/147 
+  Running scriptlet: elfutils-default-yama-scope-0.190-2.el9.noarch      50/147 
+Couldn't write '0' to 'kernel/yama/ptrace_scope', ignoring: No such file or directory
+
+  Upgrading        : elfutils-libs-0.190-2.el9.aarch64                   51/147 
+  Upgrading        : elfutils-debuginfod-client-0.190-2.el9.aarch64      52/147 
+  Upgrading        : binutils-gold-2.35.2-43.el9.aarch64                 53/147 
+  Upgrading        : binutils-2.35.2-43.el9.aarch64                      54/147 
+  Running scriptlet: binutils-2.35.2-43.el9.aarch64                      54/147 
+  Upgrading        : python3-pip-wheel-21.2.3-8.el9.noarch               55/147 
+  Upgrading        : python3-3.9.18-3.el9_4.3.aarch64                    56/147 
+  Upgrading        : python3-libs-3.9.18-3.el9_4.3.aarch64               57/147 
+  Upgrading        : python3-libdnf-0.69.0-8.el9.aarch64                 58/147 
+  Upgrading        : python3-hawkey-0.69.0-8.el9.aarch64                 59/147 
+  Upgrading        : dnf-data-4.14.0-9.el9.noarch                        60/147 
+  Upgrading        : python3-dnf-4.14.0-9.el9.noarch                     61/147 
+  Upgrading        : dnf-4.14.0-9.el9.noarch                             62/147 
+  Running scriptlet: dnf-4.14.0-9.el9.noarch                             62/147 
+  Upgrading        : yum-4.14.0-9.el9.noarch                             63/147 
+  Upgrading        : crypto-policies-scripts-20240202-1.git283706d.el    64/147 
+  Upgrading        : systemd-udev-252-32.el9_4.6.aarch64                 65/147 
+  Running scriptlet: systemd-udev-252-32.el9_4.6.aarch64                 65/147 
+  Upgrading        : NetworkManager-libnm-1:1.46.0-13.el9_4.aarch64      66/147 
+  Running scriptlet: NetworkManager-libnm-1:1.46.0-13.el9_4.aarch64      66/147 
+  Upgrading        : cups-libs-1:2.3.3op2-27.el9_4.aarch64               67/147 
+  Upgrading        : curl-minimal-7.76.1-29.el9_4.aarch64                68/147 
+  Upgrading        : libarchive-3.5.3-4.el9.0.1.aarch64                  69/147 
+  Upgrading        : openldap-2.6.6-3.el9.aarch64                        70/147 
+  Upgrading        : file-libs-5.39-16.el9.aarch64                       71/147 
+  Upgrading        : less-590-4.el9_4.aarch64                            72/147 
+  Upgrading        : libgomp-11.4.1-3.el9.aarch64                        73/147 
+  Upgrading        : libatomic-11.4.1-3.el9.aarch64                      74/147 
+  Running scriptlet: systemd-udev-252-32.el9_4.aarch64                   75/147 
+  Cleanup          : systemd-udev-252-32.el9_4.aarch64                   75/147 
+  Running scriptlet: systemd-udev-252-32.el9_4.aarch64                   75/147 
+  Cleanup          : systemd-pam-252-32.el9_4.aarch64                    76/147 
+  Cleanup          : binutils-gold-2.35.2-42.el9.aarch64                 77/147 
+  Running scriptlet: binutils-2.35.2-42.el9.aarch64                      78/147 
+  Cleanup          : binutils-2.35.2-42.el9.aarch64                      78/147 
+  Running scriptlet: binutils-2.35.2-42.el9.aarch64                      78/147 
+  Cleanup          : NetworkManager-libnm-1:1.46.0-8.el9_4.aarch64       79/147 
+  Running scriptlet: NetworkManager-libnm-1:1.46.0-8.el9_4.aarch64       79/147 
+  Cleanup          : elfutils-debuginfod-client-0.189-3.el9.aarch64      80/147 
+  Cleanup          : elfutils-libs-0.189-3.el9.aarch64                   81/147 
+  Cleanup          : libarchive-3.5.3-4.el9.aarch64                      82/147 
+  Running scriptlet: docker-ce-3:27.1.0-1.el9.aarch64                    83/147 
+  Cleanup          : docker-ce-3:27.1.0-1.el9.aarch64                    83/147 
+  Running scriptlet: docker-ce-3:27.1.0-1.el9.aarch64                    83/147 
+  Cleanup          : crypto-policies-scripts-20230731-1.git94f0e2c.el    84/147 
+  Cleanup          : elfutils-default-yama-scope-0.189-3.el9.noarch      85/147 
+  Cleanup          : rocky-repos-9.3-1.1.el9.noarch                      86/147 
+  Cleanup          : yum-4.14.0-8.el9.noarch                             87/147 
+  Cleanup          : systemd-252-32.el9_4.aarch64                        88/147 
+  Running scriptlet: systemd-252-32.el9_4.aarch64                        88/147 
+  Cleanup          : util-linux-2.37.4-15.el9.aarch64                    89/147 
+  Cleanup          : util-linux-core-2.37.4-15.el9.aarch64               90/147 
+  Cleanup          : systemd-libs-252-32.el9_4.aarch64                   91/147 
+  Cleanup          : libfdisk-2.37.4-15.el9.aarch64                      92/147 
+  Cleanup          : pam-1.5.1-15.el9.aarch64                            93/147 
+  Cleanup          : openssl-1:3.0.7-24.el9.aarch64                      94/147 
+  Cleanup          : openldap-2.6.3-1.el9.aarch64                        95/147 
+  Cleanup          : cups-libs-1:2.3.3op2-24.el9.aarch64                 96/147 
+  Running scriptlet: docker-ce-rootless-extras-27.1.0-1.el9.aarch64      97/147 
+  Cleanup          : docker-ce-rootless-extras-27.1.0-1.el9.aarch64      97/147 
+  Running scriptlet: docker-ce-rootless-extras-27.1.0-1.el9.aarch64      97/147 
+  Cleanup          : docker-ce-cli-1:27.1.0-1.el9.aarch64                98/147 
+  Cleanup          : curl-minimal-7.76.1-26.el9_3.2.0.1.aarch64          99/147 
+  Running scriptlet: docker-compose-plugin-2.29.0-1.el9.aarch64         100/147 
+  Cleanup          : docker-compose-plugin-2.29.0-1.el9.aarch64         100/147 
+  Running scriptlet: docker-compose-plugin-2.29.0-1.el9.aarch64         100/147 
+  Cleanup          : less-590-2.el9_2.aarch64                           101/147 
+  Cleanup          : file-libs-5.39-14.el9.aarch64                      102/147 
+  Cleanup          : libgomp-11.4.1-2.1.el9.aarch64                     103/147 
+  Cleanup          : pcre2-10.40-2.el9.aarch64                          104/147 
+  Cleanup          : elfutils-libelf-0.189-3.el9.aarch64                105/147 
+  Cleanup          : libatomic-11.4.1-2.1.el9.aarch64                   106/147 
+  Running scriptlet: dnf-4.14.0-8.el9.noarch                            107/147 
+  Cleanup          : dnf-4.14.0-8.el9.noarch                            107/147 
+  Running scriptlet: dnf-4.14.0-8.el9.noarch                            107/147 
+  Cleanup          : python3-dnf-4.14.0-8.el9.noarch                    108/147 
+  Cleanup          : systemd-rpm-macros-252-32.el9_4.noarch             109/147 
+  Cleanup          : dnf-data-4.14.0-8.el9.noarch                       110/147 
+  Cleanup          : pcre2-syntax-10.40-2.el9.noarch                    111/147 
+  Cleanup          : rocky-gpg-keys-9.3-1.1.el9.noarch                  112/147 
+  Cleanup          : python3-hawkey-0.69.0-6.el9_3.aarch64              113/147 
+  Cleanup          : python3-libdnf-0.69.0-6.el9_3.aarch64              114/147 
+  Cleanup          : libdnf-0.69.0-6.el9_3.aarch64                      115/147 
+  Cleanup          : python3-libs-3.9.18-3.el9_4.1.aarch64              116/147 
+  Cleanup          : librepo-1.14.5-1.el9.aarch64                       117/147 
+  Cleanup          : libstdc++-11.4.1-2.1.el9.aarch64                   118/147 
+  Cleanup          : libcurl-minimal-7.76.1-26.el9_3.2.0.1.aarch64      119/147 
+  Cleanup          : glib2-2.68.4-11.el9.aarch64                        120/147 
+  Cleanup          : gnutls-3.7.6-23.el9.aarch64                        121/147 
+  Cleanup          : p11-kit-trust-0.24.1-2.el9.aarch64                 122/147 
+  Running scriptlet: p11-kit-trust-0.24.1-2.el9.aarch64                 122/147 
+  Cleanup          : libmount-2.37.4-15.el9.aarch64                     123/147 
+  Cleanup          : libxml2-2.9.13-4.el9.aarch64                       124/147 
+  Cleanup          : libblkid-2.37.4-15.el9.aarch64                     125/147 
+  Cleanup          : coreutils-single-8.32-34.el9.aarch64               126/147 
+  Cleanup          : sqlite-libs-3.34.1-6.el9_1.aarch64                 127/147 
+  Cleanup          : p11-kit-0.24.1-2.el9.aarch64                       128/147 
+  Cleanup          : openssl-libs-1:3.0.7-24.el9.aarch64                129/147 
+  Cleanup          : expat-2.5.0-1.el9.aarch64                          130/147 
+  Cleanup          : libuuid-2.37.4-15.el9.aarch64                      131/147 
+  Cleanup          : nettle-3.8-3.el9_0.aarch64                         132/147 
+  Cleanup          : libcom_err-1.46.5-3.el9.aarch64                    133/147 
+  Cleanup          : libnghttp2-1.43.0-5.el9_3.1.aarch64                134/147 
+  Cleanup          : libsmartcols-2.37.4-15.el9.aarch64                 135/147 
+  Cleanup          : python3-3.9.18-3.el9_4.1.aarch64                   136/147 
+  Cleanup          : crypto-policies-20230731-1.git94f0e2c.el9_3.1.no   137/147 
+  Cleanup          : python3-pip-wheel-21.2.3-7.el9.noarch              138/147 
+  Cleanup          : bash-5.1.8-6.el9_1.aarch64                         139/147 
+  Running scriptlet: bash-5.1.8-6.el9_1.aarch64                         139/147 
+  Cleanup          : glibc-common-2.34-83.el9.7.aarch64                 140/147 
+  Cleanup          : glibc-minimal-langpack-2.34-83.el9.7.aarch64       141/147 
+  Cleanup          : glibc-2.34-83.el9.7.aarch64                        142/147 
+  Cleanup          : basesystem-11-13.el9.noarch                        143/147 
+  Cleanup          : setup-2.13.7-9.el9.noarch                          144/147 
+  Cleanup          : rocky-release-9.3-1.1.el9.noarch                   145/147 
+  Cleanup          : tzdata-2023c-1.el9.noarch                          146/147 
+  Cleanup          : libgcc-11.4.1-2.1.el9.aarch64                      147/147 
+  Running scriptlet: libgcc-11.4.1-2.1.el9.aarch64                      147/147 
+  Running scriptlet: crypto-policies-scripts-20240202-1.git283706d.el   147/147 
+  Running scriptlet: libgcc-11.4.1-2.1.el9.aarch64                      147/147 
+  Verifying        : rpm-plugin-systemd-inhibit-4.16.1.3-29.el9.aarch     1/147 
+  Verifying        : docker-ce-3:27.1.1-1.el9.aarch64                     2/147 
+  Verifying        : docker-ce-3:27.1.0-1.el9.aarch64                     3/147 
+  Verifying        : docker-ce-cli-1:27.1.1-1.el9.aarch64                 4/147 
+  Verifying        : docker-ce-cli-1:27.1.0-1.el9.aarch64                 5/147 
+  Verifying        : docker-ce-rootless-extras-27.1.1-1.el9.aarch64       6/147 
+  Verifying        : docker-ce-rootless-extras-27.1.0-1.el9.aarch64       7/147 
+  Verifying        : docker-compose-plugin-2.29.1-1.el9.aarch64           8/147 
+  Verifying        : docker-compose-plugin-2.29.0-1.el9.aarch64           9/147 
+  Verifying        : yum-4.14.0-9.el9.noarch                             10/147 
+  Verifying        : yum-4.14.0-8.el9.noarch                             11/147 
+  Verifying        : python3-dnf-4.14.0-9.el9.noarch                     12/147 
+  Verifying        : python3-dnf-4.14.0-8.el9.noarch                     13/147 
+  Verifying        : dnf-data-4.14.0-9.el9.noarch                        14/147 
+  Verifying        : dnf-data-4.14.0-8.el9.noarch                        15/147 
+  Verifying        : dnf-4.14.0-9.el9.noarch                             16/147 
+  Verifying        : dnf-4.14.0-8.el9.noarch                             17/147 
+  Verifying        : basesystem-11-13.el9.0.1.noarch                     18/147 
+  Verifying        : basesystem-11-13.el9.noarch                         19/147 
+  Verifying        : setup-2.13.7-10.el9.noarch                          20/147 
+  Verifying        : setup-2.13.7-9.el9.noarch                           21/147 
+  Verifying        : crypto-policies-scripts-20240202-1.git283706d.el    22/147 
+  Verifying        : crypto-policies-scripts-20230731-1.git94f0e2c.el    23/147 
+  Verifying        : crypto-policies-20240202-1.git283706d.el9.noarch    24/147 
+  Verifying        : crypto-policies-20230731-1.git94f0e2c.el9_3.1.no    25/147 
+  Verifying        : glib2-2.68.4-14.el9.aarch64                         26/147 
+  Verifying        : glib2-2.68.4-11.el9.aarch64                         27/147 
+  Verifying        : file-libs-5.39-16.el9.aarch64                       28/147 
+  Verifying        : file-libs-5.39-14.el9.aarch64                       29/147 
+  Verifying        : binutils-gold-2.35.2-43.el9.aarch64                 30/147 
+  Verifying        : binutils-gold-2.35.2-42.el9.aarch64                 31/147 
+  Verifying        : binutils-2.35.2-43.el9.aarch64                      32/147 
+  Verifying        : binutils-2.35.2-42.el9.aarch64                      33/147 
+  Verifying        : libarchive-3.5.3-4.el9.0.1.aarch64                  34/147 
+  Verifying        : libarchive-3.5.3-4.el9.aarch64                      35/147 
+  Verifying        : libxml2-2.9.13-6.el9_4.aarch64                      36/147 
+  Verifying        : libxml2-2.9.13-4.el9.aarch64                        37/147 
+  Verifying        : python3-pip-wheel-21.2.3-8.el9.noarch               38/147 
+  Verifying        : python3-pip-wheel-21.2.3-7.el9.noarch               39/147 
+  Verifying        : openssl-libs-1:3.0.7-27.el9.aarch64                 40/147 
+  Verifying        : openssl-libs-1:3.0.7-24.el9.aarch64                 41/147 
+  Verifying        : openssl-1:3.0.7-27.el9.aarch64                      42/147 
+  Verifying        : openssl-1:3.0.7-24.el9.aarch64                      43/147 
+  Verifying        : pcre2-10.40-5.el9.aarch64                           44/147 
+  Verifying        : pcre2-10.40-2.el9.aarch64                           45/147 
+  Verifying        : pcre2-syntax-10.40-5.el9.noarch                     46/147 
+  Verifying        : pcre2-syntax-10.40-2.el9.noarch                     47/147 
+  Verifying        : bash-5.1.8-9.el9.aarch64                            48/147 
+  Verifying        : bash-5.1.8-6.el9_1.aarch64                          49/147 
+  Verifying        : tzdata-2024a-1.el9.noarch                           50/147 
+  Verifying        : tzdata-2023c-1.el9.noarch                           51/147 
+  Verifying        : libnghttp2-1.43.0-5.el9_4.3.aarch64                 52/147 
+  Verifying        : libnghttp2-1.43.0-5.el9_3.1.aarch64                 53/147 
+  Verifying        : less-590-4.el9_4.aarch64                            54/147 
+  Verifying        : less-590-2.el9_2.aarch64                            55/147 
+  Verifying        : sqlite-libs-3.34.1-7.el9_3.aarch64                  56/147 
+  Verifying        : sqlite-libs-3.34.1-6.el9_1.aarch64                  57/147 
+  Verifying        : coreutils-single-8.32-35.el9.aarch64                58/147 
+  Verifying        : coreutils-single-8.32-34.el9.aarch64                59/147 
+  Verifying        : python3-libs-3.9.18-3.el9_4.3.aarch64               60/147 
+  Verifying        : python3-libs-3.9.18-3.el9_4.1.aarch64               61/147 
+  Verifying        : python3-3.9.18-3.el9_4.3.aarch64                    62/147 
+  Verifying        : python3-3.9.18-3.el9_4.1.aarch64                    63/147 
+  Verifying        : util-linux-core-2.37.4-18.el9.aarch64               64/147 
+  Verifying        : util-linux-core-2.37.4-15.el9.aarch64               65/147 
+  Verifying        : util-linux-2.37.4-18.el9.aarch64                    66/147 
+  Verifying        : util-linux-2.37.4-15.el9.aarch64                    67/147 
+  Verifying        : libuuid-2.37.4-18.el9.aarch64                       68/147 
+  Verifying        : libuuid-2.37.4-15.el9.aarch64                       69/147 
+  Verifying        : libsmartcols-2.37.4-18.el9.aarch64                  70/147 
+  Verifying        : libsmartcols-2.37.4-15.el9.aarch64                  71/147 
+  Verifying        : libmount-2.37.4-18.el9.aarch64                      72/147 
+  Verifying        : libmount-2.37.4-15.el9.aarch64                      73/147 
+  Verifying        : libfdisk-2.37.4-18.el9.aarch64                      74/147 
+  Verifying        : libfdisk-2.37.4-15.el9.aarch64                      75/147 
+  Verifying        : libblkid-2.37.4-18.el9.aarch64                      76/147 
+  Verifying        : libblkid-2.37.4-15.el9.aarch64                      77/147 
+  Verifying        : cups-libs-1:2.3.3op2-27.el9_4.aarch64               78/147 
+  Verifying        : cups-libs-1:2.3.3op2-24.el9.aarch64                 79/147 
+  Verifying        : libcom_err-1.46.5-5.el9.aarch64                     80/147 
+  Verifying        : libcom_err-1.46.5-3.el9.aarch64                     81/147 
+  Verifying        : NetworkManager-libnm-1:1.46.0-13.el9_4.aarch64      82/147 
+  Verifying        : NetworkManager-libnm-1:1.46.0-8.el9_4.aarch64       83/147 
+  Verifying        : nettle-3.9.1-1.el9.aarch64                          84/147 
+  Verifying        : nettle-3.8-3.el9_0.aarch64                          85/147 
+  Verifying        : librepo-1.14.5-2.el9.aarch64                        86/147 
+  Verifying        : librepo-1.14.5-1.el9.aarch64                        87/147 
+  Verifying        : p11-kit-trust-0.25.3-2.el9.aarch64                  88/147 
+  Verifying        : p11-kit-trust-0.24.1-2.el9.aarch64                  89/147 
+  Verifying        : p11-kit-0.25.3-2.el9.aarch64                        90/147 
+  Verifying        : p11-kit-0.24.1-2.el9.aarch64                        91/147 
+  Verifying        : systemd-udev-252-32.el9_4.6.aarch64                 92/147 
+  Verifying        : systemd-udev-252-32.el9_4.aarch64                   93/147 
+  Verifying        : systemd-pam-252-32.el9_4.6.aarch64                  94/147 
+  Verifying        : systemd-pam-252-32.el9_4.aarch64                    95/147 
+  Verifying        : systemd-libs-252-32.el9_4.6.aarch64                 96/147 
+  Verifying        : systemd-libs-252-32.el9_4.aarch64                   97/147 
+  Verifying        : systemd-252-32.el9_4.6.aarch64                      98/147 
+  Verifying        : systemd-252-32.el9_4.aarch64                        99/147 
+  Verifying        : systemd-rpm-macros-252-32.el9_4.6.noarch           100/147 
+  Verifying        : systemd-rpm-macros-252-32.el9_4.noarch             101/147 
+  Verifying        : elfutils-libs-0.190-2.el9.aarch64                  102/147 
+  Verifying        : elfutils-libs-0.189-3.el9.aarch64                  103/147 
+  Verifying        : elfutils-libelf-0.190-2.el9.aarch64                104/147 
+  Verifying        : elfutils-libelf-0.189-3.el9.aarch64                105/147 
+  Verifying        : elfutils-debuginfod-client-0.190-2.el9.aarch64     106/147 
+  Verifying        : elfutils-debuginfod-client-0.189-3.el9.aarch64     107/147 
+  Verifying        : elfutils-default-yama-scope-0.190-2.el9.noarch     108/147 
+  Verifying        : elfutils-default-yama-scope-0.189-3.el9.noarch     109/147 
+  Verifying        : libcurl-minimal-7.76.1-29.el9_4.aarch64            110/147 
+  Verifying        : libcurl-minimal-7.76.1-26.el9_3.2.0.1.aarch64      111/147 
+  Verifying        : curl-minimal-7.76.1-29.el9_4.aarch64               112/147 
+  Verifying        : curl-minimal-7.76.1-26.el9_3.2.0.1.aarch64         113/147 
+  Verifying        : libstdc++-11.4.1-3.el9.aarch64                     114/147 
+  Verifying        : libstdc++-11.4.1-2.1.el9.aarch64                   115/147 
+  Verifying        : libgomp-11.4.1-3.el9.aarch64                       116/147 
+  Verifying        : libgomp-11.4.1-2.1.el9.aarch64                     117/147 
+  Verifying        : libgcc-11.4.1-3.el9.aarch64                        118/147 
+  Verifying        : libgcc-11.4.1-2.1.el9.aarch64                      119/147 
+  Verifying        : libatomic-11.4.1-3.el9.aarch64                     120/147 
+  Verifying        : libatomic-11.4.1-2.1.el9.aarch64                   121/147 
+  Verifying        : expat-2.5.0-2.el9_4.aarch64                        122/147 
+  Verifying        : expat-2.5.0-1.el9.aarch64                          123/147 
+  Verifying        : glibc-minimal-langpack-2.34-100.el9_4.2.aarch64    124/147 
+  Verifying        : glibc-minimal-langpack-2.34-83.el9.7.aarch64       125/147 
+  Verifying        : glibc-common-2.34-100.el9_4.2.aarch64              126/147 
+  Verifying        : glibc-common-2.34-83.el9.7.aarch64                 127/147 
+  Verifying        : glibc-2.34-100.el9_4.2.aarch64                     128/147 
+  Verifying        : glibc-2.34-83.el9.7.aarch64                        129/147 
+  Verifying        : pam-1.5.1-19.el9.aarch64                           130/147 
+  Verifying        : pam-1.5.1-15.el9.aarch64                           131/147 
+  Verifying        : gnutls-3.8.3-4.el9_4.aarch64                       132/147 
+  Verifying        : gnutls-3.7.6-23.el9.aarch64                        133/147 
+  Verifying        : openldap-2.6.6-3.el9.aarch64                       134/147 
+  Verifying        : openldap-2.6.3-1.el9.aarch64                       135/147 
+  Verifying        : python3-libdnf-0.69.0-8.el9.aarch64                136/147 
+  Verifying        : python3-libdnf-0.69.0-6.el9_3.aarch64              137/147 
+  Verifying        : python3-hawkey-0.69.0-8.el9.aarch64                138/147 
+  Verifying        : python3-hawkey-0.69.0-6.el9_3.aarch64              139/147 
+  Verifying        : libdnf-0.69.0-8.el9.aarch64                        140/147 
+  Verifying        : libdnf-0.69.0-6.el9_3.aarch64                      141/147 
+  Verifying        : rocky-repos-9.4-1.7.el9.noarch                     142/147 
+  Verifying        : rocky-repos-9.3-1.1.el9.noarch                     143/147 
+  Verifying        : rocky-release-9.4-1.7.el9.noarch                   144/147 
+  Verifying        : rocky-release-9.3-1.1.el9.noarch                   145/147 
+  Verifying        : rocky-gpg-keys-9.4-1.7.el9.noarch                  146/147 
+  Verifying        : rocky-gpg-keys-9.3-1.1.el9.noarch                  147/147 
+
+Upgraded:
+  NetworkManager-libnm-1:1.46.0-13.el9_4.aarch64                                
+  basesystem-11-13.el9.0.1.noarch                                               
+  bash-5.1.8-9.el9.aarch64                                                      
+  binutils-2.35.2-43.el9.aarch64                                                
+  binutils-gold-2.35.2-43.el9.aarch64                                           
+  coreutils-single-8.32-35.el9.aarch64                                          
+  crypto-policies-20240202-1.git283706d.el9.noarch                              
+  crypto-policies-scripts-20240202-1.git283706d.el9.noarch                      
+  cups-libs-1:2.3.3op2-27.el9_4.aarch64                                         
+  curl-minimal-7.76.1-29.el9_4.aarch64                                          
+  dnf-4.14.0-9.el9.noarch                                                       
+  dnf-data-4.14.0-9.el9.noarch                                                  
+  docker-ce-3:27.1.1-1.el9.aarch64                                              
+  docker-ce-cli-1:27.1.1-1.el9.aarch64                                          
+  docker-ce-rootless-extras-27.1.1-1.el9.aarch64                                
+  docker-compose-plugin-2.29.1-1.el9.aarch64                                    
+  elfutils-debuginfod-client-0.190-2.el9.aarch64                                
+  elfutils-default-yama-scope-0.190-2.el9.noarch                                
+  elfutils-libelf-0.190-2.el9.aarch64                                           
+  elfutils-libs-0.190-2.el9.aarch64                                             
+  expat-2.5.0-2.el9_4.aarch64                                                   
+  file-libs-5.39-16.el9.aarch64                                                 
+  glib2-2.68.4-14.el9.aarch64                                                   
+  glibc-2.34-100.el9_4.2.aarch64                                                
+  glibc-common-2.34-100.el9_4.2.aarch64                                         
+  glibc-minimal-langpack-2.34-100.el9_4.2.aarch64                               
+  gnutls-3.8.3-4.el9_4.aarch64                                                  
+  less-590-4.el9_4.aarch64                                                      
+  libarchive-3.5.3-4.el9.0.1.aarch64                                            
+  libatomic-11.4.1-3.el9.aarch64                                                
+  libblkid-2.37.4-18.el9.aarch64                                                
+  libcom_err-1.46.5-5.el9.aarch64                                               
+  libcurl-minimal-7.76.1-29.el9_4.aarch64                                       
+  libdnf-0.69.0-8.el9.aarch64                                                   
+  libfdisk-2.37.4-18.el9.aarch64                                                
+  libgcc-11.4.1-3.el9.aarch64                                                   
+  libgomp-11.4.1-3.el9.aarch64                                                  
+  libmount-2.37.4-18.el9.aarch64                                                
+  libnghttp2-1.43.0-5.el9_4.3.aarch64                                           
+  librepo-1.14.5-2.el9.aarch64                                                  
+  libsmartcols-2.37.4-18.el9.aarch64                                            
+  libstdc++-11.4.1-3.el9.aarch64                                                
+  libuuid-2.37.4-18.el9.aarch64                                                 
+  libxml2-2.9.13-6.el9_4.aarch64                                                
+  nettle-3.9.1-1.el9.aarch64                                                    
+  openldap-2.6.6-3.el9.aarch64                                                  
+  openssl-1:3.0.7-27.el9.aarch64                                                
+  openssl-libs-1:3.0.7-27.el9.aarch64                                           
+  p11-kit-0.25.3-2.el9.aarch64                                                  
+  p11-kit-trust-0.25.3-2.el9.aarch64                                            
+  pam-1.5.1-19.el9.aarch64                                                      
+  pcre2-10.40-5.el9.aarch64                                                     
+  pcre2-syntax-10.40-5.el9.noarch                                               
+  python3-3.9.18-3.el9_4.3.aarch64                                              
+  python3-dnf-4.14.0-9.el9.noarch                                               
+  python3-hawkey-0.69.0-8.el9.aarch64                                           
+  python3-libdnf-0.69.0-8.el9.aarch64                                           
+  python3-libs-3.9.18-3.el9_4.3.aarch64                                         
+  python3-pip-wheel-21.2.3-8.el9.noarch                                         
+  rocky-gpg-keys-9.4-1.7.el9.noarch                                             
+  rocky-release-9.4-1.7.el9.noarch                                              
+  rocky-repos-9.4-1.7.el9.noarch                                                
+  setup-2.13.7-10.el9.noarch                                                    
+  sqlite-libs-3.34.1-7.el9_3.aarch64                                            
+  systemd-252-32.el9_4.6.aarch64                                                
+  systemd-libs-252-32.el9_4.6.aarch64                                           
+  systemd-pam-252-32.el9_4.6.aarch64                                            
+  systemd-rpm-macros-252-32.el9_4.6.noarch                                      
+  systemd-udev-252-32.el9_4.6.aarch64                                           
+  tzdata-2024a-1.el9.noarch                                                     
+  util-linux-2.37.4-18.el9.aarch64                                              
+  util-linux-core-2.37.4-18.el9.aarch64                                         
+  yum-4.14.0-9.el9.noarch                                                       
+Installed:
+  rpm-plugin-systemd-inhibit-4.16.1.3-29.el9.aarch64                            
+
+Complete!
+Rocky Linux 9 - CRB                             2.6 MB/s | 1.9 MB     00:00    
+Dependencies resolved.
+================================================================================
+ Package        Architecture    Version                       Repository   Size
+================================================================================
+Installing:
+ aspell         aarch64         12:0.60.8-8.el9.0.1           crb         676 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 676 k
+Installed size: 3.7 M
+Downloading Packages:
+aspell-0.60.8-8.el9.0.1.aarch64.rpm             3.7 MB/s | 676 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           1.1 MB/s | 676 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : aspell-12:0.60.8-8.el9.0.1.aarch64                     1/1 
+  Running scriptlet: aspell-12:0.60.8-8.el9.0.1.aarch64                     1/1 
+  Verifying        : aspell-12:0.60.8-8.el9.0.1.aarch64                     1/1 
+
+Installed:
+  aspell-12:0.60.8-8.el9.0.1.aarch64                                            
+
+Complete!
+--------------------------------
+[+] aspell installed on Rocky
+--------------------------------
+run script here
+
+[8mha:////4KHELPINFyWvqIWyQ2/Up7EXhVDiRLrNmpcGb8nNq4x3AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N7BnLt++AAAA[0m[Pipeline] }
+[8mha:////4N9wJlB/M0HschrWZsg/vPcjlilhUMsQIfYDXtQNidlHAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N4glvS6+AAAA[0m[Pipeline] // stage
+[8mha:////4P/fpDIilJwQdE9bi+HzYyZVa6zXiA7WFQdcyNU2JuimAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaeggyqSwcK1uGxhNggghh/idAJJUn8mreQTQzVm6xs2+b93zBOgY4UtDMKhwMxs4w7yZdFssUhqujzCxdWEcYySkmVBbUq9OCgpKCJVUNKw4bhZ2jaFAn2HIr77JxEnVzTqF8Bw616Ud4QMWLOcmQvjAH2N2mPhL+PH8FMHufoG73n2rfl6fofL4AAAA=[0m[Pipeline] }
+[8mha:////4G4qUippdgmjV9hrFALOxFqyAdK5E7gEbIJ4zuL3wYNjAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICHRKiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BtQlufq+AAAA[0m[Pipeline] // withEnv
+[8mha:////4I31b/qN+32xTcijA32zaNdB/O788pvDGtqwNuJkS7C7AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIREg1CVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9APRJVd+9AAAA[0m[Pipeline] }
+[8mha:////4NcDKMYR9E/5qgzfrxA4UXqJZWQBgRKjHvYdigbsjLNQAAAAoh+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMJBUCIqWisNLzCJMU6su2BfSCpexNf4AxGRqNhqZ5p5vbFMEUeOTjWWWk+p8qoLvZueGji218CDaviiKqbEwarSDiXX9jRjyWIxL8ux0FhZqgInT06w1o15mCIYcsVZ4uQOGrmv73gi01NZTJQvjBGbW18npl/nbwBj1wny3VaQ7T+IzLXKvQAAAA==[0m[Pipeline] // node
+[8mha:////4PgfG7jL7HP4lFfERh+cs0MR8OiQsTYiK2zUW2GhdlDFAAAAoh+LCAAAAAAAAP9tjTESgjAQRT84FraWHiKMtI6VbYbGE0SIMZDZxWQRKk/k1byDjMxY+av/XvNeb6xTxJGjU62lzlOqverD4OanRo7dNfCoWr6omilxsKqyY8WNPS1YsVgsy3KsNDaW6sDJkxNsdWsepgiGXHGWOLuDRu6bO57I9FwWE+ULU8TuNjSJ6df5G8DU94K83Auy8gOu1dKAvQAAAA==[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

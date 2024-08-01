@@ -1,13 +1,27 @@
 
 pipeline {
-    // agent {label 'workers'}
-    agent {label 'worker-2'}
+    agent {label 'workers'}
+    // agent {label 'worker-2'}
     stages {
-        stage('Spellcheck') {
+        stage('Install and Exec aSpell') {
             steps {
                 sh '''
-                chmod +x scripts/spellcheck.sh
-                bash scripts/spellcheck.sh
+                chmod +x scripts/aspell_01_install.sh
+                bash scripts/aspell_01_install.sh
+                '''
+            }
+
+            step {
+                sh '''
+                chmod +x scripts/git_details_app.sh
+                bash scripts/git_details_app.sh
+                '''
+            }
+
+            steps {
+                sh '''
+                chmod +x scripts/aspell_02_exec.sh
+                bash ./scripts/aspell_02_exec.sh
                 '''
             }
         }

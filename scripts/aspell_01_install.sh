@@ -1,16 +1,13 @@
 #!/bin/bash
 
-# ----------------------------------------------------------------------------
-# This Scrips runs spell check for all python files in the Details-app project
+# ---------------------------------------------------------------------
+# This Scrips Install aspell base on Linux distributions
 # Autor: Ori Nahum
 # Collaborator : Avishay Layani
-# ----------------------------------------------------------------------------
+# https://www.freecodecamp.org/news/spell-check-on-your-linux-terminal/
+# ----------------------------------------------------------------------
 
-# Initial step to clone the Details App project into /tmp folder for the testing
-cd /tmp/
-git clone https://github.com/orinahum/Details_App.git
-
-# Checking if the OS is Debian, Rocky or Alpine and running installations accordingly
+# checking if the OS is Debian, Rocky or Alpine and running installations accordingly
 . /etc/os-release
 
 if [[ $ID = "debian" ]]; then
@@ -36,24 +33,4 @@ else
     echo -------------------------------------------------------
     exit 1
 fi
-
-# Doing the actual testing of every python file in the details app project
-# (aspell list < test) >> testing.txt
-
-echo "run script here"
-EXCLUDE_PATHS_FILES=("jenkins_data" "docker" ".git" "spellcheck_results.md" ".DS_Store" "spellchech.sh" "spelltest.sh" "." "..")
-echo 
-
-echo "" > 1.txt
-for i in $(ls -Ra);
-do
-    if  [[ $i =~ ${EXCLUDE_PATHS_FILES[@]} ]]
-    then
-        continue
-    else
-        echo $i >> 1.txt
-    fi  
-done
-
-# https://www.freecodecamp.org/news/spell-check-on-your-linux-terminal/
 

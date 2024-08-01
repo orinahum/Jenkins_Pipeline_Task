@@ -9,6 +9,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
+          <name>pipeline_04_build_id</name>
           <url>https://github.com/orinahum/Jenkins_Pipeline_Task.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>

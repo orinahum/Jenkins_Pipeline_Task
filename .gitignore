@@ -1,1 +1,8 @@
 jenkins_data/caches/git-*
+jenkins_data/workspace/pipeline_00_manager_id@script
+jenkins_data/workspace/pipeline_01_spellcheck@script
+jenkins_data/workspace/pipeline_02_code_shell_check@script
+jenkins_data/workspace/pipeline_03_tests@script
+jenkins_data/workspace/pipeline_04_build@script
+.git
+.DS_Store
