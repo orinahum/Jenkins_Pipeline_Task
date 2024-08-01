@@ -6,8 +6,9 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
-OUTPUT_FILE="$HOME/reports/spellcheck_results.md"
-echo $HOME
+pwd > $HOME_DIR
+echo $HOME_DIR
+OUTPUT_FILE="$HOME_DIR/reports/spellcheck_results.md"
 EXCLUDE_PATHS_FILES=("jenkins_data" "docker" ".git" "spellcheck_results.md" ".DS_Store" "spellchech.sh" "spelltest.sh")
 
 # initialize the output file
