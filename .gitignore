@@ -6,3 +6,4 @@ jenkins_data/workspace/pipeline_03_tests@script
 jenkins_data/workspace/pipeline_04_build@script
 .git
 .DS_Store
+spellcheck_results.md
