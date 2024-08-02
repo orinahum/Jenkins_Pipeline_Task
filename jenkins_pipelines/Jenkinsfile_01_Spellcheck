@@ -5,35 +5,35 @@ pipeline {
     stages {
         stage('Clone/Pull Git Details_App') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/00_git_details_app.sh
                 bash scripts/00_git_details_app.sh
-                '''
+                """
             }
         }
 
         stage('Install aSpell') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/01_install_aspell.sh
                 bash scripts/01_install_aspell.sh
-                '''
+                """
             }
         }
 
         stage('Exec aSpell') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/01_exec_aspell.sh
                 bash scripts/01_exec_aspell.sh /tmp/Details_App/
-                '''
+                """
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'reports/spellcheck_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: "reports/spellcheck_results.md", allowEmptyArchive: true
         }
     }
 }

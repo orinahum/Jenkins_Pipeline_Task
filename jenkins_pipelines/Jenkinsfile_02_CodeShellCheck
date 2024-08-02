@@ -4,54 +4,54 @@ pipeline {
         stages {
         stage('Clone/Pull Git Details_App') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/00_git_details_app.sh
                 bash scripts/00_git_details_app.sh
-                '''
+                """
             }
         }
 
         stage('Install Shellcheck') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/02_install_shellcheck.sh
                 bash scripts/02_install_shellcheck.sh
-                '''
+                """
             }
         }
 
         stage('Install Codespell') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/02_install_codespell.sh
                 bash scripts/02_install_codespell.sh
-                '''
+                """
             }
         }
 
         stage('Exec Shell Check') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/02_exec_shellcheck.sh
                 bash scripts/02_exec_shellcheck.sh '.' '/tmp/Details_App/'
-                '''
+                """
             }
         }
 
         stage('Exec Code Spell') {
             steps {
-                sh '''
+                sh """
                 chmod +x scripts/02_exec_codespell.sh
                 bash scripts/02_exec_codespell.sh '.' '/tmp/Details_App/'
-                '''
+                """
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'reports/shellcheck_results.md', allowEmptyArchive: true
-            archiveArtifacts artifacts: 'reports/codespell_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: "reports/shellcheck_results.md", allowEmptyArchive: true
+            archiveArtifacts artifacts: "reports/codespell_results.md", allowEmptyArchive: true
 
         }
     }
