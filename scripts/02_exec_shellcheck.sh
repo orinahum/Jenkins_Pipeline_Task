@@ -12,7 +12,7 @@ then
 fi
 
 OUTPUT_FILE="reports/shellcheck_results.md"
-PATHS_LOCATION=("./" "/tmp/Details_App")
+PATHS_LOCATION=("." "/tmp/Details_App/.")
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
@@ -22,10 +22,10 @@ echo "==================" >> $OUTPUT_FILE
 # loop through all directories and find .sh files
 for LOCATION in "${PATHS_LOCATION[@]}"
 do
-    echo $LOCATION
     if [[ $LOCATION != '' ]];
     then
         find $LOCATION -name "*.sh" -exec shellcheck {} + >> $OUTPUT_FILE
+        echo '-----------' >> $OUTPUT_FILE
     else
         echo "[-] Location was not provided"
     fi

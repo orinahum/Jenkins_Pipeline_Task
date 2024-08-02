@@ -12,7 +12,7 @@ then
 fi
 
 OUTPUT_FILE="reports/codespell_results.md"
-PATHS_LOCATION=("./" "/tmp/Details_App/.")
+PATHS_LOCATION=("." "/tmp/Details_App/.")
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
@@ -22,10 +22,10 @@ echo "==================" >> $OUTPUT_FILE
 # loop through all directories and find .sh files
 for LOCATION in "${PATHS_LOCATION[@]}"
 do
-echo $LOCATION
     if [[ $LOCATION != '' ]];
     then
         find $LOCATION -name "*.sh" -exec codespell {} + >> $OUTPUT_FILE
+        echo '-----------' >> $OUTPUT_FILE
     else
         echo "[-] Location was not provided"
     fi

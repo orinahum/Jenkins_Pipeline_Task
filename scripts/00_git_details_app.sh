@@ -43,14 +43,10 @@ fi
 # check if the directory /tmp/Details_APP/ is not exists and clone/pull repo
 if [[ ! -d "/tmp/Details_App/" ]];
 then
-    echo clone
     git clone https://github.com/orinahum/Details_App.git /tmp/Details_App
     echo "[+] Project Details App successfully cloned"
 else
-    echo pull
-    pwd
     cd /tmp/Details_App/
     git pull
     echo "[+] Project Details App successfully pull"
-    pwd
 fi
