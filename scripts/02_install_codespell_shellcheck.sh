@@ -18,16 +18,16 @@ then
 
     if [[ $ID = "debian" ]]; then
         sudo apt update -y
-        sudo apt install -y python3-pip shellcheck
+        sudo apt install -y shellcheck
         echo "[+] shellcheck installed on Debian"
 
     elif [[ $ID = "rocky" ]]; then
         sudo dnf update -y
-        sudo dnf -y install python3-pip epel-release shellcheck
+        sudo dnf -y install epel-release shellcheck
         echo "[+] shellcheck installed on Rocky"
 
     elif [[ $ID = "alpine" ]]; then 
-        sudo apk --no-cache --update add py3-pip shellcheck
+        sudo apk --no-cache --update add shellcheck
         echo "[+] shellcheck installed on Alpine"
 
     else
