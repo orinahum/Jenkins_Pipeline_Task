@@ -5,6 +5,7 @@ pipeline {
         stage('Clone/Pull Git Details_App') {
             steps {
                 sh """
+                pwd
                 chmod +x scripts/00_git_details_app.sh
                 bash scripts/00_git_details_app.sh
                 """
