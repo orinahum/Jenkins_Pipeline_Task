@@ -16,8 +16,8 @@ then
     . /etc/os-release
 
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
-        sudo apt update -y
-        sudo apt install -y codespell
+        sudo apt-get update -y
+        sudo apt-get install -y apt-utils codespell
         echo "[+] codespell installed on Debian"
 
     elif [[ $ID = "rocky" ]]; then
