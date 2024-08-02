@@ -46,6 +46,7 @@ then
     git clone https://github.com/orinahum/Details_App.git /tmp/Details_App
     echo "[+] Project Details App successfully cloned"
 else
+    echo pull
     git pull https://github.com/orinahum/Details_App.git /tmp/Details_App
     echo "[+] Project Details App successfully pull"
 fi
