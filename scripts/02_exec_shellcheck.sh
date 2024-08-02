@@ -6,7 +6,7 @@
 # Collaborator : Avishay Layani
 # -------------------------------------------------------------
 
-OUTPUT_FILE="reports/shellcheck_results.md"
+OUTPUT_FILE="/home/jenkins/workspace/pipeline_02_code_shell_check/reports/shellcheck_results.md"
 pwd
 PATHS_LOCATION=("$1" "$2")
 
