@@ -15,8 +15,8 @@ pipeline {
         stage('Install aSpell') {
             steps {
                 sh '''
-                chmod +x scripts/01_aspell_install.sh
-                bash scripts/01_aspell_install.sh
+                chmod +x scripts/01_install_aspell.sh
+                bash scripts/01_install_aspell.sh
                 '''
             }
         }
@@ -24,9 +24,9 @@ pipeline {
         stage('Exec aSpell') {
             steps {
                 sh '''
-                chmod +x scripts/01_aspell_exec.sh
+                chmod +x scripts/01_exec_aspell.sh
                 pwd
-                bash scripts/01_aspell_exec.sh /tmp/Details_App/
+                bash scripts/01_exec_aspell.sh /tmp/Details_App/
                 '''
             }
         }

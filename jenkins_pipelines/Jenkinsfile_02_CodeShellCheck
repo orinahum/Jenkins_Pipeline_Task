@@ -10,20 +10,29 @@ pipeline {
                 '''
             }
         }
-        stage('Install Codespell & Shellchack') {
+        stage('Install Codespell & Shellcheck') {
             steps {
                 sh '''
-                chmod +x scripts/02_codeshell_spellcheck_install.sh
-                bash scripts/02_codeshell_spellcheck_install.sh
+                chmod +x scripts/02_install_codespell_shellcheck.sh
+                bash scripts/02_install_codespell_shellcheck.sh
                 '''
             }
         }
 
-        stage('Exec Codespell & Shellchack') {
+        stage('Exec Shell Check') {
             steps {
                 sh '''
-                chmod +x scripts/02_codeshell_spellcheck_exec.sh
-                bash scripts/02_codeshell_spellcheck_exec.sh /tmp/Details_App/
+                chmod +x scripts/02_exec_shellcheck.sh
+                bash scripts/02_exec_shellcheck.sh './' '/tmp/Details_App/'
+                '''
+            }
+        }
+
+        stage('Exec Shell Check') {
+            steps {
+                sh '''
+                chmod +x scripts/02_exec_codeshell.sh
+                bash scripts/02_exec_codeshell.sh './' '/tmp/Details_App/'
                 '''
             }
         }
@@ -31,7 +40,9 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: './reports/code_shell_spell_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: './reports/shellcheck_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: './reports/codespell_results.md', allowEmptyArchive: true
+
         }
     }
 }

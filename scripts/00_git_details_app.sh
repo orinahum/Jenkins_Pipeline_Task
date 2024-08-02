@@ -9,7 +9,6 @@
 # ----------------------------------------------------------------------------------------------------------
 
 git --version
-
 # check if GIT is install
 if [[ $? != 0 ]];
 then
@@ -19,27 +18,22 @@ then
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
         sudo apt-get update -y
         sudo apt-get -y install git
-        echo --------------------------------
+
         echo "[+] GIT installed on Debian"
-        echo --------------------------------
 
     elif [[ $ID = "rocky" ]]; then
         sudo dnf update -y
         sudo dnf --enablerepo=crb -y install git
-        echo --------------------------------
+
         echo "[+] GIT installed on Rocky"
-        echo --------------------------------
 
     elif [[ $ID = "alpine" ]]; then 
         sudo apk --no-cache --update add git
-        echo --------------------------------
+
         echo "[+] GIT installed on Alpine"
-        echo --------------------------------
 
     else
-        echo -------------------------------------------------------
         printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID
-        echo -------------------------------------------------------
         exit 1
     fi
 else
