@@ -6,8 +6,11 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
-mkdir reports
-pwd
+if [[ ! -d "/tmp/Details_App/" ]];
+then
+    mkdir reports
+fi
+
 OUTPUT_FILE="reports/spellcheck_results.md"
 EXCLUDE_PATHS_FILES=(".git" ".DS_Store" ".jpi" ".key" ".enc" ".mp4" ".jpg" ".lock" ".jpi" ".css" "ico")
 

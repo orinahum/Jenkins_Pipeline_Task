@@ -6,8 +6,12 @@
 # Collaborator : Avishay Layani
 # -------------------------------------------------------------
 
-OUTPUT_FILE="./reports/shellcheck_results.md"
-pwd
+if [[ ! -d "/tmp/Details_App/" ]];
+then
+    mkdir reports
+fi
+
+OUTPUT_FILE="reports/shellcheck_results.md"
 PATHS_LOCATION=("$1" "$2")
 
 # initialize the output file
