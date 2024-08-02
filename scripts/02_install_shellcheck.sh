@@ -2,10 +2,9 @@
 
 # -----------------------------------------------------------------------------------------------------------------
 # This Scrips Install packages base on Linux distributions
-# Packages: python3-pip, codespell, shellcheck, epel-release
+# Packages: shellcheck, epel-release
 # Autor: Ori Nahum
 # Collaborator : Avishay Layani
-# https://linuxcommandlibrary.com/man/codespell
 # https://www.cyberciti.biz/programming/improve-your-bashsh-shell-script-with-shellcheck-lint-script-analysis-tool/
 # -----------------------------------------------------------------------------------------------------------------
 
@@ -16,7 +15,7 @@ then
     # checking if the OS is Debian, Rocky or Alpine and running installations accordingly
     . /etc/os-release
 
-    if [[ $ID = "debian" ]]; then
+    if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
         sudo apt update -y
         sudo apt install -y shellcheck
         echo "[+] shellcheck installed on Debian"
@@ -37,15 +36,3 @@ then
 else 
     echo "[+] shellcheck already installed"
 fi
-
-codespell --version > /dev/null
-#check if codespell is install
-if [[ $? != 0 ]];
-then
-    pip3 install codespell
-else
-    echo "[+] codespell already installed"
-fi
-
-
-

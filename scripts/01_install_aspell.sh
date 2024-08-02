@@ -2,10 +2,10 @@
 
 # ---------------------------------------------------------------------
 # This Scrips Install aspell base on Linux distributions
+# Packages: aspell
 # Autor: Ori Nahum
 # Collaborator : Avishay Layani
 # https://www.freecodecamp.org/news/spell-check-on-your-linux-terminal/
-# Packages: aspell
 # ----------------------------------------------------------------------
 
 aspell --version > /dev/null
@@ -15,7 +15,7 @@ then
     # checking if the OS is Debian, Rocky or Alpine and running installations accordingly
     . /etc/os-release
 
-    if [[ $ID = "debian" ]]; then
+    if [[ $ID = "debian" || $ID = "ubuntu" ]]; then
         sudo apt-get update -y
         sudo apt-get -y install aspell
 

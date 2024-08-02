@@ -10,11 +10,21 @@ pipeline {
                 '''
             }
         }
-        stage('Install Codespell & Shellcheck') {
+
+        stage('Install Shellcheck') {
             steps {
                 sh '''
-                chmod +x scripts/02_install_codespell_shellcheck.sh
-                bash scripts/02_install_codespell_shellcheck.sh
+                chmod +x scripts/02_install_shellcheck.sh
+                bash scripts/02_install_shellcheck.sh
+                '''
+            }
+        }
+
+        stage('Install Codespell') {
+            steps {
+                sh '''
+                chmod +x scripts/02_install_codespell.sh
+                bash scripts/02_install_codespell.sh
                 '''
             }
         }
