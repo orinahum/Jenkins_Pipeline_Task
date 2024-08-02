@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sh """
                 chmod +x scripts/02_exec_shellcheck.sh
-                bash scripts/02_exec_shellcheck.sh '.' '/tmp/Details_App/'
+                bash scripts/02_exec_shellcheck.sh
                 """
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             steps {
                 sh """
                 chmod +x scripts/02_exec_codespell.sh
-                bash scripts/02_exec_codespell.sh '.' '/tmp/Details_App/'
+                bash scripts/02_exec_codespell.sh
                 """
             }
         }

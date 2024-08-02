@@ -12,7 +12,7 @@ then
 fi
 
 OUTPUT_FILE="reports/shellcheck_results.md"
-PATHS_LOCATION=("$1" "$2")
+PATHS_LOCATION=("./" "/tmp/Details_App")
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
