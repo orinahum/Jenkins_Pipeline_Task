@@ -25,7 +25,6 @@ do
     if [[ $LOCATION != '' ]];
     then
         find $LOCATION -name "*.sh" -exec shellcheck {} + >> $OUTPUT_FILE
-        echo '-----------' >> $OUTPUT_FILE
     else
         echo "[-] Location was not provided"
     fi
