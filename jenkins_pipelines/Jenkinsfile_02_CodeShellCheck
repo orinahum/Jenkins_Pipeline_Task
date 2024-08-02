@@ -28,11 +28,11 @@ pipeline {
             }
         }
 
-        stage('Exec Shell Check') {
+        stage('Exec Code Spell') {
             steps {
                 sh '''
-                chmod +x scripts/02_exec_codeshell.sh
-                bash scripts/02_exec_codeshell.sh './' '/tmp/Details_App/'
+                chmod +x scripts/02_exec_codespell.sh
+                bash scripts/02_exec_codespell.sh './' '/tmp/Details_App/'
                 '''
             }
         }
