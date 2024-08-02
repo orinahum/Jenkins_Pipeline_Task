@@ -7,6 +7,7 @@
 # -------------------------------------------------------------
 
 OUTPUT_FILE="reports/codespell_results.md"
+pwd
 PATHS_LOCATION=("$1" "$2")
 
 # initialize the output file
