@@ -50,8 +50,8 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: './reports/shellcheck_results.md', allowEmptyArchive: true
-            archiveArtifacts artifacts: './reports/codespell_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/shellcheck_results.md', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'reports/codespell_results.md', allowEmptyArchive: true
 
         }
     }
