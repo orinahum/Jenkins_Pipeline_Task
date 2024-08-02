@@ -22,6 +22,7 @@ echo "==================" >> $OUTPUT_FILE
 # loop through all directories and find .sh files
 for LOCATION in "${PATHS_LOCATION[@]}"
 do
+    echo $LOCATION
     if [[ $LOCATION != '' ]];
     then
         find $LOCATION -name "*.sh" -exec shellcheck {} + >> $OUTPUT_FILE
