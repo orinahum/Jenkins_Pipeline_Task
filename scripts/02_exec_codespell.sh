@@ -12,7 +12,7 @@ PATHS_LOCATION=("$1" "$2")
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
-echo "Code Spell Results" >> $OUTPUT_FILE
+echo "CodeSpell Results" >> $OUTPUT_FILE
 echo "==================" >> $OUTPUT_FILE
 
 # loop through all directories and find .sh files

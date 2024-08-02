@@ -11,7 +11,7 @@ EXCLUDE_PATHS_FILES=(".git" ".DS_Store" ".jpi" ".key" ".enc" ".mp4" ".jpg" ".loc
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
-echo "Spellcheck Results" >> $OUTPUT_FILE
+echo "SpellCheck Results" >> $OUTPUT_FILE
 echo "==================" >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
