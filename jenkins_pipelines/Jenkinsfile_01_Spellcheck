@@ -3,7 +3,7 @@ pipeline {
     agent {label 'workers'}
     // agent {label 'worker-2'}
     stages {
-        tage('Clone/Pull Git Details_App') {
+        stage('Clone/Pull Git Details_App') {
             steps {
                 sh '''
                 chmod +x scripts/00_git_details_app.sh

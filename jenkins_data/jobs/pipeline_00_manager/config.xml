@@ -11,7 +11,16 @@
   </actions>
   <description>pipeline that uses Rest-API request to run separate pipelines on the Jenkins Workers</description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>1</daysToKeep>
+        <numToKeep>1</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3908.vd6b_b_5a_a_54010">
     <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.2">
       <configVersion>2</configVersion>
