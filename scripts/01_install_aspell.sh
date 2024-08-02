@@ -8,7 +8,7 @@
 # Packages: aspell
 # ----------------------------------------------------------------------
 
-aspell --version
+aspell --version > /dev/null
 # check if aspell is install
 if [[ $? != 0 ]];
 then
