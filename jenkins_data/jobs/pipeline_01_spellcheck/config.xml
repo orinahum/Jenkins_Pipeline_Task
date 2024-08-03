@@ -27,7 +27,7 @@
         <hudson.model.StringParameterDefinition>
           <name>APP_DIR</name>
           <description>The path Directory for project Details_app</description>
-          <defaultValue>/tmp/details_app/</defaultValue>
+          <defaultValue>/tmp/Details_App/</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
