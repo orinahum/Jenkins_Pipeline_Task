@@ -34,7 +34,7 @@
         <hudson.model.StringParameterDefinition>
           <name>OUTPUT_FILE</name>
           <description>The report location fot spellcheck</description>
-          <defaultValue>$HOME/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md</defaultValue>
+          <defaultValue>/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
