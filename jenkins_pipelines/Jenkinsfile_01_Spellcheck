@@ -6,8 +6,8 @@ pipeline {
             defaultValue: '/tmp/details_app/',
             description: 'The path Directory for project Details_app'
         )
-        string(name: 'OUTPUT_FILE',
-            defaultValue: '/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md',
+        string(name: 'REPORT_DIR',
+            defaultValue: '/home/jenkins/workspace/pipeline_01_spellcheck/reports/',
             description: 'The report location fot spellcheck'
         )
         
@@ -36,7 +36,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: params.OUTPUT_FILE, allowEmptyArchive: true
+            archiveArtifacts artifacts: params.OUTPUT_FILE + "01_spellcheck_results.md", allowEmptyArchive: true
         }
     }
 }
