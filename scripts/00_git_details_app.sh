@@ -41,12 +41,11 @@ else
 fi
     
 # check if the directory /tmp/Details_APP/ is not exists and clone/pull repo
-if [[ ! -d "/tmp/Details_App/" ]];
+if [[ ! -d $APP_DIR ]];
 then
-    git clone https://github.com/orinahum/Details_App.git /tmp/Details_App
+    git clone https://github.com/orinahum/Details_App.git -C $APP_DIR
     echo "[+] Project Details App successfully cloned"
 else
-    cd /tmp/Details_App/
-    git pull
+    git pull -C $APP_DIR
     echo "[+] Project Details App successfully pull"
 fi
