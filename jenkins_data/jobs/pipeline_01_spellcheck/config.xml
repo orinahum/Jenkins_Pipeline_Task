@@ -34,7 +34,7 @@
         <hudson.model.StringParameterDefinition>
           <name>OUTPUT_FILE</name>
           <description>The report location fot spellcheck</description>
-          <defaultValue>/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md</defaultValue>
+          <defaultValue>$HOME/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
@@ -45,7 +45,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <name>pipeline_01_spellcheck_id</name>
+          <name>pipeline_01_code_spellcheck_id</name>
           <url>https://github.com/orinahum/Jenkins_Pipeline_Task.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
