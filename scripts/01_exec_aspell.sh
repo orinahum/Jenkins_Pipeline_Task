@@ -6,7 +6,7 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
-# OUTPUT_FILE="reports/spellcheck_results.md"
+OUTPUT_FILE="/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md"
 
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
