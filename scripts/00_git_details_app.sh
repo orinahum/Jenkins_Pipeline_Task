@@ -46,6 +46,6 @@ then
     git clone https://github.com/orinahum/Details_App.git $APP_DIR
     echo "[+] Project Details App successfully cloned"
 else
-    git pull --separate-git-dir $APP_DIR
+    git -C $APP_DIR pull
     echo "[+] Project Details App successfully pull"
 fi
