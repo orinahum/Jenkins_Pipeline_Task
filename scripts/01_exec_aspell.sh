@@ -25,7 +25,7 @@ echo "" >> $OUTPUT_FILE
 find $1 -type f | while read -r FILE
 do
     EXCLUDE=false
-    for EXCLUDE_EXT in "${EXCLUDE_EXTENTIONS[@]}"
+    for EXCLUDE_EXT in "${EXCLUDE_PATHS_FILES[@]}"
     do
         if [[ "$FILE" == *"$EXCLUDE_EXT"* ]]; then
             EXCLUDE=true
