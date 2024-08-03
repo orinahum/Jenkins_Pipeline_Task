@@ -3,7 +3,7 @@ pipeline {
     agent {label 'workers'}
     parameters {
         string(name: 'APP_DIR', 
-            defaultValue: '/tmp/details_app/',
+            defaultValue: '/tmp/Details_App/',
             description: 'The path Directory for project Details_app'
         )
     }
