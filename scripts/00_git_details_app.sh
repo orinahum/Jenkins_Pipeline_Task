@@ -43,9 +43,9 @@ fi
 # check if the directory /tmp/Details_APP/ is not exists and clone/pull repo
 if [[ ! -d $APP_DIR ]];
 then
-    git clone https://github.com/orinahum/Details_App.git -C $APP_DIR
+    git clone https://github.com/orinahum/Details_App.git --separate-git-dir $APP_DIR
     echo "[+] Project Details App successfully cloned"
 else
-    git pull -C $APP_DIR
+    git pull --separate-git-dir $APP_DIR
     echo "[+] Project Details App successfully pull"
 fi
