@@ -7,9 +7,6 @@ pipeline {
             description: 'The path Directory for project Details_app')
         string(name: 'OUTPUT_FILE'
             defaultValue: '/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md')
-        string(name: 'EXCLUSION_EXTENTIONS',
-            defaultValue:'".git" ".DS_Store" ".jpi" ".key" ".enc" ".mp4" ".jpg" ".lock" ".jpi" ".css" ".ico" ".toml" "Dockerfile* ".yml" ".yaml" ".dockerignore"',
-            description:'The list of file extetions that will process through aspell check')
     }
 
     stages {
