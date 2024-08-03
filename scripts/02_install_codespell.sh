@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------------------------------------------
-# This Scrips Install packages base on Linux distributions
+# This Script Install packages base on Linux distributions
 # Packages: python3-pip, py3-pip codespell
-# Autor: Ori Nahum
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # https://linuxcommandlibrary.com/man/codespell
+# https://rhel.pkgs.org/9/epel-x86_64/codespell-2.2.1-1.el9.noarch.rpm.html
 # -----------------------------------------------------------------------------------------------------------------
 
 codespell --version > /dev/null
@@ -32,7 +33,7 @@ then
         echo "[+] codespell installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID
+        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
         exit 1
     fi
 else

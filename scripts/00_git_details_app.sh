@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # ----------------------------------------------------------------------------------------------------------
-# This Scrips check if git is installed and clone/pull the Detailes_App repo from github to /tmp/Details_App
+# This Script check if git is installed and clone/pull the Detailes_App repo from github to /tmp/Details_App
 #   and if git is not installed it's check the OS and install it accordingly.
-# Autor: Ori Nahum
+# Author: Ori Nahum
 # Collaborator: Avishay Layani
 # Packages: GIT
 # ----------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ then
         echo "[+] GIT installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID
+        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
         exit 1
     fi
 else

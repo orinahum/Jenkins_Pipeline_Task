@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------------------------------------------
-# This Scrips Install packages base on Linux distributions
+# This Script Install packages base on Linux distributions
 # Packages: shellcheck, epel-release
-# Autor: Ori Nahum
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # https://www.cyberciti.biz/programming/improve-your-bashsh-shell-script-with-shellcheck-lint-script-analysis-tool/
 # -----------------------------------------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ then
         echo "[+] shellcheck installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID
+        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
         exit 1
     fi
 else 

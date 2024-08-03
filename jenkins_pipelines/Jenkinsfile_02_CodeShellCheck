@@ -1,6 +1,10 @@
 
 pipeline {
     agent {label 'workers'}
+    parameters{
+        String(name: 'APP_DIR', defaultValue: '/tmp/details_app', description: 'The Directory of Details_App project will be cloned into')
+        String(name: 'SCRIPTS_EXT', defaultValue:'*.sh *.py', description:'The list of keywords that will not go through spell chek')
+    }
         stages {
         stage('Clone/Pull Git Details_App') {
             steps {

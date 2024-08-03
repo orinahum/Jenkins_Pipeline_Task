@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # -------------------------------------------------------------
-# This Scrips find all .sh scripts and runs shellcheck on them
-# Autor: Ori Nahum
+# This Script find all .sh scripts and runs shellcheck on them
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # -------------------------------------------------------------
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # ---------------------------------------------------------------------
-# This Scrips Install aspell base on Linux distributions
+# This Script Install aspell base on Linux distributions
 # Packages: aspell
-# Autor: Ori Nahum
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # https://www.freecodecamp.org/news/spell-check-on-your-linux-terminal/
 # ----------------------------------------------------------------------
@@ -33,7 +33,7 @@ then
         echo "[+] aspell installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID
+        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
         exit 1
     fi
 else

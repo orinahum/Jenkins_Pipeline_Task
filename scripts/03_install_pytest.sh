@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------------------------------------------
-# This Scrips Install packages base on Linux distributions
+# This Script Install packages base on Linux distributions
 # Packages: pytest, python3-pip, python3-pytest
-# Autor: Ori Nahum
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # https://pkgs.org/download/pytest
 # https://pkgs.org/search/?q=pytest
@@ -33,7 +33,7 @@ then
         echo "[+] pytest installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is ment for Debian, Rocky or Alpine systems ONLY\n" $ID
+        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
         exit 1
     fi
 else

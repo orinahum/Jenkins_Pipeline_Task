@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # ----------------------------------------------------------------------
-# This Scrips runs spell check for all files in the Details-app project
-# Autor: Ori Nahum
+# This Script runs spell check for all files in the Details-app project
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
+pwd
 if [[ ! -d "/tmp/Details_App/" ]];
 then
     mkdir reports
@@ -24,9 +25,9 @@ echo "" >> $OUTPUT_FILE
 find $1 -type f | while read -r FILE
 do
     EXCLUDE=false
-    for EXCLUDE_PATH in "${EXCLUDE_PATHS_FILES[@]}"
+    for EXCLUDE_EXT in "${EXCLUDE_EXTENTIONS[@]}"
     do
-        if [[ "$FILE" == *"$EXCLUDE_PATH"* ]]; then
+        if [[ "$FILE" == *"$EXCLUDE_EXT"* ]]; then
             EXCLUDE=true
             break
         fi

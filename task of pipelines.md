@@ -27,5 +27,3 @@ Create a pipeline that uses RestAPI request to run seperate pipelines on the Jen
 ### Warning
 
 You are graded for this task
-
-

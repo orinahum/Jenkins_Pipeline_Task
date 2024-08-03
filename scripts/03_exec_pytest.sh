@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # ---------------------------------------------------------------------
-# This Scrips find all .py files in Details_App and runs pytest on them
-# Autor: Ori Nahum
+# This Script find all .py files in Details_App and runs pytest on them
+# Author: Ori Nahum
 # Collaborator : Avishay Layani
 # ---------------------------------------------------------------------
 
