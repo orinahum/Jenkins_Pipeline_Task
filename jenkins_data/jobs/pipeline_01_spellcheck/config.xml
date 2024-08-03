@@ -7,7 +7,7 @@
       <triggers/>
       <parameters>
         <string>APP_DIR</string>
-        <string>OUTPUT_FILE</string>
+        <string>REPORT_DIR</string>
       </parameters>
       <options/>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
@@ -32,9 +32,9 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>OUTPUT_FILE</name>
+          <name>REPORT_DIR</name>
           <description>The report location fot spellcheck</description>
-          <defaultValue>/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md</defaultValue>
+          <defaultValue>/home/jenkins/workspace/pipeline_01_spellcheck/reports/</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
