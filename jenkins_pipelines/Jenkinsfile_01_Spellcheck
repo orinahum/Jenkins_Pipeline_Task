@@ -6,7 +6,7 @@ pipeline {
             defaultValue: '/tmp/details_app/',
             description: 'The path Directory for project Details_app')
         string(name: 'OUTPUT_FILE',
-            defaultValue: '/home/jenkins/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md',
+            defaultValue: '$HOME/workspace/pipeline_01_spellcheck/reports/spellcheck_results.md',
             description: 'The report location fot spellcheck')
         
     }

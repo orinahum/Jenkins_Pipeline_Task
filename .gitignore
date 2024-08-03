@@ -7,5 +7,4 @@ jenkins_data/workspace/pipeline_04_build@script
 jenkins_data/jobs/pipeline_*/builds/*
 .git
 .DS_Store
-reports/*.md
 remove_d.sh
