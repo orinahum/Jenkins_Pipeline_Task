@@ -4,7 +4,7 @@ pipeline {
     // agent {label 'worker-2'}
     parameters{
         string(name: 'APP_DIR', defaultValue: "/tmp/details_app", description: "The Directory of the project Details_App")
-        string(name: 'EXCLUDE_EXTENTIONS', defaultValue:".git .DS_Store .jpi .key .enc .mp4 .jpg .lock .jpi .css ico', description:'List of file extention of the spell checks")
+        string(name: 'EXCLUDE_EXTENTIONS', defaultValue:".git" ".DS_Store" ".jpi" ".key" ".enc" ".mp4" ".jpg" ".lock" ".jpi" ".css" "ico", description:'List of file extention of the spell checks")
     }
     stages {
         stage('Clone/Pull Git Details_App') {
