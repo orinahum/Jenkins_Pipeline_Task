@@ -36,7 +36,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: param.OUTPUT_FILE, allowEmptyArchive: true
+            archiveArtifacts artifacts: params.OUTPUT_FILE, allowEmptyArchive: true
         }
     }
 }
