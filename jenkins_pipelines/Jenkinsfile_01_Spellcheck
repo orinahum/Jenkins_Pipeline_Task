@@ -1,7 +1,6 @@
 
 pipeline {
     agent {label 'workers'}
-    // agent {label 'worker-2'}
     stages {
         stage('Clone/Pull Git Details_App') {
             steps {

@@ -4,28 +4,7 @@
   <approvedSignatures/>
   <aclApprovedSignatures/>
   <approvedClasspathEntries/>
-  <pendingScripts>
-    <pendingScript>
-      <context>
-        <user>admin</user>
-        <item>pipeline</item>
-        <key>pipeline</key>
-      </context>
-      <script>pipeline {
-    agent {label &apos;workers&apos;}
-
-    stages {
-        stage(&apos;Hello&apos;) {
-            steps {
-                echo &apos;Hello World&apos;
-            }
-        }
-    }
-}
-</script>
-      <language>groovy</language>
-    </pendingScript>
-  </pendingScripts>
+  <pendingScripts/>
   <pendingSignatures/>
   <pendingClasspathEntries/>
 </scriptApproval>

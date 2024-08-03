@@ -31,15 +31,10 @@
           <defaultValue>/tmp/details_app</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>EXCLUDE_EXTENTIONS</name>
-          <defaultValue>.git .DS_Store .jpi .key .enc .mp4 .jpg .lock .jpi .css ico&apos;, description:&apos;List of file extention of the spell checks</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3908.vd6b_b_5a_a_54010">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@3922.va_f73b_7c4246b_">
     <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.2">
       <configVersion>2</configVersion>
       <userRemoteConfigs>

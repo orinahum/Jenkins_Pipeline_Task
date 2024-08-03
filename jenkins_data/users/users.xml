@@ -3,6 +3,10 @@
   <version>1</version>
   <idToDirectoryNameMap class="concurrent-hash-map">
     <entry>
+      <string>ori</string>
+      <string>ori_9641393577447606181</string>
+    </entry>
+    <entry>
       <string>admin</string>
       <string>admin_2775822988393947179</string>
     </entry>
