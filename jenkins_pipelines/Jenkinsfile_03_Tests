@@ -23,24 +23,18 @@ pipeline {
             }
         }
 
-        // stage('Install pytest-html') {
-        //     steps {
-        //         sh "chmod +x scripts/03_install_pytest_html.sh"
-        //         sh "bash scripts/03_install_pytest_html.sh"
-        //     }
-        // }
-
         stage('Exec pytest') {
             steps {
-                sh "pwd"
                 sh "chmod +x scripts/03_exec_poetry.sh"
                 sh "bash scripts/03_exec_poetry.sh"
+                sh "sed -i 's/assets\/style.css/style.css/g' reports/03_pytest_results.html"
             }
         }
     }
     post {
         always {
-            archiveArtifacts artifacts: 'reports/**', followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "reports/03_pytest_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'reports/03_pytest_results.html, reports/assets/style.css', followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
