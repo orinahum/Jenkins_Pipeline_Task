@@ -2,7 +2,7 @@
 
 # -----------------------------------------------------------------------------------------------------------------
 # This Script Install packages base on Linux distributions
-# Packages: python3-pip, py3-pip, poetry
+# Packages: python3, python3-pip, py3-pip, poetry
 # Author: Ori Nahum
 # Collaborator : Avishay Layani
 
@@ -16,17 +16,19 @@ then
     . /etc/os-release
 
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
+        sudo apt-get update
+        sudo apt-get install python3.12
         pip install poetry
         echo "[+] poetry installed on Debian"
 
     elif [[ $ID = "rocky" ]]; then
         sudo dnf update -y
-        sudo dnf install -y python3-pip
+        sudo dnf install -y python3.12 python3-pip
         pip install poetry
         echo "[+] poetry installed on Rocky"
 
     elif [[ $ID = "alpine" ]]; then 
-        sudo apk --no-cache --update add py3-pip
+        sudo apk --no-cache --update add python3.12 py3-pipp
         pip install poetry
         echo "[+] poetry installed on Alpine"
 
