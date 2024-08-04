@@ -17,7 +17,12 @@ echo "" >> $OUTPUT_FILE
 
 poetry init --no-interaction --directory=$APP_DIR
 poetry lock [--no-update]
-poetry add pytest-html pytest-md
+poetry add pytest-html
+echo -----------------------------
+poetry add pytest-md
+echo -----------------------------
+pip install python3-pytest-md
+echo -----------------------------
 poetry -C $APP_DIR install
 export TEST_DB=True
 cd $APP_DIR
