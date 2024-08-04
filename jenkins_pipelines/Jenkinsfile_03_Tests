@@ -23,12 +23,12 @@ pipeline {
             }
         }
 
-        stage('Install pytest-html') {
-            steps {
-                sh "chmod +x scripts/03_install_pytest_html.sh"
-                sh "bash scripts/03_install_pytest_html.sh"
-            }
-        }
+        // stage('Install pytest-html') {
+        //     steps {
+        //         sh "chmod +x scripts/03_install_pytest_html.sh"
+        //         sh "bash scripts/03_install_pytest_html.sh"
+        //     }
+        // }
 
         stage('Exec pytest') {
             steps {
