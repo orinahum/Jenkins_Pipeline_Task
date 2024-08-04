@@ -18,6 +18,6 @@ echo "" >> $OUTPUT_FILE
 poetry shell --directory=$APP_DIR
 poetry -C $APP_DIR install
 export TEST_DB=True
-pytest $APP_DIR > $OUTPUT_FILE + //
-pytest $APP_DIR --html=$OUTPUT_HTML_FILE + //
+pytest $APP_DIR/ > $OUTPUT_FILE
+pytest $APP_DIR/ --html=$OUTPUT_HTML_FILE
 exit
