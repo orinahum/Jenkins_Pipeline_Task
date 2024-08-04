@@ -16,7 +16,7 @@ then
     . /etc/os-release
 
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
-        sudo pip install poetry
+        pip install poetry
         echo "[+] poetry installed on Debian"
 
     elif [[ $ID = "rocky" ]]; then

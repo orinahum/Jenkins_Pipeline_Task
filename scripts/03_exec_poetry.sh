@@ -13,7 +13,7 @@ OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_re
 echo "==================" > $OUTPUT_FILE
 echo "SpellCheck Results" >> $OUTPUT_FILE
 echo "==================" >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FIL
+echo "" >> $OUTPUT_FILE
 
 poetry shell --directory=$APP_DIR
 poetry -C ../Details_App install
