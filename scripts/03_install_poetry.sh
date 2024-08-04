@@ -37,11 +37,6 @@
         exit 1
     fi
 
-    curl -O https://files.pythonhosted.org/packages/source/p/pytest-html/pytest-html-3.2.0.tar.gz /tmp/
-    tar -xzf /tmp/pytest-html-3.2.0.tar.gz
-    pip install . /tmp/pytest-html-3.2.0
-    pip install pytest-html
-
 # else
 #     echo "[+] poetry already installed"
 # fi

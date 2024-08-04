@@ -15,7 +15,7 @@ echo "SpellCheck Results" >> $OUTPUT_FILE
 echo "==================" >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
-poetry shell --directory=$APP_DIR
+poetry init --no-interaction --directory=$APP_DIR
 poetry -C $APP_DIR install
 export TEST_DB=True
 pytest $APP_DIR --html=$OUTPUT_HTML_FILE > $OUTPUT_FILE

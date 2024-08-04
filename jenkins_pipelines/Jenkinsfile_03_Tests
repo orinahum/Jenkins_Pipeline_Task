@@ -25,8 +25,8 @@ pipeline {
 
         stage('Install pytest-html') {
             steps {
-                sh "chmod +x scripts/03_install_pytest-html.sh"
-                sh "bash scripts/03_install_pytest-html.sh"
+                sh "chmod +x scripts/03_install_pytest_html.sh"
+                sh "bash scripts/03_install_pytest_html.sh"
             }
         }
 
