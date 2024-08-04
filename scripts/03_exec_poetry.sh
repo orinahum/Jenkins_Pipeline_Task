@@ -6,8 +6,8 @@
 # Collaborator : Avishay Layani
 # --------------------------------------------------------------------------------------------
 
-OUTPUT_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_results.md"
-OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_results.html"
+OUTPUT_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/03_pytest_results.md"
+OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/03_pytest_results.html"
 HOME_DIR=$(pwd)
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
@@ -22,6 +22,6 @@ poetry -C $APP_DIR install
 export TEST_DB=True
 cd $APP_DIR
 poetry run pytest --html=$OUTPUT_HTML_FILE --self-contained-html 
-poetry run pytest --md=$OUTPUT_FILE
+poetry run pytest > $OUTPUT_FILE
 cd $HOME_DIR
 exit
