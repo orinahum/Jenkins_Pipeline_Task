@@ -8,3 +8,4 @@ jenkins_data/jobs/pipeline_*/builds/*
 .git
 .DS_Store
 remove_d.sh
+.pytest_cache

@@ -1,11 +1,40 @@
 
 pipeline {
     agent {label 'workers'}
+    parameters {
+        string(name: 'APP_DIR', 
+            defaultValue: '/tmp/Details_App/',
+            description: 'The path Directory for project Details_app'
+        )
+    }
+
     stages {
-        stage('Spellcheck') {
+        stage('Clone/Pull Git Details_App') {
             steps {
-                sh 'curl -u admin:admin "http://localhost/job/pipeline_manager/build?token=spellcheck"'
+                sh "chmod +x scripts/00_git_details_app.sh"
+                sh "bash scripts/00_git_details_app.sh"
             }
+        }
+
+        stage('Install pytest') {
+            steps {
+                sh "chmod +x scripts/03_install_poetry.sh"
+                sh "bash scripts/03_install_poetry.sh"
+            }
+        }
+
+        stage('Exec pytest') {
+            steps {
+                sh "chmod +x scripts/03_exec_poetry.sh"
+                sh "bash scripts/03_exec_poetry.sh"
+            }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: "reports/03_pytest_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "reports/03_pytest_results.html", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "reports/assets", followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
