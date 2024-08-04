@@ -8,7 +8,7 @@
 
 OUTPUT_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_results.md"
 OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_results.html"
-HOME_DIR=$pwd
+HOME_DIR=$(pwd)
 echo ----------------------------------------------------------------
 echo $HOME_DIR
 
