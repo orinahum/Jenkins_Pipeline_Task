@@ -41,7 +41,6 @@ pipeline {
         always {
             archiveArtifacts artifacts: "reports/03_pytest_results.md", followSymlinks: false, onlyIfSuccessful: true
             archiveArtifacts artifacts: "reports/03_pytest_results.html", followSymlinks: false, onlyIfSuccessful: true
-            archiveArtifacts artifacts: "reports/assets", followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
