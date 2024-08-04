@@ -19,5 +19,7 @@ poetry init --no-interaction --directory=$APP_DIR
 poetry lock [--no-update]
 poetry -C $APP_DIR install
 export TEST_DB=True
+echo 1
 pytest "$APP_DIR --html=$OUTPUT_HTML_FILE" > $OUTPUT_FILE
+echo 2
 exit
