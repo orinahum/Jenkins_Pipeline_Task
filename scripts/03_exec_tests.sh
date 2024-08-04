@@ -9,6 +9,7 @@
 OUTPUT_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/03_pytest_results.md"
 OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/03_pytest_results.html"
 HOME_DIR=$(pwd)
+
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
 echo "SpellCheck Results" >> $OUTPUT_FILE
@@ -24,4 +25,5 @@ cd $APP_DIR
 poetry run pytest --html=$OUTPUT_HTML_FILE #--self-contained-html 
 poetry run pytest > $OUTPUT_FILE
 cd $HOME_DIR
+sed -i '3s/.*/<link rel="stylesheet" href="styles.css">/' $OUTPUT_HTML_FILE
 exit
