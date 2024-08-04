@@ -1,6 +1,6 @@
 
 pipeline {
-    agent {label 'worker1'}
+    agent {label 'worker-1'}
     parameters {
         string(name: 'APP_DIR', 
             defaultValue: '/tmp/Details_App/',
