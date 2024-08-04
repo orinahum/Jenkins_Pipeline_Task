@@ -18,16 +18,16 @@ then
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
         sudo apt update
         sudo upgrade
-        sudo apt install -y python3-poetry python3-pytest
+        sudo apt install -y python3-poetry python3-pytest python3-dev python3-pytest-html
         echo "[+] poetry installed on Debian"
 
     elif [[ $ID = "rocky" ]]; then
         sudo dnf update -y
-        sudo dnf install -y python3-poetry python3-pytest
+        sudo dnf install -y python3-poetry python3-pytest python3-dev python3-pytest-html
         echo "[+] poetry installed on Rocky"
 
     elif [[ $ID = "alpine" ]]; then 
-        sudo apk --no-cache --update add py3-poetry py3-pytest
+        sudo apk --no-cache --update add py3-poetry py3-pytest py3-dev py3-pytest-html
         echo "[+] poetry installed on Alpine"
 
     else
