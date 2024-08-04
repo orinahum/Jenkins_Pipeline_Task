@@ -8,10 +8,11 @@
 
 # -----------------------------------------------------------------------------------------------------------------
 
-poetry --version > /dev/null
-#check if poetry is install
-if [[ $? != 0 ]];
-then
+# poetry --version > /dev/null
+
+# #check if poetry is install
+# if [[ $? != 0 ]];
+# then
      # checking if the OS is Debian, Rocky or Alpine and running installations accordingly
     . /etc/os-release
 
@@ -34,6 +35,6 @@ then
         printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
         exit 1
     fi
-else
-    echo "[+] poetry already installed"
-fi
+# else
+#     echo "[+] poetry already installed"
+# fi
