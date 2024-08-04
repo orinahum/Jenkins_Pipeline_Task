@@ -9,7 +9,6 @@
 OUTPUT_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_results.md"
 OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/04_pytest_results.html"
 HOME_DIR=$(pwd)
-echo $HOME_DIR
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
 echo "SpellCheck Results" >> $OUTPUT_FILE
@@ -23,8 +22,7 @@ poetry -C $APP_DIR install
 export TEST_DB=True
 cd $APP_DIR
 poetry run pytest --html=$OUTPUT_HTML_FILE --self-contained-html
-echo $(pwd)
+echo $(ls -la)
 poetry run pytest >> $OUTPUT_FILE
-echo $(pwd)
 cd $HOME_DIR
 exit
