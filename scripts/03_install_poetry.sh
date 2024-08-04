@@ -16,8 +16,9 @@ then
     . /etc/os-release
 
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
-        sudo apt-get update
-        sudo apt-get install python3.12
+        sudo apt update
+        sudo upgrade
+        sudo apt install python3.12
         pip install poetry
         echo "[+] poetry installed on Debian"
 
