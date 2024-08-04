@@ -24,7 +24,7 @@ export TEST_DB=True
 cd $APP_DIR
 poetry run pytest --html=$OUTPUT_HTML_FILE --self-contained-html
 echo $(pwd)
-poetry run pytest > $OUTPUT_FILE
+poetry run pytest >> $OUTPUT_FILE
 echo $(pwd)
 cd $HOME_DIR
 exit
