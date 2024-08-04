@@ -20,10 +20,9 @@ echo "" >> $OUTPUT_FILE
 
 poetry init --no-interaction --directory=$APP_DIR
 poetry lock [--no-update]
-cd $APP_DIR
+poetry add pytest-html
 poetry -C $APP_DIR install
 export TEST_DB=True
-echo 1
-pytest $APP_DIR --html=$OUTPUT_HTML_FILE > $OUTPUT_FILE
-echo 2
+poetry run pytest $APP_DIR --html=$OUTPUT_HTML_FILE --self-contained-html
+pytest $APP_DIR > $OUTPUT_FILE
 exit

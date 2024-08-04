@@ -14,3 +14,4 @@ pytest ../Details_App --log-file=/Users/ori/Documents/Git_Repositories/Jenkins_P
 
 poetry shell
 poetry install
+poetry run pytest --html=report.html --self-contained-htmlc
