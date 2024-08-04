@@ -12,6 +12,11 @@ pytest ../Details_App --log-file=/Users/ori/Documents/Git_Repositories/Jenkins_P
     alias pushgit='echo "Enter Commit Note"; read p;git add .;git commit -m "$p";git push origin main'
 
 
-poetry shell
-poetry install
-poetry run pytest --html=report.html --self-contained-htmlc
+poetry init --no-interaction --directory=$APP_DIR
+poetry lock [--no-update]
+poetry add pytest-html
+poetry -C $APP_DIR install
+export TEST_DB=True
+cd $APP_DIR
+poetry run pytest --html=$OUTPUT_HTML_FILE #--self-contained-html
+poetry run pytest > $OUTPUT_FILE

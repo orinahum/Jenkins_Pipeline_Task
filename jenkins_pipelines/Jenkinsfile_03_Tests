@@ -32,8 +32,9 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: "reports/03_pytest_results.md", followSymlinks: false, onlyIfSuccessful: true
-            archiveArtifacts artifacts: 'reports/03_pytest_results.html, reports/assets/style.css', followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'reports/03_pytest_results.md', followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'reports/03_pytest_results.html', followSymlinks: false, onlyIfSuccessful: true
+            // archiveArtifacts artifacts: 'reports/03_pytest_results.html, reports/assets/style.css', followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
