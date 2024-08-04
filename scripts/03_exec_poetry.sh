@@ -21,7 +21,7 @@ poetry add pytest-html
 poetry -C $APP_DIR install
 export TEST_DB=True
 cd $APP_DIR
-poetry run pytest --html=$OUTPUT_HTML_FILE --self-contained-html 
+poetry run pytest --html=$OUTPUT_HTML_FILE #--self-contained-html 
 poetry run pytest > $OUTPUT_FILE
 cd $HOME_DIR
 exit
