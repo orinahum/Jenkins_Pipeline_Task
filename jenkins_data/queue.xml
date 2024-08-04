@@ -1,36 +1,10 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson.model.Queue_-State>
-  <items>
-    <hudson.model.Queue_-BuildableItem>
-      <actions/>
-      <id>251</id>
-      <task class="org.jenkinsci.plugins.workflow.support.steps.ExecutorStepExecution$PlaceholderTask" plugin="workflow-durable-task-step@1364.v2fd76fb_6fd41">
-        <context class="org.jenkinsci.plugins.workflow.cps.CpsStepContext" plugin="workflow-cps@3922.va_f73b_7c4246b_">
-          <executionRef class="org.jenkinsci.plugins.workflow.job.WorkflowRun$Owner" plugin="workflow-job@1400.v7fd111b_ec82f">
-            <job>pipeline_03_tests</job>
-            <id>7</id>
-          </executionRef>
-          <id>3</id>
-          <bodyHeads/>
-          <body class="org.jenkinsci.plugins.workflow.cps.StaticBodyReference" resolves-to="org.jenkinsci.plugins.workflow.cps.HandleBodyReference">
-            <id>1</id>
-          </body>
-          <threadId>0</threadId>
-          <stepDescriptorId>org.jenkinsci.plugins.workflow.support.steps.ExecutorStep</stepDescriptorId>
-        </context>
-        <label>worker1</label>
-        <labelIsSelfLabel>false</labelIsSelfLabel>
-        <runId>pipeline_03_tests#7</runId>
-      </task>
-      <inQueueSince>1722747613588</inQueueSince>
-      <buildableStartMilliseconds>1722747613652</buildableStartMilliseconds>
-      <isPending>false</isPending>
-    </hudson.model.Queue_-BuildableItem>
-  </items>
+  <items/>
   <properties>
     <entry>
       <string>jenkins.model.queue.QueueIdStrategy$DefaultStrategy</string>
-      <long>251</long>
+      <long>253</long>
     </entry>
   </properties>
 </hudson.model.Queue_-State>
