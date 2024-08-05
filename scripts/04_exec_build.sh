@@ -2,7 +2,7 @@
 
 # Set variables
 
-TAG=${$APP_VER}
+TAG=$APP_VER
 
 # Navigate to the project directory
 cd "$APP_DIR" || { echo "Directory $APP_DIR does not exist."; exit 1; }
