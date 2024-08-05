@@ -52,8 +52,6 @@ pipeline {
     }
     post {
         always {
-            def DOCKER_HUB_KEY = ''
-            sh "rm -f ${env.DOCKER_KEY_FILE}"
         }
     }
 
