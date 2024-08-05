@@ -1,51 +1,58 @@
 #!/bin/bash
 
 # ----------------------------------------------------------------------------------------------------------
-# This Script check if git is installed and clone/pull the Detailes_App repo from github to /tmp/Details_App
-#   and if git is not installed it's check the OS and install it accordingly.
+# This Script checks if Git is installed and clones/pulls the Details_App repo from GitHub to /tmp/Details_App.
+# If Git is not installed, it checks the OS and installs Git accordingly.
 # Author: Ori Nahum
 # Collaborator: Avishay Layani
 # Packages: GIT
 # ----------------------------------------------------------------------------------------------------------
 
+# Check if Git is installed by running 'git --version'
 git --version
-# check if GIT is install
-if [[ $? != 0 ]];
-then
-    # checking if the OS is Debian, Rocky or Alpine and running installations accordingly
+
+# Check the exit status of the previous command to determine if Git is installed
+if [[ $? != 0 ]]; then
+    # Source the OS release information to determine the distribution
     . /etc/os-release
 
+    # Install Git based on the detected OS distribution
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
+        # For Debian-based systems (including Ubuntu)
         sudo apt-get update -y
         sudo apt-get -y install git
-
-        echo "[+] GIT installed on Debian"
+        echo "[+] Git installed on Debian/Ubuntu"
 
     elif [[ $ID = "rocky" ]]; then
+        # For Rocky Linux
         sudo dnf update -y
         sudo dnf --enablerepo=crb -y install git
-
-        echo "[+] GIT installed on Rocky"
+        echo "[+] Git installed on Rocky"
 
     elif [[ $ID = "alpine" ]]; then 
+        # For Alpine Linux
         sudo apk --no-cache --update add git
-
-        echo "[+] GIT installed on Alpine"
+        echo "[+] Git installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
+        # Handle unsupported OS distributions
+        printf "[!] Your OS %s is not compatible with this script. \n[!] This script is meant for Debian, Rocky, or Alpine systems ONLY\n" $ID
         exit 1
     fi
 else
-    echo "[+] GIT is already installed"
+    echo "[+] Git is already installed"
 fi
     
-# check if the directory /tmp/Details_APP/ is not exists and clone/pull repo
-if [[ ! -d $APP_DIR ]];
-then
+# Define the application directory
+APP_DIR="/tmp/Details_App"
+
+# Check if the directory /tmp/Details_App does not exist
+if [[ ! -d $APP_DIR ]]; then
+    # Clone the Details_App repository into the directory
     git clone https://github.com/orinahum/Details_App.git $APP_DIR
     echo "[+] Project Details App successfully cloned"
 else
+    # Pull the latest changes in the existing repository
     git -C $APP_DIR pull
-    echo "[+] Project Details App successfully pull"
+    echo "[+] Project Details App successfully updated"
 fi

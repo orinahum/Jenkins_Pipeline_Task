@@ -1,27 +1,29 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------------------------------------------
-# This Script Install packages base on Linux distributions
+# This Script installs packages based on Linux distributions.
 # Packages: python3, python3-pip, py3-pip, poetry
 # Author: Ori Nahum
-# Collaborator : Avishay Layani
-# https://docs.pytest.org/en/stable/reference/plugin_list.html
-# https://pytest-html.readthedocs.io/en/latest/installing.html
+# Collaborator: Avishay Layani
+# References:
+# - https://docs.pytest.org/en/stable/reference/plugin_list.html
+# - https://pytest-html.readthedocs.io/en/latest/installing.html
 # -----------------------------------------------------------------------------------------------------------------
 
+# Check if poetry is installed by running 'poetry --version'
 poetry --version > /dev/null
 
-#check if poetry is install
-if [[ $? != 0 ]];
-then
-     # checking if the OS is Debian, Rocky or Alpine and running installations accordingly
+# Check the exit status of the previous command to determine if poetry is installed
+if [[ $? != 0 ]]; then
+    # Source the OS release information to determine the distribution
     . /etc/os-release
 
+    # Install poetry based on the detected OS distribution
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
-        sudo apt update
-        sudo upgrade
+        sudo apt update -y
+        sudo apt upgrade -y
         sudo apt install -y python3-poetry
-        echo "[+] poetry installed on Debian"
+        echo "[+] poetry installed on Debian/Ubuntu"
 
     elif [[ $ID = "rocky" ]]; then
         sudo dnf update -y
@@ -33,42 +35,45 @@ then
         echo "[+] poetry installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
+        # Handle unsupported OS distributions
+        printf "[!] Your OS %s is not compatible with this script. \n[!] This script is meant for Debian, Rocky, or Alpine systems ONLY\n" $ID
         exit 1
     fi
 
 else
-    echo "[+] poetry already installed"
+    echo "[+] poetry is already installed"
 fi
 
+# Check if pytest is installed by running 'pytest --version'
 pytest --version > /dev/null
 
-#check if pytest is install
-if [[ $? != 0 ]];
-then
-     # checking if the OS is Debian, Rocky or Alpine and running installations accordingly
+# Check the exit status of the previous command to determine if pytest is installed
+if [[ $? != 0 ]]; then
+    # Source the OS release information to determine the distribution
     . /etc/os-release
 
+    # Install pytest based on the detected OS distribution
     if [[ $ID = "debian" || $ID = 'ubuntu' ]]; then
-        sudo apt update
-        sudo upgrade
+        sudo apt update -y
+        sudo apt upgrade -y
         sudo apt install -y python3-poetry python3-pytest python3-dev
-        echo "[+] poetry installed on Debian"
+        echo "[+] pytest installed on Debian/Ubuntu"
 
     elif [[ $ID = "rocky" ]]; then
         sudo dnf update -y
-        sudo dnf install -y python3-poetry python3-pytest python3-dev
-        echo "[+] poetry installed on Rocky"
+        sudo dnf install -y python3-poetry python3-pytest python3-devel
+        echo "[+] pytest installed on Rocky"
 
     elif [[ $ID = "alpine" ]]; then 
         sudo apk --no-cache --update add py3-poetry py3-pytest py3-dev
-        echo "[+] poetry installed on Alpine"
+        echo "[+] pytest installed on Alpine"
 
     else
-        printf "[!] Your OS %s is not compatible with this pipeline. \n[!] This is meant for Debian, Rocky or Alpine systems ONLY\n" $ID
+        # Handle unsupported OS distributions
+        printf "[!] Your OS %s is not compatible with this script. \n[!] This script is meant for Debian, Rocky, or Alpine systems ONLY\n" $ID
         exit 1
     fi
 
 else
-    echo "[+] pytest already installed"
+    echo "[+] pytest is already installed"
 fi
