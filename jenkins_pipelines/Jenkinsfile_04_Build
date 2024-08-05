@@ -2,14 +2,17 @@
 pipeline {
     agent {label 'workers'}
     parameters {
-        string(name: 'APP_DIR', 
+        string(
+            name: 'APP_DIR', 
             defaultValue: '/tmp/Details_App/',
             description: 'The path Directory for project Details_app'
         )
-        string(name: 'IMAGE_NAME',
-            defaultValue: 'orinahum1982/details_app_pipeline'
+        string(
+            name: 'IMAGE_NAME',
+            defaultValue: 'details_app_pipeline'
         )
-        string(name: 'IMAGE_TAG',
+        string(
+            name: 'IMAGE_TAG',
             defaultValue: 'v1.0'
         )
     }
@@ -29,6 +32,17 @@ pipeline {
             }
         }
 
+        stage('Prepare docker login') {
+            step(
+                withCredentials([usernamePassword(credentialsId: '51bd7d4c-f8c4-4ce9-92ef-1532023bf941', 
+                usernameVariable: 'DOCKER_HUB_USERNAME', 
+                passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
+                    sh "sudo docker logout"
+                    sh "echo "${DOCKER_HUB_PASSWORD}" | docker login -u "${DOCKER_HUB_USERNAME}" --password-stdin"
+                }
+            )
+        }
+
         stage('Exec build and push into Docker Hub') {
             steps {
                 sh "chmod +x scripts/04_exec_build.sh"
@@ -36,11 +50,11 @@ pipeline {
             }
         }
     }
-    // post {
-    //     always {
-    //         archiveArtifacts artifacts: 'reports/03_pytest_results.md', followSymlinks: false, onlyIfSuccessful: true
-    //         archiveArtifacts artifacts: 'reports/03_pytest_results.html, reports/assets/style.css', followSymlinks: false, onlyIfSuccessful: true
-    //     }
-    // }
+    post {
+        always {
+            def DOCKER_HUB_KEY = ''
+            sh "rm -f ${env.DOCKER_KEY_FILE}"
+        }
+    }
 
 }
