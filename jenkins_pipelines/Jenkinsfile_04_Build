@@ -7,7 +7,7 @@ pipeline {
             description: 'The path Directory for project Details_app'
         )
         string(name: 'APP_VER'.
-            defaultValue: '1:0.0.0',
+            defaultValue: '1\:0.0.0',
             description: 'The Version for builds Details_app'
         )
         string(name: 'IMAGE_NAME',
