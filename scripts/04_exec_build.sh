@@ -9,7 +9,9 @@ sudo docker build -t "$IMAGE_NAME:$IMAGE_TAG" .
 
 sudo docker images
 
-# Log in to Docker Hub (you will be prompted to enter your Docker Hub credentials)
+docker logout
+# Logout and Login to Docker Hub
+docker logout
 docker login -u orinahum1982 -p turhbjuo1982!
 
 # Push the Docker image to Docker Hub
