@@ -6,15 +6,11 @@ pipeline {
             defaultValue: '/tmp/Details_App/',
             description: 'The path Directory for project Details_app'
         )
-        string(name: 'APP_VER',
-            defaultValue: '1:0.0.0',
-            description: 'The Version for builds Details_app'
-        )
         string(name: 'IMAGE_NAME',
             defaultValue: 'orinahum1982/details_app_pipeline'
         )
-        string(name: 'TAG_NAME',
-            defaultValue: 'latest'
+        string(name: 'IMAGE_TAG',
+            defaultValue: 'v1.0'
         )
     }
 
