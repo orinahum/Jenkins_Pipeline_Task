@@ -33,14 +33,14 @@ pipeline {
         }
 
         stage('Prepare docker login') {
-            step(
+            step {
                 withCredentials([usernamePassword(credentialsId: '51bd7d4c-f8c4-4ce9-92ef-1532023bf941', 
                 usernameVariable: 'DOCKER_HUB_USERNAME', 
                 passwordVariable: 'DOCKER_HUB_PASSWORD')]) {
                     sh "sudo docker logout"
                     sh "echo "${DOCKER_HUB_PASSWORD}" | docker login -u "${DOCKER_HUB_USERNAME}" --password-stdin"
                 }
-            )
+            }
         }
 
         stage('Exec build and push into Docker Hub') {
