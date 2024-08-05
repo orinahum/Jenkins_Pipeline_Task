@@ -11,12 +11,10 @@ pipeline {
             description: 'The Version for builds Details_app'
         )
         string(name: 'IMAGE_NAME',
-            defaultValue: 'orinahum1982/details_app_pipeline',
-            description
+            defaultValue: 'orinahum1982/details_app_pipeline'
         )
         string(name: 'TAG_NAME',
-            defaultValue: 'latest',
-            description
+            defaultValue: 'latest'
         )
     }
 
