@@ -7,7 +7,7 @@ cd "$APP_DIR" || { echo "Directory $APP_DIR does not exist."; exit 1; }
 # Build the Docker image
 sudo docker build -t "$IMAGE_NAME:$IMAGE_TAG" .
 
-docker images
+sudo docker images
 
 # Log in to Docker Hub (you will be prompted to enter your Docker Hub credentials)
 docker login -u orinahum1982 -p turhbjuo1982!
