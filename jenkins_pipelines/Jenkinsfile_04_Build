@@ -35,9 +35,9 @@ pipeline {
         stage('Build Details_App docker IMAGE') {
             steps{
                 sh '''
-                    cd $APP_DIR
-                    sudo docker build . -t details_app
-                    sudo docker images
+                cd $APP_DIR
+                sudo docker build . -t details_app
+                sudo docker images
                 '''
             }
         }
@@ -56,7 +56,10 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                    sh '''
+                    cd $APP_DIR
+                    sudo docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
+                    '''
                 }
             }
         }
@@ -64,11 +67,11 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    // Tag the Docker image
-                    sh "sudo docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}"
-                    
-                    // Push the Docker image to Docker Hub
-                    sh "sudo docker push ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}"
+                    sh '''
+                    cd $APP_DIR
+                    sudo docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}"
+                    sudo docker push ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}
+                    '''
                 }
             }
         }

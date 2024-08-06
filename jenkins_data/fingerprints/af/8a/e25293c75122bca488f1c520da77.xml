@@ -10,7 +10,7 @@
     </entry>
     <entry>
       <string>pipeline_04_build</string>
-      <ranges>25-26</ranges>
+      <ranges>25-26,28</ranges>
     </entry>
   </usages>
   <facets/>
