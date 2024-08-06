@@ -32,6 +32,16 @@ pipeline {
             }
         }
 
+        stage('Build Details_App docker IMAGE') {
+            steps{
+                sh '''
+                    cd $APP_DIR
+                    docker build . -t details_app
+                    docker images
+                '''
+            }
+        }
+
         stage('Prepare docker login') {
             steps {
                 withCredentials([usernamePassword(credentialsId: '51bd7d4c-f8c4-4ce9-92ef-1532023bf941', 
