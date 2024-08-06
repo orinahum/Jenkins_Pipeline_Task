@@ -34,7 +34,7 @@
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>IMAGE_NAME</name>
-          <defaultValue>orinahum1982/details_app_pipeline</defaultValue>
+          <defaultValue>details_app_pipeline</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
