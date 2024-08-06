@@ -43,11 +43,38 @@ pipeline {
             }
         }
 
-        stage('Exec build and push into Docker Hub') {
+        stage('Build Docker Image') {
             steps {
-                sh 'chmod +x scripts/04_exec_build.sh'
-                sh 'bash scripts/04_exec_build.sh'
+                script {
+                    sh "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} ."
+                }
             }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Tag the Docker image
+                    sh "docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}"
+                    
+                    // Push the Docker image to Docker Hub
+                    sh "docker push ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}"
+                }
+            }
+        }
+
+        // stage('Exec build and push into Docker Hub') {
+        //     steps {
+        //         sh 'chmod +x scripts/04_exec_build.sh'
+        //         sh 'bash scripts/04_exec_build.sh'
+        //     }
+        // }
+    }
+
+    post {
+        always {
+            // Clean up: Logout from Docker Hub
+            sh 'sudo docker logout'
         }
     }
 
