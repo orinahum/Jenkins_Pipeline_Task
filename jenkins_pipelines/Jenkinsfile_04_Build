@@ -57,7 +57,6 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    cd $APP_DIR
                     sudo docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .
                     '''
                 }
@@ -68,7 +67,6 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    cd $APP_DIR
                     sudo docker tag ${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}"
                     sudo docker push ${DOCKER_HUB_REPO}/${IMAGE_NAME}:${IMAGE_TAG}
                     '''
