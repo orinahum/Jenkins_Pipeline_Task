@@ -69,7 +69,7 @@ pipeline {
                 script {
                     sh '''
                     sudo docker tag details_app:latest ${DOCKER_HUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
-                    sudo docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} .
+                    sudo docker push ${DOCKER_HUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
                     '''
                 }
             }
