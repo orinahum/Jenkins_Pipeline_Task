@@ -51,8 +51,8 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: params.OUTPUT_DIR+"/02_shellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
-            archiveArtifacts artifacts: params.OUTPUT_DIR+"/02_codespell_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "${params.OUTPUT_DIR}/02_shellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "${params.OUTPUT_DIR}/02_codespell_results.md", followSymlinks: false, onlyIfSuccessful: true
 
         }
     }
