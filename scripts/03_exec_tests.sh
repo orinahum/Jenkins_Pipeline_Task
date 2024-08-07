@@ -32,11 +32,7 @@ echo "" >> "${OUTPUT_DIR}/03_pytest_result.md"
     else
         echo "Poetry project initialized in $APP_DIR"
     fi
-else
-    echo "Directory $APP_DIR does not exist"
-fi
-
-
+    
 # Generate the poetry.lock file without updating dependencies 
 poetry lock # [--no-update]
 # Add pytest-html as a dependency for generating HTML test reports

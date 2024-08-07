@@ -7,7 +7,7 @@
           <org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamCause plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
             <upstreamProject>pipeline_00_manager</upstreamProject>
             <upstreamUrl>job/pipeline_00_manager/</upstreamUrl>
-            <upstreamBuild>29</upstreamBuild>
+            <upstreamBuild>30</upstreamBuild>
             <upstreamCauses>
               <hudson.model.Cause_-RemoteCause>
                 <addr>192.168.65.1</addr>
@@ -21,7 +21,7 @@
     </hudson.model.CauseAction>
     <org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamNodeAction plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
       <upstreamNodeId>24</upstreamNodeId>
-      <upstreamRunId>pipeline_00_manager#29</upstreamRunId>
+      <upstreamRunId>pipeline_00_manager#30</upstreamRunId>
     </org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamNodeAction>
     <org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerAction plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
       <triggers>
@@ -29,7 +29,7 @@
           <context class="org.jenkinsci.plugins.workflow.cps.CpsStepContext" plugin="workflow-cps@3922.va_f73b_7c4246b_">
             <executionRef class="flow-owner" plugin="workflow-job@1400.v7fd111b_ec82f">
               <job>pipeline_00_manager</job>
-              <id>29</id>
+              <id>30</id>
             </executionRef>
             <id>24</id>
             <bodyHeads/>
@@ -49,22 +49,28 @@
           <description>The path Directory for project Details_app</description>
           <value>/tmp/Details_App/</value>
         </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>OUTPUT_DIR</name>
+          <description>report directory</description>
+          <value>/home/jenkins/reports</value>
+        </hudson.model.StringParameterValue>
       </parameters>
       <parameterDefinitionNames>
         <string>APP_DIR</string>
+        <string>OUTPUT_DIR</string>
       </parameterDefinitionNames>
     </hudson.model.ParametersAction>
     <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.21-451.vd51df8df52ec">
-      <queuingDurationMillis>9111</queuingDurationMillis>
+      <queuingDurationMillis>6126</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
       <buildableDurationMillis>0</buildableDurationMillis>
-      <waitingDurationMillis>9094</waitingDurationMillis>
+      <waitingDurationMillis>6119</waitingDurationMillis>
     </jenkins.metrics.impl.TimeInQueueAction>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@727.ve832a_9244dfa_">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2205.vc9522a_9d5711">
-      <stagesUUID>29afaabd-a79e-486d-be01-9516b80ed3d9</stagesUUID>
+      <stagesUUID>0b3b9109-a979-4fd3-8d79-bf2ceccf2199</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2205.vc9522a_9d5711">
           <stages>
@@ -190,7 +196,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>29afaabd-a79e-486d-be01-9516b80ed3d9</uuid>
+            <uuid>0b3b9109-a979-4fd3-8d79-bf2ceccf2199</uuid>
           </stages>
           <agent>
             <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
@@ -271,7 +277,7 @@
           <string>refs/remotes/pipeline_03_tests_id/main</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@5.0.0">
-              <sha1>faecd90210165e60ff57a9eee69443991ce7e83c</sha1>
+              <sha1>a10e021b742aee7a6e81168f616f63ec8f57aab1</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -280,7 +286,7 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>52</hudsonBuildNumber>
+            <hudsonBuildNumber>53</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
@@ -298,19 +304,19 @@
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
     <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.21-451.vd51df8df52ec">
-      <queuingDurationMillis>3</queuingDurationMillis>
+      <queuingDurationMillis>6</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
-      <buildableDurationMillis>2</buildableDurationMillis>
-      <waitingDurationMillis>0</waitingDurationMillis>
-      <executingDurationMillis>78629</executingDurationMillis>
+      <buildableDurationMillis>4</buildableDurationMillis>
+      <waitingDurationMillis>1</waitingDurationMillis>
+      <executingDurationMillis>6457</executingDurationMillis>
       <workUnitCount>1</workUnitCount>
     </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
-  <queueId>489</queueId>
-  <timestamp>1723052172294</timestamp>
-  <startTime>1723052172320</startTime>
+  <queueId>497</queueId>
+  <timestamp>1723053428218</timestamp>
+  <startTime>1723053428225</startTime>
   <result>FAILURE</result>
-  <duration>79805</duration>
+  <duration>7949</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
@@ -358,23 +364,23 @@ pipeline {
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>199022833</long>
+        <long>247138971</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>166603187</long>
+        <long>121882960</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>9225590914</long>
+        <long>3156040752</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>82104500</long>
+        <long>85662042</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>7875343588</long>
+        <long>2255896913</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -464,7 +470,7 @@ pipeline {
       </scm>
       <node>worker-1</node>
       <workspace>/home/jenkins/workspace/pipeline_03_tests</workspace>
-      <changelogFile>/var/jenkins_home/jobs/pipeline_03_tests/builds/52/changelog15876346820881595591.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/pipeline_03_tests/builds/53/changelog11689462075521508611.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
   </checkouts>
