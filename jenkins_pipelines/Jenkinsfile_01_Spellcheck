@@ -39,5 +39,6 @@ pipeline {
             steps {
                 archiveArtifacts artifacts: "${params.OUTPUT_DIR}/01_spellcheck_results.md", allowEmptyArchive: false
             }
+        }
     }
 }
