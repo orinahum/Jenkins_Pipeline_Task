@@ -4,52 +4,108 @@
     <hudson.model.CauseAction>
       <causeBag class="linked-hash-map">
         <entry>
-          <hudson.model.Cause_-RemoteCause>
-            <addr>192.168.65.1</addr>
-          </hudson.model.Cause_-RemoteCause>
+          <org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamCause plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
+            <upstreamProject>pipeline_00_manager</upstreamProject>
+            <upstreamUrl>job/pipeline_00_manager/</upstreamUrl>
+            <upstreamBuild>13</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-RemoteCause>
+                <addr>192.168.65.1</addr>
+              </hudson.model.Cause_-RemoteCause>
+            </upstreamCauses>
+            <nodeId>14</nodeId>
+          </org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamCause>
           <int>1</int>
         </entry>
       </causeBag>
     </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamNodeAction plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
+      <upstreamNodeId>14</upstreamNodeId>
+      <upstreamRunId>pipeline_00_manager#13</upstreamRunId>
+    </org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamNodeAction>
+    <org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerAction plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
+      <triggers>
+        <org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerAction_-Trigger>
+          <context class="org.jenkinsci.plugins.workflow.cps.CpsStepContext" plugin="workflow-cps@3922.va_f73b_7c4246b_">
+            <executionRef class="flow-owner" plugin="workflow-job@1400.v7fd111b_ec82f">
+              <job>pipeline_00_manager</job>
+              <id>13</id>
+            </executionRef>
+            <id>14</id>
+            <bodyHeads/>
+            <threadId>8</threadId>
+            <stepDescriptorId>org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerStep</stepDescriptorId>
+          </context>
+          <propagate>true</propagate>
+          <waitForStart>false</waitForStart>
+        </org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerAction_-Trigger>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.support.steps.build.BuildTriggerAction>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>APP_DIR</name>
+          <description>The path Directory for project Details_app</description>
+          <value>/tmp/Details_App/</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>OUTPUT_DIR</name>
+          <description>report directory</description>
+          <value>/home/jenkins/reports</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>APP_DIR</string>
+        <string>OUTPUT_DIR</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
     <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.21-451.vd51df8df52ec">
-      <queuingDurationMillis>5930</queuingDurationMillis>
+      <queuingDurationMillis>6502</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
       <buildableDurationMillis>0</buildableDurationMillis>
-      <waitingDurationMillis>5916</waitingDurationMillis>
+      <waitingDurationMillis>6497</waitingDurationMillis>
     </jenkins.metrics.impl.TimeInQueueAction>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@727.ve832a_9244dfa_">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2205.vc9522a_9d5711">
-      <stagesUUID>d78639cc-d7e1-4379-8d60-cd7d1c4204ff</stagesUUID>
+      <stagesUUID>5d312cf2-f552-4a9c-8e58-668bec3bbc19</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2205.vc9522a_9d5711">
           <stages>
             <stages>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>Spellcheck Pipeline</name>
+                <name>Clone/Pull Git Details_App</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>build</name>
+                        <name>sh</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>job</key>
+                                <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">pipeline_01_spellcheck</value>
+                                <value class="string">chmod +x scripts/00_git_details_app.sh</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>wait</key>
+                                <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="boolean">true</value>
+                                <value class="string">bash scripts/00_git_details_app.sh</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -60,29 +116,36 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>CodeSpell and ShellCheck Pipeline</name>
+                <name>Install aspell</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>build</name>
+                        <name>sh</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>job</key>
+                                <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">pipeline_02_code_shell_check</value>
+                                <value class="string">chmod +x scripts/01_install_aspell.sh</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>sh</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>wait</key>
+                                <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="boolean">true</value>
+                                <value class="string">bash scripts/01_install_aspell.sh</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -93,62 +156,36 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>Tests(pytest) Pipeline</name>
+                <name>Exec aspell</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>build</name>
+                        <name>sh</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>job</key>
+                                <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">pipeline_03_tests</value>
-                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                            </entry>
-                            <entry>
-                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>wait</key>
-                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="boolean">true</value>
+                                <value class="string">chmod +x scripts/01_exec_aspell.sh</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
                         </args>
                       </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                    </steps>
-                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
-                </branches>
-              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>Build and Push Pipeline</name>
-                <branches>
-                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
-                    <name>default</name>
-                    <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>build</name>
+                        <name>sh</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>job</key>
+                                <key>script</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">pipeline_04_build</value>
-                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                            </entry>
-                            <entry>
-                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>wait</key>
-                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="boolean">true</value>
+                                <value class="string">bash scripts/01_exec_aspell.sh /tmp/Details_App/</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -159,8 +196,51 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>d78639cc-d7e1-4379-8d60-cd7d1c4204ff</uuid>
+            <uuid>5d312cf2-f552-4a9c-8e58-668bec3bbc19</uuid>
           </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>always</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>archiveArtifacts</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>artifacts</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                              <value class="string">&quot;${params.OUTPUT_DIR}/01_spellcheck_results.md&quot;</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                          </entry>
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>followSymlinks</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="boolean">false</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>onlyIfSuccessful</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="boolean">true</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
           <agent>
             <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
               <value class="string">workers</value>
@@ -169,30 +249,91 @@
               <key>label</key>
             </agentType>
           </agent>
+          <parameters>
+            <parameters>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildParameter>
+                <name>string</name>
+                <args>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>name</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">APP_DIR</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>defaultValue</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">/tmp/Details_App/</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>description</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">The path Directory for project Details_app</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                </args>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildParameter>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildParameter>
+                <name>string</name>
+                <args>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>name</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">OUTPUT_DIR</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>defaultValue</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">/home/jenkins/reports</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                    <key>
+                      <key>description</key>
+                    </key>
+                    <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                      <value class="string">report directory</value>
+                    </value>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                </args>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildParameter>
+            </parameters>
+          </parameters>
         </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
       </pipelineDefs>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
     <hudson.plugins.git.util.BuildData plugin="git@5.3.0">
       <buildsByBranchName>
         <entry>
-          <string>refs/remotes/pipeline_00_manager_id/main</string>
+          <string>refs/remotes/pipeline_01_code_spellcheck_id/main</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@5.0.0">
-              <sha1>3dd926ab9a3a1a9f7d11568a6494005e67755bef</sha1>
+              <sha1>9d2403c95d7619042edf5486c327274eb46bfb6d</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
-                  <name>refs/remotes/pipeline_00_manager_id/main</name>
+                  <name>refs/remotes/pipeline_01_code_spellcheck_id/main</name>
                 </hudson.plugins.git.Branch>
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>12</hudsonBuildNumber>
+            <hudsonBuildNumber>23</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
-      <scmName></scmName>
       <remoteUrls>
         <string>https://github.com/orinahum/Jenkins_Pipeline_Task.git</string>
       </remoteUrls>
@@ -205,66 +346,62 @@
         </entry>
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
-    <org.jenkinsci.plugins.workflow.support.steps.build.DownstreamBuildAction plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
-      <downstreamBuilds>
-        <org.jenkinsci.plugins.workflow.support.steps.build.DownstreamBuildAction_-DownstreamBuild>
-          <flowNodeId>14</flowNodeId>
-          <jobFullName>pipeline_01_spellcheck</jobFullName>
-          <buildNumber>22</buildNumber>
-        </org.jenkinsci.plugins.workflow.support.steps.build.DownstreamBuildAction_-DownstreamBuild>
-      </downstreamBuilds>
-    </org.jenkinsci.plugins.workflow.support.steps.build.DownstreamBuildAction>
     <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.21-451.vd51df8df52ec">
-      <queuingDurationMillis>9</queuingDurationMillis>
+      <queuingDurationMillis>3</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
-      <buildableDurationMillis>6</buildableDurationMillis>
-      <waitingDurationMillis>1</waitingDurationMillis>
-      <executingDurationMillis>17215</executingDurationMillis>
+      <buildableDurationMillis>1</buildableDurationMillis>
+      <waitingDurationMillis>0</waitingDurationMillis>
+      <executingDurationMillis>5177</executingDurationMillis>
       <workUnitCount>1</workUnitCount>
     </jenkins.metrics.impl.SubTaskTimeInQueueAction>
-    <jenkins.model.InterruptedBuildAction>
-      <causes>
-        <org.jenkinsci.plugins.workflow.support.steps.build.DownstreamFailureCause plugin="pipeline-build-step@540.vb_e8849e1a_b_d8">
-          <id>pipeline_01_spellcheck#22</id>
-        </org.jenkinsci.plugins.workflow.support.steps.build.DownstreamFailureCause>
-      </causes>
-    </jenkins.model.InterruptedBuildAction>
   </actions>
-  <queueId>417</queueId>
-  <timestamp>1723046512517</timestamp>
-  <startTime>1723046512529</startTime>
+  <queueId>423</queueId>
+  <timestamp>1723046722693</timestamp>
+  <startTime>1723046722698</startTime>
   <result>FAILURE</result>
-  <duration>19246</duration>
+  <duration>6253</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
     <result>FAILURE</result>
-    <script>pipeline {
+    <script>
+pipeline {
     agent {label &apos;workers&apos;}
+    parameters {
+        string(name: &apos;APP_DIR&apos;, 
+            defaultValue: &apos;/tmp/Details_App/&apos;,
+            description: &apos;The path Directory for project Details_app&apos;
+        )
+        string(name: &apos;OUTPUT_DIR&apos;,
+            defaultValue: &quot;/home/jenkins/reports&quot;,
+            description: &apos;report directory&apos;
+        )
+    }
+
     stages {
-        stage(&apos;Spellcheck Pipeline&apos;) {
+        stage(&apos;Clone/Pull Git Details_App&apos;) {
             steps {
-                build job: &quot;pipeline_01_spellcheck&quot;, wait: true
-            // sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_01_spellcheck/buildWithParameters?token=spellcheck_token&quot;&apos;
+                sh &quot;chmod +x scripts/00_git_details_app.sh&quot;
+                sh &quot;bash scripts/00_git_details_app.sh&quot;
             }
         }
-        stage(&apos;CodeSpell and ShellCheck Pipeline&apos;) {
+        stage(&apos;Install aspell&apos;) {
             steps {
-                build job: &quot;pipeline_02_code_shell_check&quot;, wait: true
-            //    sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_02_code_shell_check/buildWithParameters?token=code_shell_check_token&quot;&apos;
+                sh &quot;chmod +x scripts/01_install_aspell.sh&quot;
+                sh &quot;bash scripts/01_install_aspell.sh&quot;
             }
         }
-        stage(&apos;Tests(pytest) Pipeline&apos;) {
+        stage(&apos;Exec aspell&apos;) {
             steps {
-                build job: &quot;pipeline_03_tests&quot;, wait: true
-                // sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_03_tests/buildWithParameters?token=tests_token&quot;&apos;
+                sh &quot;chmod +x scripts/01_exec_aspell.sh&quot;
+                sh &quot;bash scripts/01_exec_aspell.sh /tmp/Details_App/&quot;
             }
         }
-        stage(&apos;Build and Push Pipeline&apos;) {
-            steps {
-                build job: &quot;pipeline_04_build&quot;, wait: true
-                // sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_04_build/buildWithParameters?token=build_token&quot;&apos;
-            }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: &quot;${params.OUTPUT_DIR}/01_spellcheck_results.md&quot;, followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
@@ -274,33 +411,34 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>356452177</long>
+        <long>198861208</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>150966333</long>
+        <long>119595678</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>2699975078</long>
+        <long>2971512751</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>125545334</long>
+        <long>66661458</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>1728772418</long>
+        <long>2128695755</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
-      <string>org.jenkinsci.plugins.pipeline.StageStatus.TAG_NAME</string>
+      <string>hudson.Functions.printThrowable</string>
+      <string>hudson.model.Result.fromString</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.CommonUtils.instantiateDescribable</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.SyntheticStageNames.checkout</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.SyntheticStageNames.postBuild</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.createStepsBlock</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.getRestartedStage</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.logToTaskListener</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.markStageFailedAndContinued</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.markStageWithTag</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateJobProperties</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateRunAndJobActions</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.agent.impl.Label.customWorkspace</string>
@@ -317,6 +455,12 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.hasAgent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.populateMap</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.rawClosure</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.BuildCondition.getCombinedResult</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.BuildCondition.orderedConditionNames</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Parameters.&lt;init&gt;</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Parameters.parameters</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.&lt;init&gt;</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.closureForSatisfiedCondition</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.agent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.astUUID</string>
@@ -330,9 +474,6 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.stages</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.tools</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.triggers</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.SkippedStageReason$Failure.&lt;init&gt;</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.SkippedStageReason$Failure.message</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.SkippedStageReason$Failure.stageStatus</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Stage.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Stage.agent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Stage.environment</string>
@@ -352,11 +493,14 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.StepsBlock.closure</string>
       <string>org.jenkinsci.plugins.workflow.cps.persistence.IteratorHack$Itr.hasNext</string>
       <string>org.jenkinsci.plugins.workflow.cps.persistence.IteratorHack$Itr.next</string>
+      <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
+      <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.currentResult</string>
+      <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.rawBuild</string>
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>36</iota>
-    <head>1:36</head>
+    <iota>39</iota>
+    <head>1:39</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -368,7 +512,7 @@
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
-            <name>pipeline_00_manager_id</name>
+            <name>pipeline_01_code_spellcheck_id</name>
             <url>https://github.com/orinahum/Jenkins_Pipeline_Task.git</url>
           </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
@@ -381,9 +525,9 @@
         <submoduleCfg class="empty-list"/>
         <extensions/>
       </scm>
-      <node>worker-1</node>
-      <workspace>/home/jenkins/workspace/pipeline_00_manager</workspace>
-      <changelogFile>/var/jenkins_home/jobs/pipeline_00_manager/builds/12/changelog8544426212051654805.xml</changelogFile>
+      <node>worker-2</node>
+      <workspace>/home/jenkins/workspace/pipeline_01_spellcheck</workspace>
+      <changelogFile>/var/jenkins_home/jobs/pipeline_01_spellcheck/builds/23/changelog16381792642302522123.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
   </checkouts>

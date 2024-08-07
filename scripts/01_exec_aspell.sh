@@ -7,16 +7,16 @@
 # ----------------------------------------------------------------------
 
 # initialize the output file
-echo "==================" > $OUTPUT_FILE
-echo "SpellCheck Results" >> $OUTPUT_FILE
-echo "==================" >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
+echo "==================" > "${OUTPUT_DIR}/01_aspell_results.md"
+echo "SpellCheck Results" >> "${OUTPUT_DIR}/01_aspell_results.md"
+echo "==================" >> "${OUTPUT_DIR}/01_aspell_results.md"
+echo "" >> "${OUTPUT_DIR}/01_aspell_results.md"
 
 # Find all files with the specified document extensions under the directory provided as the first argument
 find $1 -type f \( -name "*.txt" -o -name "*.md" -o -name "*.doc" -o -name "*.docx" \) | while read -r FILE
 do
     # Log the file being processed to the output file
-    echo "> File: $FILE" >> $OUTPUT_FILE
+    echo "> File: $FILE" >> "${OUTPUT_DIR}/01_aspell_results.md"
 
     # Use aspell to list misspelled words in the file, sort them uniquely, and process each word
     aspell list < "$FILE" | sort -u | while read WORD
@@ -32,17 +32,17 @@ do
             SUGGESTIONS=$(echo "$WORD" | aspell -a | awk -F ': ' '/^&/ {print $2}' | tr -s ' ' ',' | cut -d, -f1-2)
 
             # Log the line number, content, and the misspelled word to the output file
-            echo " - line $LINE_NUMBER:" >> $OUTPUT_FILE
-            echo "  * '$LINE_CONTENT'" >> $OUTPUT_FILE
-            echo "  # '$WORD'" >> $OUTPUT_FILE
+            echo " - line $LINE_NUMBER:" >> "${OUTPUT_DIR}/01_aspell_results.md"
+            echo "  * '$LINE_CONTENT'" >> "${OUTPUT_DIR}/01_aspell_results.md"
+            echo "  # '$WORD'" >> "${OUTPUT_DIR}/01_aspell_results.md"
 
             # Log suggestions if available, otherwise note that no suggestions are available
             if [ -n "$SUGGESTIONS" ]; then
-                echo "  + Suggestions: $SUGGESTIONS" >> $OUTPUT_FILE 
+                echo "  + Suggestions: $SUGGESTIONS" >> "${OUTPUT_DIR}/01_aspell_results.md"
             else
-                echo "  - No suggestions available" >> $OUTPUT_FILE
+                echo "  - No suggestions available" >> "${OUTPUT_DIR}/01_aspell_results.md"
             fi
-            echo "" >> $OUTPUT_FILE
+            echo "" >> "${OUTPUT_DIR}/01_aspell_results.md"
         done
     done
 done
