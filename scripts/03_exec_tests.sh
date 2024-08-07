@@ -49,7 +49,5 @@ poetry run pytest --html="${OUTPUT_DIR}/03_pytest_results.html" # --self-contain
 poetry run pytest > "${OUTPUT_DIR}/03_pytest_result.md"
 # Return to the original directory
 cd $HOME_DIR
-# Modify the HTML report to include a CSS stylesheet 
-sed -i "3s/.*/<link rel='stylesheet' href='styles.css'>/ ${OUTPUT_DIR}/03_pytest_results.html"
 # Exit the script
 exit
