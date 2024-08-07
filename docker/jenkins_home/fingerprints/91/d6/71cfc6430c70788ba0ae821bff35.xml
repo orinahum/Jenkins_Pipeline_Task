@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2024-08-07 18:02:56.539 UTC</timestamp>
+  <md5sum>91d671cfc6430c70788ba0ae821bff35</md5sum>
+  <fileName>Credential id=51bd7d4c-f8c4-4ce9-92ef-1532023bf941 name=orinahum1982/****** (Docker Hub user and pass)</fileName>
+  <usages>
+    <entry>
+      <string>pipeline_04_build</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
