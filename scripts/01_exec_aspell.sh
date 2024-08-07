@@ -6,6 +6,11 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
+# Check if the directory $OUTPOT_DIR exists; if not, create a reports directory
+if [[ ! -d "$OUTPOT_DIR" ]]; then
+    mkdir "$OUTPOT_DIR"
+fi
+
 # initialize the output file
 echo "==================" > "${OUTPUT_DIR}/01_aspell_results.md"
 echo "SpellCheck Results" >> "${OUTPUT_DIR}/01_aspell_results.md"
