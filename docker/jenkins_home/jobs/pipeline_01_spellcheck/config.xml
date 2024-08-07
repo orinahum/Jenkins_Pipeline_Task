@@ -8,6 +8,7 @@
       <parameters>
         <string>OUTPUT_DIR</string>
         <string>APP_DIR</string>
+        <string>EXCLUDE_PATHS_FILES</string>
       </parameters>
       <options/>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
@@ -35,6 +36,12 @@
           <name>OUTPUT_DIR</name>
           <description>report directory</description>
           <defaultValue>/home/jenkins/reports</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>EXCLUDE_PATHS_FILES</name>
+          <description>exclusion files</description>
+          <defaultValue>.git .DS_Store .jpi .key .enc .lock .jpg .mp4 .ico .css</defaultValue>
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>

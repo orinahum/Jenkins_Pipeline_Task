@@ -7,8 +7,8 @@
 # -------------------------------------------------------------
 
 # Check if the directory $OUTPOT_DIR exists; if not, create a reports directory
-if [[ ! -d "$OUTPOT_DIR" ]]; then
-    mkdir "$OUTPOT_DIR"
+if [[ ! -d $OUTPOT_DIR ]]; then
+    mkdir $OUTPOT_DIR
 fi
 
 # Initialize the output file with a header
