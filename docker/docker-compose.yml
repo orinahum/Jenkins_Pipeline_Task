@@ -26,6 +26,7 @@ services:
             SSH_USERPASS: jenkins
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
+            - ../reports:/home/jenkins/reports
 
     worker2:
         hostname: jenkins_worker2
@@ -40,5 +41,6 @@ services:
             SSH_USERPASS: jenkins
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock   
+            - ../reports:/home/jenkins/reports
 networks:
     jenkins:
