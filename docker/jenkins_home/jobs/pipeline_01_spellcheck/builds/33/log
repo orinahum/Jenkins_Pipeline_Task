@@ -1,0 +1,101 @@
+[2024-08-07T17:14:51.124Z] Started by upstream project "[8mha:////4A/E52RjMSjLV50XsoQCjcKoZBMRkYiZefpF8TcedqcoAAAApB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzhEgZJ/az8JP2CzIJUoI2p8QYG8bmJeYnpqUX6AMBJpHLOAAAA[0mpipeline_00_manager" build number [8mha:////4JlS6zRbvbUKc7QIPVAVOCBDNc3cmet8Z8kL6tbfFX2OAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZp/az8JP2CzIJUoI2p8QYG8bmJeYnpqUX6RsYAveRxNNAAAAA=[0m23
+[2024-08-07T17:14:51.124Z] originally caused by:
+[2024-08-07T17:14:51.124Z]  Started by remote host 192.168.65.1
+[2024-08-07T17:14:51.791Z] Obtained jenkins_pipelines/Jenkinsfile_01_Spellcheck from git https://github.com/orinahum/Jenkins_Pipeline_Task.git
+[2024-08-07T17:14:51.882Z] [8mha:////4Im7xsHvhSLTy8ROZJIWVwLklJUx48X+VsMLzgQmmp8MAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[2024-08-07T17:14:52.079Z] [8mha:////4GhypCCdMlEtxjW6RzCOpBRsb46PUl0yBgHknhgAy5W5AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+[2024-08-07T17:14:52.086Z] Running on [8mha:////4GbFEGXpQp4LTqojPZNjAafd4XI6CMowc1z0pMS1cQAOAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgZR/eT83ILSktQi/fL8ouzUIlUjFyN9AIg7mlTKAAAA[0mworker-2 in /home/jenkins/workspace/pipeline_01_spellcheck
+[2024-08-07T17:14:52.148Z] [8mha:////4EXLCzajK4iglacq9duTb374oVMkOAAGLegCf4wcqSU6AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[2024-08-07T17:14:52.198Z] [8mha:////4Oj801IlRF+ItrztKZAFw4Rg2zyKo/Pa+inM+neY78hnAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[2024-08-07T17:14:52.201Z] [8mha:////4E0pXBlw/wbOwsejHKMtSRgKoH3rcRiCuhGyrD/9Opk0AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[2024-08-07T17:14:52.258Z] [8mha:////4M13/ZdsGJ7jFzXgofHBnac1T8mrO1+ivpid/joBZ05KAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+[2024-08-07T17:14:52.273Z] The recommended git tool is: git
+[2024-08-07T17:14:52.289Z] No credentials specified
+[2024-08-07T17:14:52.307Z] Fetching changes from the remote Git repository
+[2024-08-07T17:14:53.138Z] Checking out Revision c8fea226c16e6e6c9c3c67be424657bffc761b7e (refs/remotes/pipeline_01_code_spellcheck_id/main)
+[2024-08-07T17:14:53.164Z] Commit message: "."
+[2024-08-07T17:14:52.294Z]  > git rev-parse --resolve-git-dir /home/jenkins/workspace/pipeline_01_spellcheck/.git # timeout=10
+[2024-08-07T17:14:52.319Z]  > git config remote.pipeline_01_code_spellcheck_id.url https://github.com/orinahum/Jenkins_Pipeline_Task.git # timeout=10
+[2024-08-07T17:14:52.325Z] Fetching upstream changes from https://github.com/orinahum/Jenkins_Pipeline_Task.git
+[2024-08-07T17:14:52.325Z]  > git --version # timeout=10
+[2024-08-07T17:14:52.328Z]  > git --version # 'git version 2.43.5'
+[2024-08-07T17:14:52.329Z]  > git fetch --tags --force --progress -- https://github.com/orinahum/Jenkins_Pipeline_Task.git +refs/heads/*:refs/remotes/pipeline_01_code_spellcheck_id/* # timeout=10
+[2024-08-07T17:14:53.134Z]  > git rev-parse refs/remotes/pipeline_01_code_spellcheck_id/main^{commit} # timeout=10
+[2024-08-07T17:14:53.139Z]  > git config core.sparsecheckout # timeout=10
+[2024-08-07T17:14:53.142Z]  > git checkout -f c8fea226c16e6e6c9c3c67be424657bffc761b7e # timeout=10
+[2024-08-07T17:14:53.166Z]  > git rev-list --no-walk 5313bdac799e3b0231bd1955e6838a90f225a137 # timeout=10
+[2024-08-07T17:14:53.209Z] [8mha:////4Gry0B1L1FJVdDyQGCPKhq5gwsTnsGXFTEV2db0fSqoxAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[2024-08-07T17:14:53.294Z] [8mha:////4ER3fTg46Lc2+aBnhKEDnB77KB6/ZdVLFon1zi207ESQAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[2024-08-07T17:14:53.306Z] [8mha:////4HQRt2iExnGs1EZouFRJ8IsIkK1u0Hu47WdgzUt6wSEgAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[2024-08-07T17:14:53.310Z] [8mha:////4DZbFpEUvH+GnfXtF+HaKveQ+JXrWLrYJNF8QvBquFmrAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[2024-08-07T17:14:53.357Z] [8mha:////4OSqDgnHpp//VFlpDB9PTvu3ck+9F0wVlofWht4KwnTfAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[2024-08-07T17:14:53.359Z] [8mha:////4FUMZ54QVqC7S7Tw01i+czI9UwVfoAaaUQb8HrqjAkilAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Clone/Pull Git Details_App)
+[2024-08-07T17:14:53.453Z] [8mha:////4HbfXARFKTQP7Eg+NVO4osyeQQIpU8h7lXKZVtiXgJxAAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] sh
+[2024-08-07T17:14:53.735Z] + chmod +x scripts/00_git_details_app.sh
+[2024-08-07T17:14:53.820Z] [8mha:////4LEGPXkCYbv2GhLw+SD00IFFx8mlnUQnrifrsB7JY9dBAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN0uFte2+AAAA[0m[Pipeline] sh
+[2024-08-07T17:14:54.092Z] + bash scripts/00_git_details_app.sh
+[2024-08-07T17:14:54.092Z] git version 2.43.5
+[2024-08-07T17:14:54.092Z] [+] Git is already installed
+[2024-08-07T17:14:54.664Z] Already up to date.
+[2024-08-07T17:14:54.664Z] [+] Project Details App successfully updated
+[2024-08-07T17:14:55.145Z] [8mha:////4M5FhVLZ5hrhnM330veNeau1YIR9H/Gkb+M6Blqtb5hYAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQEeFbpZvgAAAA==[0m[Pipeline] }
+[2024-08-07T17:14:55.325Z] [8mha:////4FP6LmL9f+gaP4n85QCw7XPO0xaE+jHRCy7hxFsKYltWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiaCgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7Ny324eW+AAAA[0m[Pipeline] // stage
+[2024-08-07T17:14:55.355Z] [8mha:////4JBaJcMehR+xkL9DqCwaGStCkKreLYaGDkIpz23QrCmiAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohU3ZAQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9AAkvMTrCAAAA[0m[Pipeline] stage
+[2024-08-07T17:14:55.360Z] [8mha:////4PkDQTNBn8RHE6gb8DRjYydi0fHtWCAwdaV4rPGHH2PZAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] { (Install spellcheck)
+[2024-08-07T17:14:55.444Z] [8mha:////4M1wKrvWDWeCNQBtkWWL1TkOor2fe7SUSkZFW6HwfnPkAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICdAilorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYI5e6Qa78dPhmQ9Da+AAAA[0m[Pipeline] sh
+[2024-08-07T17:14:56.023Z] + chmod +x scripts/01_install_spellcheck.sh
+[2024-08-07T17:14:56.234Z] [8mha:////4H2wljgAAs6gbrDNOPh6s41Wu2etBVNxSCie/i1kEsq8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0CFEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNknKOtDrn3tP1ih7y++AAAA[0m[Pipeline] sh
+[2024-08-07T17:14:56.534Z] + bash scripts/01_install_spellcheck.sh
+[2024-08-07T17:14:56.534Z] @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
+[2024-08-07T17:14:56.534Z] 
+[2024-08-07T17:14:56.534Z] 
+[2024-08-07T17:14:56.534Z] Copyright (C) 2002-2014 László Németh. License: MPL/GPL/LGPL.
+[2024-08-07T17:14:56.534Z] 
+[2024-08-07T17:14:56.534Z] Based on OpenOffice.org's Myspell library.
+[2024-08-07T17:14:56.534Z] Myspell's copyright (C) Kevin Hendricks, 2001-2002, License: BSD.
+[2024-08-07T17:14:56.534Z] 
+[2024-08-07T17:14:56.534Z] This is free software; see the source for copying conditions.  There is NO
+[2024-08-07T17:14:56.534Z] warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,
+[2024-08-07T17:14:56.534Z] to the extent permitted by law.
+[2024-08-07T17:14:56.534Z] git version 2.43.5
+[2024-08-07T17:14:56.534Z] [+] GIT is already installed
+[2024-08-07T17:14:56.605Z] [8mha:////4NHEYgSvBxH8CdUq8sBKPNBFn+wGOagbKXDYCh40bTPWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIR6RCiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BGVd59ofPoukFhO+AAAA[0m[Pipeline] }
+[2024-08-07T17:14:56.708Z] [8mha:////4MTkTJJLfCsup56rOyiBhcW5JYQpUfYHwCcwHGQrjLfVAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw+4R02vvgAAAA==[0m[Pipeline] // stage
+[2024-08-07T17:14:56.720Z] [8mha:////4N+IZhy2trYCCchZ7LqetNMFmMHsSmFPJuHT3uXj2QcxAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohURWyIqWvUhROEJoSk0f8lSUknTsTVuAOBSkx4sGxL1nu+oAoejuQ1swoHg6E3bHSTzokl8sPFUWKWzqwnDOQU61TqSKp2qR1FBYuKElYc1gp7R8GgjrDhVtxF7QTq+hR93g4cSiNv8ICCZ3IUPn7L7GF7nWQg/HH+AmAeI5RNk223/zyrN+/1G3zCAAAA[0m[Pipeline] stage
+[2024-08-07T17:14:56.728Z] [8mha:////4KVIMDabGFbRJwpo26DeRHvWWLlu6LmawTZbF6DIGGkFAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] { (Exec spellcheck)
+[2024-08-07T17:14:56.834Z] [8mha:////4F00eh/LvnnXa0xANQgU4URYvmT3JDwnehvyij+2tqeMAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAEIWoEpvgAAAA==[0m[Pipeline] sh
+[2024-08-07T17:14:57.116Z] + chmod +x scripts/01_exec_spellcheck.sh
+[2024-08-07T17:14:57.174Z] [8mha:////4ML5bPUZ+m8Ge9HdTYJ3TzWz0HnKcOJMW67QjBIoWo7RAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q1Ja5owvgAAAA==[0m[Pipeline] sh
+[2024-08-07T17:14:57.446Z] + bash scripts/01_exec_spellcheck.sh
+[2024-08-07T17:14:57.447Z] /home/jenkins/reports
+[2024-08-07T17:14:57.447Z] jenkins_worker2
+[2024-08-07T17:15:01.638Z] [v] Spell Check Results saved in /home/jenkins/reports/01_spellcheck_results.md
+[2024-08-07T17:15:01.697Z] [8mha:////4Pr781V23ms4A50Rrusk9xPQbEHm+UWIl9JtUXOPj74GAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEhIaq0lhteYGJjnFh3xnZIKl7E1/gDgUhUbLHa2WaeL1imCEeOFltDnaPUOAy+t9PCgWN38Txgy2dsmBJ7g9IMkrWpZ5ScDcwpSlgIWBlqPCdHNsNatOquKq/IVqccp+8goHT6Bg8oxGTOKuYvjBE2114npp/nrwDGEDKU2/2ndm8FmBaQvgAAAA==[0m[Pipeline] }
+[2024-08-07T17:15:01.794Z] [8mha:////4Go1gJfm4aNPwJQqGToDrNo6japTJvOR7hLEnVg5N3udAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIRqEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQE2e00svgAAAA==[0m[Pipeline] // stage
+[2024-08-07T17:15:01.814Z] [8mha:////4CjzDmBjTetf1iKG7cjiFeK5t8C9gkz9VCEbjzocU3sUAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUihExdY2ycIKQhJA2+r8kKe3EibgadyBQiQkPlm3Jes8XVDHAkYJlncHeYVSODX60ObGJQn/xNLGOzkwRRvKGCTMJ0qZdqqBkYFFRworD2qDyFB3aBBveybusvURbn1LI24FD6fQNHlDwTE4ypG+ZA2yvo46EP85fAMxDgrJpsu13n2f1Bk28/UHCAAAA[0m[Pipeline] stage
+[2024-08-07T17:15:01.825Z] [8mha:////4A80GGNVFKBQgkO9U/L4Z0QAdnbn6Mrt1HbjEjEn2KE/AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUxIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLDbrb9/Cw+ty4Up8IAAAA=[0m[Pipeline] { (Declarative: Post Actions)
+[2024-08-07T17:15:01.907Z] [8mha:////4NnMjwO2ilIVqoUya67jUuC4/EqC5bLhs0FxmJstRgD1AAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFDud9+ahfettHKdL4AAAA=[0m[Pipeline] archiveArtifacts
+[2024-08-07T17:15:01.913Z] Archiving artifacts
+[2024-08-07T17:15:01.986Z] ‘/home/jenkins/reports/01_spellcheck_results.md’ doesn’t match anything: ‘’ exists but not ‘/home/jenkins/reports/01_spellcheck_results.md’
+[2024-08-07T17:15:02.008Z] Error when executing always post condition:
+[2024-08-07T17:15:02.008Z] Also:   org.jenkinsci.plugins.workflow.actions.ErrorAction$ErrorId: d785aee8-25ea-4237-b4cb-92633f78f387
+[2024-08-07T17:15:02.008Z] hudson.AbortException: No artifacts found that match the file pattern "/home/jenkins/reports/01_spellcheck_results.md". Configuration error?
+[2024-08-07T17:15:02.008Z] 	at hudson.tasks.ArtifactArchiver.perform(ArtifactArchiver.java:280)
+[2024-08-07T17:15:02.008Z] 	at org.jenkinsci.plugins.workflow.steps.CoreStep$Execution.run(CoreStep.java:101)
+[2024-08-07T17:15:02.008Z] 	at org.jenkinsci.plugins.workflow.steps.CoreStep$Execution.run(CoreStep.java:71)
+[2024-08-07T17:15:02.008Z] 	at org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:47)
+[2024-08-07T17:15:02.008Z] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+[2024-08-07T17:15:02.008Z] 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[2024-08-07T17:15:02.008Z] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[2024-08-07T17:15:02.008Z] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[2024-08-07T17:15:02.008Z] 	at java.base/java.lang.Thread.run(Unknown Source)
+[2024-08-07T17:15:02.008Z] 
+[2024-08-07T17:15:02.017Z] [8mha:////4BsvhylYeA0us2z4ByKN0uURG2AV+mLEZzVWWJ3OkevTAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIilBJR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMHmfoKzrT+3fKpbQQr4AAAA=[0m[Pipeline] }
+[2024-08-07T17:15:02.137Z] [8mha:////4DvNmSFI4LEuQ6Udc1vFKwuXIj1X6ZuqBSl2wRGX7MtzAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BgSW0ii+AAAA[0m[Pipeline] // stage
+[2024-08-07T17:15:02.146Z] [8mha:////4N+Ba8c1+vN4+lUrtgoc7Doz9iC2XdARRD4RK+mm2W4OAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKiCFEhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3h1x1/QG1F7+mvgAAAA==[0m[Pipeline] }
+[2024-08-07T17:15:02.225Z] [8mha:////4It8xVzorYJ4TxPQhsQyJyie2gZ3hwAKa6UJjy/hOZkBAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICQqJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuD7l22w+NVSxXvgAAAA==[0m[Pipeline] // withEnv
+[2024-08-07T17:15:02.232Z] [8mha:////4IuuAycNXE2ynNQ9MEwmE0pwRD+fb8u0LgVvEvzD4EgiAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIpQKJAVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9AJ5WrS29AAAA[0m[Pipeline] }
+[2024-08-07T17:15:02.366Z] [8mha:////4JJZ7UVOneTCobxFaC/HC45ZuSWEmNrEPVGUTD/FhEauAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IMLCbGybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8FebkXZOUH7FSZMb0AAAA=[0m[Pipeline] // node
+[2024-08-07T17:15:02.383Z] [8mha:////4OFr/X731w3K+HHeYpJk3lraUmPwhz1/NBAqWhevRmGtAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRoEKIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLcXZNsPyk3+e70AAAA=[0m[Pipeline] End of Pipeline
+[2024-08-07T17:15:02.433Z] ERROR: No artifacts found that match the file pattern "/home/jenkins/reports/01_spellcheck_results.md". Configuration error?
+[2024-08-07T17:15:02.448Z] Finished: FAILURE

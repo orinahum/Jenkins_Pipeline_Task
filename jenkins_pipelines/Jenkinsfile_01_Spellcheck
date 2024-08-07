@@ -35,11 +35,9 @@ pipeline {
                 sh "bash scripts/01_exec_spellcheck.sh"
             }
         }
-    }
-
-    post {
-        always {
-            archiveArtifacts artifacts: "${params.OUTPUT_DIR}/01_spellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
-        }
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: "${params.OUTPUT_DIR}/01_spellcheck_results.md", allowEmptyArchive: false
+            }
     }
 }
