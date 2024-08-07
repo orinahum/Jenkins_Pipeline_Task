@@ -10,6 +10,10 @@ pipeline {
             defaultValue: "/home/jenkins/reports",
             description: 'report directory'
         )
+        string(name: 'EXCLUDE_PATHS_FILES',
+        defaultValue: ".git .DS_Store .jpi .key .enc .lock .jpg .mp4 .ico .css",
+        description: 'exclusion files'
+        )
     }
 
     stages {
@@ -19,23 +23,23 @@ pipeline {
                 sh "bash scripts/00_git_details_app.sh"
             }
         }
-        stage('Install aspell') {
+        stage('Install spellcheck') {
             steps {
-                sh "chmod +x scripts/01_install_aspell.sh"
-                sh "bash scripts/01_install_aspell.sh"
+                sh "chmod +x scripts/01_install_spellcheck.sh"
+                sh "bash scripts/01_install_spellcheck.sh"
             }
         }
-        stage('Exec aspell') {
+        stage('Exec spellcheck') {
             steps {
-                sh "chmod +x scripts/01_exec_aspell.sh"
-                sh "bash scripts/01_exec_aspell.sh /tmp/Details_App/"
+                sh "chmod +x scripts/01_exec_spellcheck.sh"
+                sh "bash scripts/01_exec_spellcheck.sh"
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: "${params.OUTPUT_DIR}/01_aspell_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "${params.OUTPUT_DIR}/01_spellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
