@@ -35,10 +35,11 @@ pipeline {
                 sh "bash scripts/01_exec_spellcheck.sh"
             }
         }
-        stage('Archive Artifacts') {
-            steps {
-                archiveArtifacts artifacts: "${params.OUTPUT_DIR}/01_spellcheck_results.md", allowEmptyArchive: false
-            }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: "/home/jenkins/reports/01_spellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
