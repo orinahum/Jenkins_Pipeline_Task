@@ -22,8 +22,21 @@ echo "Pytest Results" >> "${OUTPUT_DIR}/03_pytest_result.md"
 echo "==================" >> "${OUTPUT_DIR}/03_pytest_result.md"
 echo "" >> "${OUTPUT_DIR}/03_pytest_result.md"
 
-# Initialize a new Poetry environment in the application directory
-poetry init --no-interaction --directory=$APP_DIR
+    # Try to initialize a new poetry project with no interaction
+    init_output=$(poetry init --no-interaction 2>&1)
+
+    # Check if the output contains "already exists"
+    if echo "$init_output" | grep -q "already exists"; then
+        echo "Poetry project already initialized in $APP_DIR"
+        poetry shell
+    else
+        echo "Poetry project initialized in $APP_DIR"
+    fi
+else
+    echo "Directory $APP_DIR does not exist"
+fi
+
+
 # Generate the poetry.lock file without updating dependencies 
 poetry lock # [--no-update]
 # Add pytest-html as a dependency for generating HTML test reports
