@@ -47,10 +47,6 @@ do
         hunspell -u -d en_US $i >> "${OUTPUT_DIR}/01_spellcheck_results.md"
     fi
 done
-            echo "" >> "${OUTPUT_DIR}/01_spellcheck_results.md"
-        done
-    done
-done
 
 # Notify the user that spell check results have been saved to the output file
 echo "[v] Spell Check Results saved in ${OUTPUT_DIR}/01_spellcheck_results.md"
