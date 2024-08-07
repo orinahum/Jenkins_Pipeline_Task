@@ -10,5 +10,6 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
   https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 COPY id_rsa.pub  /root/.ssh/authorized_keys
+COPY jenkins_home /var/jenkins_home
 RUN apt-get update && apt-get install -y docker-ce-cli git && rm -rf /var/lib/apt/lists/* 
 RUN jenkins-plugin-cli --plugins "docker-workflow:1.28 pipeline-graph-view:144.vf3924feb_7e35 pipeline-utility-steps:2.15.0"
