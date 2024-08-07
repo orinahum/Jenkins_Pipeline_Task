@@ -12,16 +12,16 @@
       </causeBag>
     </hudson.model.CauseAction>
     <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@4.2.21-451.vd51df8df52ec">
-      <queuingDurationMillis>6629</queuingDurationMillis>
+      <queuingDurationMillis>7153</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
       <buildableDurationMillis>0</buildableDurationMillis>
-      <waitingDurationMillis>6612</waitingDurationMillis>
+      <waitingDurationMillis>7148</waitingDurationMillis>
     </jenkins.metrics.impl.TimeInQueueAction>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@727.ve832a_9244dfa_">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2205.vc9522a_9d5711">
-      <stagesUUID>ae81fdaa-7fb3-41a5-9e73-06b28a4ecb6e</stagesUUID>
+      <stagesUUID>18ba6f5c-5002-4a2a-b630-e53a605bb42c</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2205.vc9522a_9d5711">
           <stages>
@@ -61,15 +61,23 @@
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>sh</name>
+                        <name>build</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>script</key>
+                                <key>job</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">curl -u admin:admin &quot;http://localhost/job/pipeline_01_spellcheck/buildWithParameters?token=spellcheck_token&quot;</value>
+                                <value class="string">pipeline_01_spellcheck</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>wait</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="boolean">true</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -86,15 +94,23 @@
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>sh</name>
+                        <name>build</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>script</key>
+                                <key>job</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">curl -u admin:admin &quot;http://localhost/job/pipeline_02_code_shell_check/buildWithParameters?token=code_shell_check_token&quot;</value>
+                                <value class="string">pipeline_02_code_shell_check</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>wait</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="boolean">true</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -111,15 +127,23 @@
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>sh</name>
+                        <name>build</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>script</key>
+                                <key>job</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">curl -u admin:admin &quot;http://localhost/job/pipeline_03_tests/buildWithParameters?token=tests_token&quot;</value>
+                                <value class="string">pipeline_03_tests</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>wait</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="boolean">true</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -136,15 +160,23 @@
                     <name>default</name>
                     <steps>
                       <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
-                        <name>sh</name>
+                        <name>build</name>
                         <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
                           <arguments class="linked-hash-map">
                             <entry>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>script</key>
+                                <key>job</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">curl -u admin:admin &quot;http://localhost/job/pipeline_04_build/buildWithParameters?token=build_token&quot;</value>
+                                <value class="string">pipeline_04_build</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>wait</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="boolean">true</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
                           </arguments>
@@ -155,7 +187,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>ae81fdaa-7fb3-41a5-9e73-06b28a4ecb6e</uuid>
+            <uuid>18ba6f5c-5002-4a2a-b630-e53a605bb42c</uuid>
           </stages>
           <agent>
             <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
@@ -174,7 +206,7 @@
           <string>refs/remotes/pipeline_00_manager_id/main</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@5.0.0">
-              <sha1>f406e6e70f28e65c19488d3b0bee2422a2f365e8</sha1>
+              <sha1>13f5b543c231355db66f844fb3db8665fdeec2df</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -183,11 +215,12 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>8</hudsonBuildNumber>
+            <hudsonBuildNumber>9</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
       <remoteUrls>
         <string>https://github.com/orinahum/Jenkins_Pipeline_Task.git</string>
       </remoteUrls>
@@ -201,19 +234,19 @@
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
     <jenkins.metrics.impl.SubTaskTimeInQueueAction plugin="metrics@4.2.21-451.vd51df8df52ec">
-      <queuingDurationMillis>7</queuingDurationMillis>
+      <queuingDurationMillis>10</queuingDurationMillis>
       <blockedDurationMillis>0</blockedDurationMillis>
-      <buildableDurationMillis>6</buildableDurationMillis>
-      <waitingDurationMillis>0</waitingDurationMillis>
-      <executingDurationMillis>2533</executingDurationMillis>
+      <buildableDurationMillis>8</buildableDurationMillis>
+      <waitingDurationMillis>1</waitingDurationMillis>
+      <executingDurationMillis>7331</executingDurationMillis>
       <workUnitCount>1</workUnitCount>
     </jenkins.metrics.impl.SubTaskTimeInQueueAction>
   </actions>
-  <queueId>405</queueId>
-  <timestamp>1723043519811</timestamp>
-  <startTime>1723043519820</startTime>
+  <queueId>407</queueId>
+  <timestamp>1723043955210</timestamp>
+  <startTime>1723043955219</startTime>
   <result>FAILURE</result>
-  <duration>3974</duration>
+  <duration>10969</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
@@ -231,22 +264,26 @@
         }
         stage(&apos;Spellcheck Pipeline&apos;) {
             steps {
-                sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_01_spellcheck/buildWithParameters?token=spellcheck_token&quot;&apos;
+                build job: &quot;pipeline_01_spellcheck&quot;, wait: true
+            // sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_01_spellcheck/buildWithParameters?token=spellcheck_token&quot;&apos;
             }
         }
         stage(&apos;CodeSpell and ShellCheck Pipeline&apos;) {
             steps {
-               sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_02_code_shell_check/buildWithParameters?token=code_shell_check_token&quot;&apos;
+                build job: &quot;pipeline_02_code_shell_check&quot;, wait: true
+            //    sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_02_code_shell_check/buildWithParameters?token=code_shell_check_token&quot;&apos;
             }
         }
         stage(&apos;Tests(pytest) Pipeline&apos;) {
             steps {
-                sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_03_tests/buildWithParameters?token=tests_token&quot;&apos;
+                build job: &quot;pipeline_03_tests&quot;, wait: true
+                // sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_03_tests/buildWithParameters?token=tests_token&quot;&apos;
             }
         }
         stage(&apos;Build and Push Pipeline&apos;) {
             steps {
-                sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_04_build/buildWithParameters?token=build_token&quot;&apos;
+                build job: &quot;pipeline_04_build&quot;, wait: true
+                // sh &apos;curl -u admin:admin &quot;http://localhost/job/pipeline_04_build/buildWithParameters?token=build_token&quot;&apos;
             }
         }
     }
@@ -257,23 +294,23 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>184090377</long>
+        <long>307705409</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>749852536</long>
+        <long>218625482</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>1990319086</long>
+        <long>2900009177</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>162901709</long>
+        <long>109355625</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>1178147455</long>
+        <long>1931941712</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -366,7 +403,7 @@
       </scm>
       <node>worker-1</node>
       <workspace>/home/jenkins/workspace/pipeline_00_manager</workspace>
-      <changelogFile>/var/jenkins_home/jobs/pipeline_00_manager/builds/8/changelog14855764431538311008.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/pipeline_00_manager/builds/9/changelog659624247810153576.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
   </checkouts>

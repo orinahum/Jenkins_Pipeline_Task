@@ -1,14 +1,6 @@
 pipeline {
     agent {label 'workers'}
     stages {
-        stage('Clone Git Details_App') {
-            steps {
-                sh '''
-                chmod +x scripts/git_details_app.sh
-                bash scripts/git_details_app.sh
-                '''
-            }
-        }
         stage('Spellcheck Pipeline') {
             steps {
                 build job: "pipeline_01_spellcheck", wait: true
