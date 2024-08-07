@@ -1,0 +1,35 @@
+[2024-08-07T17:32:07.061Z] Started by upstream project "[8mha:////4A/E52RjMSjLV50XsoQCjcKoZBMRkYiZefpF8TcedqcoAAAApB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzhEgZJ/az8JP2CzIJUoI2p8QYG8bmJeYnpqUX6AMBJpHLOAAAA[0mpipeline_00_manager" build number [8mha:////4G4T3oXIJhDEE2lz5TG0y5DBwmTG6iOh2bmf3eLcNKa7AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZp/az8JP2CzIJUoI2p8QYG8bmJeYnpqUX6RuYApCAcM9AAAAA=[0m27
+[2024-08-07T17:32:07.061Z] originally caused by:
+[2024-08-07T17:32:07.061Z]  Started by remote host 192.168.65.1
+[2024-08-07T17:32:07.720Z] Obtained jenkins_pipelines/Jenkinsfile_01_Spellcheck from git https://github.com/orinahum/Jenkins_Pipeline_Task.git
+[2024-08-07T17:32:07.737Z] org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+[2024-08-07T17:32:07.737Z] WorkflowScript: 23: unexpected token: chmod +x scripts/00_git_details_app.sh @ line 23, column 20.
+[2024-08-07T17:32:07.737Z]                    sh "chmod +x scripts/00_git_details_app.sh"
+[2024-08-07T17:32:07.737Z]                       ^
+[2024-08-07T17:32:07.737Z] 
+[2024-08-07T17:32:07.737Z] 1 error
+[2024-08-07T17:32:07.737Z] 
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:149)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:119)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.ErrorCollector.addError(ErrorCollector.java:131)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.SourceUnit.addError(SourceUnit.java:349)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.antlr.AntlrParserPlugin.transformCSTIntoAST(AntlrParserPlugin.java:225)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.antlr.AntlrParserPlugin.parseCST(AntlrParserPlugin.java:191)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.SourceUnit.parse(SourceUnit.java:233)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.CompilationUnit$1.call(CompilationUnit.java:189)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.CompilationUnit.applyToSourceUnits(CompilationUnit.java:966)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:626)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+[2024-08-07T17:32:07.737Z] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+[2024-08-07T17:32:07.737Z] 	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+[2024-08-07T17:32:07.737Z] 	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+[2024-08-07T17:32:07.737Z] 	at org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+[2024-08-07T17:32:07.737Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:190)
+[2024-08-07T17:32:07.737Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:175)
+[2024-08-07T17:32:07.737Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:635)
+[2024-08-07T17:32:07.737Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:581)
+[2024-08-07T17:32:07.737Z] 	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:335)
+[2024-08-07T17:32:07.737Z] 	at hudson.model.ResourceController.execute(ResourceController.java:101)
+[2024-08-07T17:32:07.737Z] 	at hudson.model.Executor.run(Executor.java:442)
+[2024-08-07T17:32:07.746Z] Finished: FAILURE
