@@ -9,9 +9,12 @@
 HOME_DIR=$(pwd)
 
 # Check if the directory $OUTPOT_DIR exists; if not, create a reports directory
-if [[ ! -d $OUTPOT_DIR ]]; then
-    mkdir $OUTPOT_DIR
+if [[ ! -d $OUTPUT_DIR ]]; then
+    mkdir $OUTPUT_DIR
 fi
+
+#### Changing ownership of the reports folder, as it's in Volume, it's created with root permissions
+sudo chown -R jenkins:jenkins "${OUTPUT_DIR}"
 
 # Initialize the output file with headers
 echo "==================" > "${OUTPUT_DIR}/03_pytest_result.md"
