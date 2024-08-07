@@ -11,22 +11,26 @@ pipeline {
         }
         stage('Spellcheck Pipeline') {
             steps {
-                sh 'curl -u admin:admin "http://localhost/job/pipeline_01_spellcheck/buildWithParameters?token=spellcheck_token"'
+                build job: "pipeline_01_spellcheck", wait: true
+            // sh 'curl -u admin:admin "http://localhost/job/pipeline_01_spellcheck/buildWithParameters?token=spellcheck_token"'
             }
         }
         stage('CodeSpell and ShellCheck Pipeline') {
             steps {
-               sh 'curl -u admin:admin "http://localhost/job/pipeline_02_code_shell_check/buildWithParameters?token=code_shell_check_token"'
+                build job: "pipeline_02_code_shell_check", wait: true
+            //    sh 'curl -u admin:admin "http://localhost/job/pipeline_02_code_shell_check/buildWithParameters?token=code_shell_check_token"'
             }
         }
         stage('Tests(pytest) Pipeline') {
             steps {
-                sh 'curl -u admin:admin "http://localhost/job/pipeline_03_tests/buildWithParameters?token=tests_token"'
+                build job: "pipeline_03_tests", wait: true
+                // sh 'curl -u admin:admin "http://localhost/job/pipeline_03_tests/buildWithParameters?token=tests_token"'
             }
         }
         stage('Build and Push Pipeline') {
             steps {
-                sh 'curl -u admin:admin "http://localhost/job/pipeline_04_build/buildWithParameters?token=build_token"'
+                build job: "pipeline_04_build", wait: true
+                // sh 'curl -u admin:admin "http://localhost/job/pipeline_04_build/buildWithParameters?token=build_token"'
             }
         }
     }
