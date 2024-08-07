@@ -19,20 +19,26 @@ pipeline {
     stages {
         stage('Clone/Pull Git Details_App') {
             steps {
+                script(
                 sh "chmod +x scripts/00_git_details_app.sh"
                 sh "bash scripts/00_git_details_app.sh"
+                )
             }
         }
         stage('Install spellcheck') {
             steps {
+                script(
                 sh "chmod +x scripts/01_install_spellcheck.sh"
                 sh "bash scripts/01_install_spellcheck.sh"
+                )
             }
         }
         stage('Exec spellcheck') {
             steps {
+                script(
                 sh "chmod +x scripts/01_exec_spellcheck.sh"
                 sh "bash scripts/01_exec_spellcheck.sh"
+                )
             }
         }
     }
