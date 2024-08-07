@@ -6,6 +6,10 @@ pipeline {
             defaultValue: '/tmp/Details_App/',
             description: 'The path Directory for project Details_app'
         )
+        string(name: 'OUTPUT_DIR',
+            defaultValue: "/home/jenkins/reports",
+            description: 'report directory'
+        )
     }
 
     stages {
@@ -47,8 +51,8 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: "reports/shellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
-            archiveArtifacts artifacts: "reports/codespell_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "${OUTPUT_DIR}/02_shellcheck_results.md", followSymlinks: false, onlyIfSuccessful: true
+            archiveArtifacts artifacts: "${OUTPUT_DIR}/02_codespell_results.md", followSymlinks: false, onlyIfSuccessful: true
 
         }
     }

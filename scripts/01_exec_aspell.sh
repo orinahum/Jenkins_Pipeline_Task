@@ -6,8 +6,6 @@
 # Collaborator : Avishay Layani
 # ----------------------------------------------------------------------
 
-OUTPUT_FILE="/home/jenkins/workspace/pipeline_01_spellcheck/reports/01_spellcheck_results.md"
-
 # initialize the output file
 echo "==================" > $OUTPUT_FILE
 echo "SpellCheck Results" >> $OUTPUT_FILE

@@ -6,16 +6,13 @@
 # Collaborator: Avishay Layani
 # --------------------------------------------------------------------------------------------
 
-# Define the paths for output files
-OUTPUT_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/03_pytest_results.md"
-OUTPUT_HTML_FILE="/home/jenkins/workspace/pipeline_03_tests/reports/03_pytest_results.html"
 HOME_DIR=$(pwd)
 
 # Initialize the output file with headers
-echo "==================" > $OUTPUT_FILE
-echo "Pytest Results" >> $OUTPUT_FILE
-echo "==================" >> $OUTPUT_FILE
-echo "" >> $OUTPUT_FILE
+echo "==================" > "${OUTPUT_DIR}/03_pytest_result.md"
+echo "Pytest Results" >> "${OUTPUT_DIR}/03_pytest_result.md"
+echo "==================" >> "${OUTPUT_DIR}/03_pytest_result.md"
+echo "" >> "${OUTPUT_DIR}/03_pytest_result.md"
 
 # Initialize a new Poetry environment in the application directory
 poetry init --no-interaction --directory=$APP_DIR
@@ -30,12 +27,12 @@ export TEST_DB=True
 # Change directory to the application directory
 cd $APP_DIR
 # Run pytest and generate an HTML report
-poetry run pytest --html=$OUTPUT_HTML_FILE # --self-contained-html 
+poetry run pytest --html="${OUTPUT_DIR}/03_pytest_results.html" # --self-contained-html 
 # Run pytest and save the results to the markdown file
-poetry run pytest > $OUTPUT_FILE
+poetry run pytest > "${OUTPUT_DIR}/03_pytest_result.md"
 # Return to the original directory
 cd $HOME_DIR
 # Modify the HTML report to include a CSS stylesheet 
-sed -i '3s/.*/<link rel="stylesheet" href="styles.css">/' $OUTPUT_HTML_FILE
+sed -i "3s/.*/<link rel='stylesheet' href='styles.css'>/ ${OUTPUT_DIR}/03_pytest_results.html"
 # Exit the script
 exit
