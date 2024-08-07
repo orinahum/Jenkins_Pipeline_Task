@@ -74,20 +74,5 @@ pipeline {
                 }
             }
         }
-
-        // stage('Exec build and push into Docker Hub') {
-        //     steps {
-        //         sh 'chmod +x scripts/04_exec_build.sh'
-        //         sh 'bash scripts/04_exec_build.sh'
-        //     }
-        // }
     }
-
-    post {
-        always {
-            // Clean up: Logout from Docker Hub
-            sh 'sudo docker logout'
-        }
-    }
-
 }
